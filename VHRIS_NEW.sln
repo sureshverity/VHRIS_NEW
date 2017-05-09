@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "VHRIS_NEW", "VHRIS_NEW.phpproj", "{57621DC7-D7DB-4E6A-B671-1D331FD7FFBE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{10C0F6E7-D197-406D-8363-E52120A66784}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57621DC7-D7DB-4E6A-B671-1D331FD7FFBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57621DC7-D7DB-4E6A-B671-1D331FD7FFBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
