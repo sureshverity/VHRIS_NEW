@@ -1,0 +1,1376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/application/modules/default/library/sapp/Global.php" line="1518" />
+    <bookmark url="file://$PROJECT_DIR$/application/modules/default/controllers/RolesController.php" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="06c03dfa-3829-4bc5-bfdf-24e3062c2211" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Grid.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Zend/View/Helper/Grid.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5170">
+              <caret line="496" column="30" lean-forward="false" selection-start-line="496" selection-start-column="30" selection-end-line="496" selection-end-column="30" />
+              <folding>
+                <marker date="1475830992000" expanded="true" signature="5106:5707" ph="..." />
+                <marker date="1475830992000" expanded="true" signature="6503:6706" ph="..." />
+                <marker date="1475830992000" expanded="true" signature="6820:7034" ph="..." />
+                <marker date="1475830992000" expanded="true" signature="9776:9979" ph="..." />
+                <marker date="1475830992000" expanded="true" signature="12604:12780" ph="..." />
+                <marker date="1475830992000" expanded="true" signature="12902:12980" ph="..." />
+                <marker date="1475830992000" expanded="true" signature="13082:13156" ph="..." />
+                <marker date="1475830992000" expanded="true" signature="26474:26642" ph="..." />
+                <marker date="1475830992000" expanded="true" signature="26516:26620" ph="{...}" />
+                <marker date="1475830992000" expanded="true" signature="26756:26879" ph="..." />
+                <marker date="1475830992000" expanded="true" signature="26798:26857" ph="{...}" />
+                <marker date="1475830992000" expanded="true" signature="27054:27222" ph="..." />
+                <marker date="1475830992000" expanded="true" signature="27096:27200" ph="{...}" />
+                <marker date="1475830992000" expanded="true" signature="27783:27955" ph="..." />
+                <marker date="1475830992000" expanded="true" signature="27826:27932" ph="{...}" />
+                <marker date="1475830992000" expanded="true" signature="28219:28391" ph="..." />
+                <marker date="1475830992000" expanded="true" signature="28262:28368" ph="{...}" />
+                <marker date="1475830992000" expanded="true" signature="28615:28751" ph="..." />
+                <marker date="1475830992000" expanded="true" signature="28658:28728" ph="{...}" />
+                <marker date="1475830992000" expanded="true" signature="29045:29173" ph="..." />
+                <marker date="1475830992000" expanded="true" signature="29088:29150" ph="{...}" />
+                <marker date="1475830992000" expanded="true" signature="29351:29489" ph="..." />
+                <marker date="1475830992000" expanded="true" signature="29394:29466" ph="{...}" />
+                <marker date="1475830992000" expanded="true" signature="30683:30860" ph="..." />
+                <marker date="1475830992000" expanded="true" signature="30727:30836" ph="{...}" />
+                <marker date="1475830992000" expanded="true" signature="35019:35638" ph="..." />
+                <marker date="1475830992000" expanded="true" signature="35065:35611" ph="{...}" />
+                <marker date="1475830992000" expanded="true" signature="35260:35415" ph="{...}" />
+                <marker date="1475830992000" expanded="true" signature="36550:36759" ph="..." />
+                <marker date="1475830992000" expanded="true" signature="36584:36697" ph="{&quot;start&quot;: 'left'...}" />
+                <marker date="1475830992000" expanded="true" signature="36829:37233" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="leavemanagement.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/default/forms/leavemanagement.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="113" column="8" lean-forward="false" selection-start-line="113" selection-start-column="8" selection-end-line="113" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/leavemanagement/add.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="4" selection-end-line="127" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="changepassword.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/dashboard/changepassword.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="54" column="40" lean-forward="true" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="emailsettings.phtml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/dashboard/emailsettings.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-198">
+              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <folding>
+                <marker date="1493038393472" expanded="true" signature="1262:1276" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Emailsettings.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/default/forms/Emailsettings.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="42" column="10" lean-forward="false" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="changepassword.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/default/forms/changepassword.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="59" column="8" lean-forward="true" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/holidaydates/add.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="32" column="42" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="holidaydates.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/default/forms/holidaydates.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="62" column="8" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="employee.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/default/forms/employee.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="59">
+              <caret line="199" column="8" lean-forward="true" selection-start-line="199" selection-start-column="8" selection-end-line="199" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>lastInsertId</find>
+      <find>$loginUserId</find>
+      <find>shi</find>
+      <find>payrollattendancereport</find>
+      <find>last v</find>
+      <find>regis</find>
+      <find>bir</find>
+      <find>profile</find>
+      <find>viewpr</find>
+      <find>update</find>
+      <find>main_employees_summary</find>
+      <find>mode</find>
+      <find>busine</find>
+      <find>formDataElemen</find>
+      <find>Zend_Form_Element_Text</find>
+      <find>Zend_Form_Element_Select</find>
+      <find>busi</find>
+      <find>brdr_none</find>
+      <find>plugins.js</find>
+      <find>report</find>
+      <find>hr-employee-height</find>
+      <find>change</find>
+      <find>add</find>
+      <find>sub</find>
+      <find>check</find>
+      <find>function grid(</find>
+      <find>grid</find>
+      <find>grid(</find>
+      <find>performancegrid</find>
+      <find>welcome</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>form-control</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/public/constants.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/library/sapp/Global.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/models/Empscreening.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/models/Candidatedetails.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/models/Shifttypes.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/forms/shifttypes.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/controllers/EmployeeattendanceapprovalsController.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/models/Employeeattendanceapprovals.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/views/scripts/shifttypes/form.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/default/controllers/ShifttypesController.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/views/scripts/assignshift/form.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/default/plugins/AccessControl.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/controllers/AssignshiftController.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/forms/assignshift.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/models/Payrollattendancereport.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/models/Emppersonaldetails.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/models/Userloginlog.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/models/Users.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/views/scripts/dashboard/viewprofile.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/default/forms/viewprofile.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/views/scripts/employee/employeelist.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/default/models/Employee.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/controllers/DashboardController.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/views/scripts/employee/index.phtml" />
+        <option value="$PROJECT_DIR$/application/layouts/scripts/hrmsheadernew.phtml" />
+        <option value="$PROJECT_DIR$/application/layouts/scripts/hrmsheader.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/default/controllers/EmployeeController.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/views/scripts/employee/edit.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/default/views/scripts/employeedocs/index.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/default/views/scripts/empsalarydetails/edit.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/default/forms/empsalarydetails.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/forms/employee.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/forms/emppersonaldetails.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/views/scripts/emppersonaldetails/edit.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/default/forms/empcommunicationdetails.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/views/scripts/empcommunicationdetails/edit.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/default/forms/Creditcarddetails.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/views/scripts/creditcarddetails/edit.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/default/forms/Workeligibilitydetails.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/views/scripts/workeligibilitydetails/edit.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/default/views/scripts/empleaves/edit.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/default/views/scripts/holidaydates/index.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/default/controllers/IndexController.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/forms/holidaydates.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/views/scripts/holidaydates/add.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/default/forms/leavemanagement.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/views/scripts/leavemanagement/add.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/default/forms/changepassword.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/views/scripts/dashboard/changepassword.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/default/forms/Emailsettings.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/views/scripts/dashboard/emailsettings.phtml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="caacc1a0-fa46-43b5-9549-0a8b50877148" name="localhost" />
+    </servers>
+  </component>
+  <component name="PhpTemplates">
+    <option name="NEW_PHP_FILE_LAST_EXTENSION" value="phtml" />
+  </component>
+  <component name="PhpWebServerValidation" path_to_validation_script="D:\xampp\htdocs\VHRIS" selected_validation_type="REMOTE" web_path_to_validation_script="localhost/VHRIS/" />
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1364" />
+    <option name="height" value="726" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="leavemanagement" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="holidaydates" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="employee" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forms" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VHRIS_NEW" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../VHRIS_20-3" />
+    <property name="js.eslint.eslintPackage" value="" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\VHRIS\application\modules\default\views\scripts" />
+      <recent name="D:\xampp\htdocs\VHRIS\application\modules\default\forms" />
+      <recent name="D:\xampp\htdocs\VHRIS\application\modules\default\controllers" />
+      <recent name="D:\xampp\htdocs\VHRIS\application\modules\default\views\scripts\shifttypes" />
+      <recent name="D:\xampp\htdocs\VHRIS\application\modules\default\models" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHP Web Application.localhost">
+    <configuration default="true" type="FirefoxRemoteDebugType" factoryName="Firefox Remote" host="localhost/VHRIS">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request" server_name="localhost" url="/VHRIS">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" server_name="localhost" start_url="/VHRIS">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="false" name="localhost" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" server_name="localhost" start_url="/VHRIS">
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="PHP Web Application.localhost" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="06c03dfa-3829-4bc5-bfdf-24e3062c2211" name="Default" comment="" />
+      <created>1490865170818</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1490865170818</updated>
+      <workItem from="1490865172540" duration="7914000" />
+      <workItem from="1490936237620" duration="14076000" />
+      <workItem from="1491195456103" duration="23967000" />
+      <workItem from="1491282423198" duration="17663000" />
+      <workItem from="1491367832389" duration="8222000" />
+      <workItem from="1491895421360" duration="16202000" />
+      <workItem from="1491977823708" duration="15417000" />
+      <workItem from="1492060029037" duration="6893000" />
+      <workItem from="1492424442311" duration="7166000" />
+      <workItem from="1492493101910" duration="17379000" />
+      <workItem from="1492577349814" duration="19020000" />
+      <workItem from="1492664096124" duration="12440000" />
+      <workItem from="1492752787164" duration="11121000" />
+      <workItem from="1493010033522" duration="17972000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="195452000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1" y="1" width="1364" height="726" extended-state="1" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28834355" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61671925" sideWeight="0.5058565" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.613828" sideWeight="0.4941435" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5499182" sideWeight="0.4941435" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Zend/Controller/Plugin/Broker.php</url>
+          <line>311</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Zend/Controller/Plugin/Broker.php</url>
+          <line>313</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/modules/default/controllers/MyemployeesController.php</url>
+          <line>3760</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/modules/default/controllers/EmployeeattendanceapprovalsController.php</url>
+          <line>74</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/modules/default/models/Employeeattendanceapprovals.php</url>
+          <line>292</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/application/modules/default/models/Employeeattendanceapprovals.php</url>
+          <line>202</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="92" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PhpWebAppRunConfigurationType">
+        <watch expression="$acl_str" />
+        <watch expression="$role_type" />
+        <watch expression="$controller" />
+        <watch expression="$firstname" />
+        <watch expression="$loginUserId" />
+        <watch expression="$dataTmp" />
+        <watch expression="$employeedata[attendance]" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/application/modules/default/controllers/PayrollattendancereportController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="205" column="18" lean-forward="false" selection-start-line="205" selection-start-column="8" selection-end-line="205" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/controllers/AssignshiftController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="48" column="49" lean-forward="false" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/employee/employeelist.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="477" column="18" lean-forward="true" selection-start-line="477" selection-start-column="18" selection-end-line="477" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/forms/viewprofile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="26" column="65" lean-forward="false" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/controllers/DashboardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26906">
+          <caret line="1241" column="1" lean-forward="false" selection-start-line="1241" selection-start-column="1" selection-end-line="1241" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/models/Employees.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2134">
+          <caret line="115" column="53" lean-forward="false" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/employee/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3564">
+          <caret line="218" column="58" lean-forward="false" selection-start-line="218" selection-start-column="38" selection-end-line="218" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/models/Employee.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1980">
+          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zend/Form/Element.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4234">
+          <caret line="42" column="6" lean-forward="false" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zend/Form/Element/Xhtml.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="34" column="56" lean-forward="true" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zend/Form/Element/Text.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="34" column="55" lean-forward="true" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/forms/Appraisalinit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-802">
+          <caret line="85" column="57" lean-forward="false" selection-start-line="85" selection-start-column="57" selection-end-line="85" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/media_new/js/plugins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7766">
+          <caret line="353" column="12" lean-forward="false" selection-start-line="353" selection-start-column="12" selection-end-line="353" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/hrmsheadernew.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1760">
+          <caret line="80" column="74" lean-forward="false" selection-start-line="80" selection-start-column="74" selection-end-line="80" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/hrmsfooternew.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2002">
+          <caret line="91" column="5" lean-forward="false" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/dashboard/viewprofile.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1210">
+          <caret line="55" column="36" lean-forward="false" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/hrmsheader.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1782">
+          <caret line="81" column="110" lean-forward="false" selection-start-line="81" selection-start-column="75" selection-end-line="81" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/controllers/EmployeeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21010">
+          <caret line="973" column="34" lean-forward="false" selection-start-line="973" selection-start-column="16" selection-end-line="973" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/employeedocs/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1518">
+          <caret line="87" column="18" lean-forward="false" selection-start-line="87" selection-start-column="18" selection-end-line="87" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/empsalarydetails/edit.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3366">
+          <caret line="171" column="47" lean-forward="false" selection-start-line="171" selection-start-column="47" selection-end-line="171" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/forms/empsalarydetails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2596">
+          <caret line="136" column="8" lean-forward="false" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/forms/emppersonaldetails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="124" column="8" lean-forward="false" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/forms/empcommunicationdetails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2992">
+          <caret line="154" column="8" lean-forward="false" selection-start-line="154" selection-start-column="8" selection-end-line="154" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/emppersonaldetails/edit.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="77" column="46" lean-forward="false" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/empcommunicationdetails/edit.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="82" column="42" lean-forward="false" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/forms/Creditcarddetails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="62" column="58" lean-forward="true" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/forms/Workeligibilitydetails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="92" column="13" lean-forward="false" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/creditcarddetails/edit.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="62" column="38" lean-forward="false" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/workeligibilitydetails/edit.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3190">
+          <caret line="163" column="0" lean-forward="false" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
+          <folding>
+            <marker date="1492765510881" expanded="true" signature="1856:1870" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/empleaves/edit.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2068">
+          <caret line="112" column="20" lean-forward="false" selection-start-line="112" selection-start-column="20" selection-end-line="112" selection-end-column="20" />
+          <folding>
+            <marker date="1492772265166" expanded="true" signature="1609:1623" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/controllers/HolidaydatesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1386">
+          <caret line="81" column="41" lean-forward="true" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/models/Holidaydates.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1386">
+          <caret line="81" column="58" lean-forward="false" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="58" />
+          <folding>
+            <marker date="1485335076000" expanded="true" signature="8083:8150" ph="select * fro... main_holidaydates" />
+            <marker date="1485335076000" expanded="true" signature="10023:10204" ph="select count... " />
+            <marker date="1485335076000" expanded="true" signature="10394:10538" ph="select count... " />
+            <marker date="1485335076000" expanded="true" signature="10572:10727" ph="select count... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VHRIS_NEW.phpproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40172">
+          <caret line="1826" column="70" lean-forward="false" selection-start-line="1826" selection-start-column="70" selection-end-line="1826" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/commongrid/performanceindex.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="43" column="135" lean-forward="false" selection-start-line="43" selection-start-column="120" selection-end-line="43" selection-end-column="135" />
+          <folding>
+            <marker date="1485493438000" expanded="true" signature="1197:1211" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zend/View/Helper/Performancegrid.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+          <folding>
+            <marker date="1475830992000" expanded="true" signature="5225:5428" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="6991:7592" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="8388:8591" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="8705:8919" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="10325:10528" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="12845:13021" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="13143:13221" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="13323:13397" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="24399:24567" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="24441:24545" ph="{...}" />
+            <marker date="1475830992000" expanded="true" signature="24681:24804" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="24723:24782" ph="{...}" />
+            <marker date="1475830992000" expanded="true" signature="24979:25147" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="25021:25125" ph="{...}" />
+            <marker date="1475830992000" expanded="true" signature="25504:25677" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="25547:25654" ph="{...}" />
+            <marker date="1475830992000" expanded="true" signature="25971:26144" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="26014:26121" ph="{...}" />
+            <marker date="1475830992000" expanded="true" signature="26328:26501" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="26371:26478" ph="{...}" />
+            <marker date="1475830992000" expanded="true" signature="28043:28662" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="28089:28635" ph="{...}" />
+            <marker date="1475830992000" expanded="true" signature="28284:28439" ph="{...}" />
+            <marker date="1475830992000" expanded="true" signature="29486:29695" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="29520:29633" ph="{&quot;start&quot;: 'left'...}" />
+            <marker date="1475830992000" expanded="true" signature="29765:30169" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/index/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1064">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/index/welcome.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3968">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1491602732934" expanded="true" signature="1069:1226" ph="..." />
+            <marker date="1491602732934" expanded="true" signature="5458:5465" ph="‘" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/controllers/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2786">
+          <caret line="1436" column="9" lean-forward="true" selection-start-line="1436" selection-start-column="9" selection-end-line="1436" selection-end-column="9" />
+          <folding>
+            <marker date="1493012064730" expanded="true" signature="24800:24903" ph="Select d.id,... main_departments" />
+            <marker date="1493012064730" expanded="true" signature="63702:70271" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="63768:63782" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="63783:70230" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="63827:70224" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="63931:70218" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="63973:70214" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="63995:68074" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="64106:68070" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="64109:68066" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="66330:66383" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="66413:66453" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="66560:66613" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="66643:66683" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="66784:66837" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="66867:66907" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="67013:67066" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="67096:67136" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="67246:67299" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="67329:67369" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="67471:67524" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="67554:67594" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="67705:67758" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="67788:67828" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="67929:67982" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="68012:68052" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="68276:68340" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="68519:68587" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="68766:68832" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="69014:69082" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="69263:69329" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="69510:69580" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="69760:69830" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="70012:70082" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="90247:90312" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="90417:90541" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="90947:90990" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="91044:91087" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="91143:91186" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="93649:93719" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="93862:93905" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="93970:94013" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="94091:94134" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="94169:94181" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="94589:94632" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="94716:94759" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="95100:95143" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="95227:95270" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="104499:104505" ph=" " />
+            <marker date="1493012064730" expanded="true" signature="104738:104744" ph=" " />
+            <marker date="1493012064730" expanded="true" signature="105645:105651" ph=" " />
+            <marker date="1493012064730" expanded="true" signature="105693:105699" ph=" " />
+            <marker date="1493012064730" expanded="true" signature="105891:105897" ph=" " />
+            <marker date="1493012064730" expanded="true" signature="105940:105946" ph=" " />
+            <marker date="1493012064730" expanded="true" signature="110163:110287" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="114555:114583" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="115274:115319" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="115320:115702" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="115410:115702" ph="..." />
+            <marker date="1493012064730" expanded="true" signature="115417:115702" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/holidaydates/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="35" column="6" lean-forward="false" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+          <folding>
+            <marker date="1492776740191" expanded="true" signature="1204:1218" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/employee/edit.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="90" column="46" lean-forward="true" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="46" />
+          <folding>
+            <marker date="1492519010839" expanded="true" signature="2116:2130" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/forms/employee.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="199" column="8" lean-forward="true" selection-start-line="199" selection-start-column="8" selection-end-line="199" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/forms/holidaydates.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="62" column="8" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/commongrid/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="48" column="28" lean-forward="false" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+          <folding>
+            <marker date="1485493438000" expanded="true" signature="1197:1211" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zend/View/Helper/Grid.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5170">
+          <caret line="496" column="30" lean-forward="false" selection-start-line="496" selection-start-column="30" selection-end-line="496" selection-end-column="30" />
+          <folding>
+            <marker date="1475830992000" expanded="true" signature="5106:5707" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="6503:6706" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="6820:7034" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="9776:9979" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="12604:12780" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="12902:12980" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="13082:13156" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="26474:26642" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="26516:26620" ph="{...}" />
+            <marker date="1475830992000" expanded="true" signature="26756:26879" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="26798:26857" ph="{...}" />
+            <marker date="1475830992000" expanded="true" signature="27054:27222" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="27096:27200" ph="{...}" />
+            <marker date="1475830992000" expanded="true" signature="27783:27955" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="27826:27932" ph="{...}" />
+            <marker date="1475830992000" expanded="true" signature="28219:28391" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="28262:28368" ph="{...}" />
+            <marker date="1475830992000" expanded="true" signature="28615:28751" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="28658:28728" ph="{...}" />
+            <marker date="1475830992000" expanded="true" signature="29045:29173" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="29088:29150" ph="{...}" />
+            <marker date="1475830992000" expanded="true" signature="29351:29489" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="29394:29466" ph="{...}" />
+            <marker date="1475830992000" expanded="true" signature="30683:30860" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="30727:30836" ph="{...}" />
+            <marker date="1475830992000" expanded="true" signature="35019:35638" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="35065:35611" ph="{...}" />
+            <marker date="1475830992000" expanded="true" signature="35260:35415" ph="{...}" />
+            <marker date="1475830992000" expanded="true" signature="36550:36759" ph="..." />
+            <marker date="1475830992000" expanded="true" signature="36584:36697" ph="{&quot;start&quot;: 'left'...}" />
+            <marker date="1475830992000" expanded="true" signature="36829:37233" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/leavemanagement/add.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="4" selection-end-line="127" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/holidaydates/add.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="32" column="42" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/forms/leavemanagement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="113" column="8" lean-forward="false" selection-start-line="113" selection-start-column="8" selection-end-line="113" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/forms/changepassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="59" column="8" lean-forward="true" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/dashboard/changepassword.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="54" column="40" lean-forward="true" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/forms/Emailsettings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="42" column="10" lean-forward="false" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/dashboard/emailsettings.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding>
+            <marker date="1493038393472" expanded="true" signature="1262:1276" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
