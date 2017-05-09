@@ -1,0 +1,271 @@
+<?php 
+/********************************************************************************* 
+ *  This file is part of Sentrifugo.
+ *  Copyright (C) 2015 Sapplica
+ *   
+ *  Sentrifugo is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  Sentrifugo is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with Sentrifugo.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *  Sentrifugo Support <support@sentrifugo.com>
+ ********************************************************************************/
+
+ ?>
+<?php
+echo $this->htmlcontent;
+if($this->htmlcontent == '')
+{
+	
+ echo "<div class='left_dashboard ml-alert-1-info'><div class='style-1-icon info'></div>You have not configured your widgets.
+				<a href='".BASE_URL."viewsettings/1'> Click here  </a>
+				to configure.</div>";
+}
+?>
+<div class="col-md-3">
+  <div class="col-md-12">
+    <!-- START WIDGET CLOCK -->
+    <div class="widget widget-danger widget-padding-sm">
+      <div class="widget-big-int plugin-clock">
+        00:00
+      </div>
+      <div class="widget-subtitle plugin-date">
+        Loading...
+      </div>
+      <div class="widget-controls">
+        <!--<a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="left"
+            title="Remove Widget">
+          <span class="fa fa-times"></span>
+        </a>-->
+      </div>
+      <div class="widget-buttons widget-c3">
+        <div class="col">
+          <a href="#">
+            <span class="fa fa-clock-o"></span>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#">
+            <span class="fa fa-bell"></span>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#">
+            <span class="fa fa-calendar"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- END WIDGET CLOCK -->
+  </div>
+
+  <?php 
+if((!empty($this->loginuserRole) && $this->loginuserRole == 1) || (!empty($this->loginuserGroup) && $this->loginuserGroup != 5))
+{
+?>
+  
+  
+  <!--Today's Birthday for HR, Admin-->
+  <div class="col-md-12">
+    <div class="panel panel-default ">
+      <div class="panel-body profile" style="background: url('<?php echo MEDIA_PATH_NEW;?>assets/images/gallery/background1.jpg') center center no-repeat;">
+        <h3 class="whitener">Today's Birthday</h3>
+        <div class="owl-carousel" id="owl-example">
+         <?php 
+         if(empty($this->todyasBirthdays))
+{
+   echo '<h4 class="whitener">No birthdays today.</h4>';
+}
+else
+{
+         $count_todays_birth_dates = sizeof($this->todyasBirthdays);
+         for($i =0; $i<$count_todays_birth_dates; $i++)
+	{
+      $birthday_emp_name = $this->todyasBirthdays[$i]['firstname'] ." ".$this->todyasBirthdays[$i]['lastname'];
+      $shorten_name = strlen($birthday_emp_name) > 15 ? substr($birthday_emp_name,0,15) : $birthday_emp_name;
+      $loginProfileImg =$this->todyasBirthdays[$i]['profileimg'];
+      if( $loginProfileImg != ''){
+          $loginProfileImg = DOMAIN.'public/uploads/profile/'.$loginProfileImg;
+      }
+      else
+      {
+       $loginProfileImg = MEDIA_PATH.'images/profile_pic.png';
+      }
+
+      echo '<div>';
+      echo '<div class="profile-image">';
+      echo '<img src="'.$loginProfileImg.'" alt="'.$birthday_emp_name.'" />';
+      echo '</div>';
+      echo '<div class="profile-data">';
+      echo '<div class="profile-data-name">'.$shorten_name.'</div>';
+      echo '<div class="profile-data-title whitener">UI/UX Designer</div>';
+      echo '</div>';
+      echo '<div class="profile-controls"><a href="#" class="profile-control-right"><span class="fa fa-gift"></span></a></div>';
+      echo '</div>';
+            }
+            }
+            ?>
+
+      </div>
+    </div>
+      <div class="panel-body list-group">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <?php
+	if(empty($this->upcomingBirthdyas))
+	{
+    echo '<div class="panel x-content">';
+    echo '<div class="x-widget-timeline">';
+          echo '<div class="x-widget-timelime-head">';
+          echo '<h3>Upcoming BirthDay</h3>';
+          echo '</div>';
+    echo '<div class="x-widget-timeline-content">';
+    echo '<h5>No upcoming Birthdays.</h5>';
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+  }
+  else
+    {
+		$upcomingNames = $this->upcomingBirthdyas;
+		
+		    if(!empty($upcomingNames))
+		    {
+          echo '<div class="panel x-content">';
+          echo '<div class="x-widget-timeline">';
+          echo '<div class="x-widget-timelime-head">';
+          echo '<h3>Upcoming BirthDay</h3>';
+          echo '</div>';
+          echo '<div class="x-widget-timeline-content">';
+      
+      
+          $count_upcoming_birth_dates = sizeof($upcomingNames);
+          for($u = 0; ($u < 4) && ($u < $count_upcoming_birth_dates); $u++)
+			    {  
+				    $upcmg_birthday_name = $upcomingNames[$u]['userfullname'];
+				    $shorten_name = strlen($upcmg_birthday_name) > 12 ? substr($upcmg_birthday_name,0,12) : $upcmg_birthday_name;
+				    echo '<div class="item item-green"><a href="#">'.$shorten_name.'</a>&lsquo;s birthday is on <strong>'.sapp_Global::change_date($upcomingNames[$u]['dob'],'birthday').' </strong><span>'.$upcomingNames[$u]['days'].' days left</span></div>';
+			    }
+          echo '<button class="btn btn-default btn-block">Load more...</button>';
+          echo '</div>';
+          echo '</div>';
+          echo '</div>';
+        }
+    }
+    ?>
+  </div>
+  <?php
+} ?>
+
+  <?php
+if($this->announcementPrivilege == 'true')
+{
+    $annData = $this->announcementsData; $ann_count = count($annData);
+	if($ann_count>0)
+	{ ?>
+  <div class="col-md-12">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h3>
+        <span class="fa fa-pull-left fa-lg fa-bullhorn"></span>Announcements
+      </h3>
+      
+    </div>
+    <div class="panel-body list-group">
+      <?php 
+      for ($i=0;($i<$ann_count && $i<4);$i++)
+      { 
+		      $attachments = isset($annData[$i]['attachments'])? count((array)json_decode($annData[$i]['attachments'])):0;
+		      $clas = ($attachments > 1) ? 'multi_files' : 'single_file';
+          echo '<div class="list-group-item">';
+          echo '<a href="'.BASE_URL.'announcements/view/id/'.$annData[$i]['id'].'">'.$annData[$i]['title'].'</a>';
+          echo '</br>';
+          echo '<span>'.sapp_Global::change_date($annData[$i]['modifieddate'], 'announcement').'</span>';
+          echo '</div>';
+       } ?>
+    </div>
+  </div>
+  </div>
+  <?php
+	} 
+	else 
+	{
+      echo '<div class="col-md-12">';
+      echo '<div class="panel panel-default">';
+      echo '<div class="panel-body">';
+      echo '<h3>';
+      echo '<span class="fa fa-pull-left fa-lg fa-bullhorn"></span>Announcements';
+      echo '</h3>';
+      echo '</div>';
+      echo '<div class="panel-body list-group">';
+		  echo '<div class="list-group-item">No Announcements</div>';
+      echo '</div>';
+      echo '</div>';
+      echo '</div>';
+	}
+}
+?>
+
+<!-- Show all today birthdays when user click on more button -->
+<input type="hidden" id="today_birthdays" value='<?php echo json_encode($this->todyasBirthdays);?>' />
+</div>
+
+<script type="text/javascript">
+//$(document).ready
+$( document ).ready(function() {
+	var window_width = $('.interview_shed_block').width();
+    var interview_shed_block = window_width*(99/100);
+    $('.interview_shed_box').css("width", (interview_shed_block-233));	   
+
+   $(window).resize(function() {
+	   var window_width = $('.interview_shed_block').width();
+	    var interview_shed_block = window_width*(99/100);
+	    $('.interview_shed_box').css("width", (interview_shed_block-233));	   
+  });
+
+   $(".interview_shed_box").show();
+	// Show all today birthdays when user click on more button
+	$("#more_today_bdays").click(function() {
+		$("#today_bday_name").hide();
+		$("#more_today_bdays").hide();
+		var today_birthdays_html = '';
+		today_birthdays = JSON.parse($("#today_birthdays").val());
+		today_birthdays_html +="<ul class='today_bday_list'>";
+		var size= today_birthdays.length;
+		for (x in today_birthdays) {
+			var firstname = today_birthdays[x].firstname;
+			var firstname1 =  today_birthdays[x].firstname.substring(0, 6);
+			today_birthdays_html += '<li title="'+firstname+'">'+ firstname1 ;
+			//to remove ',' for last name
+			if(x == size-1)
+			today_birthdays_html += "</li>";
+			else
+			today_birthdays_html += ",</li>";	
+		}
+		today_birthdays_html +="</ul>";
+		$("#today_bday_name").html(today_birthdays_html).slideDown("slow");
+	}); 
+
+	// Show all upcoming birthdays when user click on more button
+	$("#more_upcmng_bdays").click(function() {
+		$("#upcmg_limit").hide();
+		$("#view_more_upcmng").show();
+		$("#more_upcmng_bdays").hide();
+		
+	});  		
+
+});
+
+</script>

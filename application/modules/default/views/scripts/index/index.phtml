@@ -1,0 +1,157 @@
+<?php 
+/********************************************************************************* 
+ *  This file is part of Sentrifugo.
+ *  Copyright (C) 2014 Sapplica
+ *   
+ *  Sentrifugo is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  Sentrifugo is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with Sentrifugo.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *  Sentrifugo Support <support@sentrifugo.com>
+ ********************************************************************************/
+?>
+<div class="login-body">
+  <div class="login-title">
+    <strong>Log In</strong> to your account
+  </div>
+  <form action="<?php echo BASE_URL;?>index/loginpopupsave" method="post" class="form-horizontal" >
+
+    <div class="form-group">
+      <div class="col-md-12">
+        <input type="text" name="username" id="username" maxlength="50" class="required form-control" placeholder="E-mail" />
+        <div class="errorMsg" style="display:none" id="usernameerror"></div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-12">
+        <input type="password" name="password" id="password" maxlength="15" onkeydown="return keycodeforIE(event)" class="required form-control" placeholder="Password" />
+        <?php if (count($this->messages)) {?>
+        <div class="errorMsg" id="usernameerror">
+
+          <?php foreach ($this->messages as $message){
+												  echo $this->escape($message); 
+												  }
+											 ?>
+        </div>
+        <?php }else{ ?>
+        <div class="errorMsg" style="display:none" id="pwderror"></div>
+        <?php }?>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-6">
+        <a href="#" class="btn btn-link btn-block" id="forgotpwdtext">Forgot your password?</a>
+      </div>
+      <div class="col-md-6">
+        <input type="submit" class="btn btn-info btn-block" value="Log In" id="loginsubmit" tabindex="-1">
+                        </div>
+    </div>
+    <!--<div class="login-or">OR</div>
+                    <div class="form-group">
+                        <div class="col-md-4">
+                            <button class="btn btn-info btn-block btn-twitter"><span class="fa fa-twitter"></span>Twitter</button>
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-info btn-block btn-facebook"><span class="fa fa-facebook"></span>Facebook</button>
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-info btn-block btn-google"><span class="fa fa-google-plus"></span>Google</button>
+                        </div>
+                    </div>
+                    <div class="login-subtitle">
+                        Don't have an account yet? <a href="#">Create an account</a>
+                    </div>-->
+  </form>
+  <div id="forgotpassworddiv" class="form-horizontal" style="display:none;">
+  <h4>Your E-mail</h4>
+  <div class="form-group">
+    <div class="col-md-12">
+      <input type="text" class="email-status form-control" id="emailaddress" name="emailaddress" placeholder="email@domain.com"/>
+      <div id="forgot_error_message" class="errorMsg" style="display:none;"></div>
+      <div id="forgot_succ_message" class="succMsg" style="display:none;"></div>
+    </div>
+  </div>
+  <div class="form-group push-up-20">
+    <div class="col-md-6">
+     
+    </div>
+    <div class="col-md-6">
+      <button id="forgotpwdbutton" onclick="sendPassword();" class="btn btn-danger btn-block">Send password</button>
+    </div>
+  </div>
+  </div>
+</div>
+<script type="text/javascript">
+
+  $(document).ready(function(){
+  <?php if (count($this->messages)) {?>
+  $('#loginpopdiv').show();
+  $("#hometab").removeClass("active");
+  $("#loginbutton").addClass("active");
+  <?php } ?>
+
+  });
+
+  $('#emailaddress').keydown(function(e) {
+
+  var code = e.keyCode || e.which;
+  if(code == 13) { //Enter keycode
+  sendPassword();
+  }
+  });
+  /* PAGE LOADING FRAME */
+  function pageLoadingFrame(action,ver){
+
+  ver = ver ? ver : 'v2';
+
+  var pl_frame = $("<div></div>").addClass("page-loading-frame");
+
+  if(ver === 'v2')
+  pl_frame.addClass("v2");
+
+  var loader = new Array();
+  loader['v1'] = '<div class="page-loading-loader"><img src="img/loaders/page-loader.gif"/></div>';
+  loader['v2'] = '<div class="page-loading-loader"><div class="dot1"></div><div class="dot2"></div></div>';
+
+  if(action == "show" || !action){
+  $("body").append(pl_frame.html(loader[ver]));
+  }
+
+  if(action == "hide"){
+
+  if($(".page-loading-frame").length > 0){
+  $(".page-loading-frame").addClass("removed");
+
+  setTimeout(function(){
+  $(".page-loading-frame").remove();
+  },800);
+  }
+  }
+  }
+  /* END PAGE LOADING FRAME */
+</script>
+<style>
+  .login-container
+  {
+  min-height: 625px;
+  }
+  h4 {
+  font-size: 12px;
+  color: #F5F5F5;
+  line-height: 20px;
+  margin-top: 10px;
+  }
+  .errorMsg{
+  color: #b64645;
+  margin-top: 5px;
+  }
+</style>

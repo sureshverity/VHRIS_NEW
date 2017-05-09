@@ -1,0 +1,286 @@
+<?php //
+///*********************************************************************************
+// *  This file is part of Sentrifugo.
+// *  Copyright (C) 2014 Sapplica
+// *
+// *  Sentrifugo is free software: you can redistribute it and/or modify
+// *  it under the terms of the GNU General Public License as published by
+// *  the Free Software Foundation, either version 3 of the License, or
+// *  (at your option) any later version.
+// *
+// *  Sentrifugo is distributed in the hope that it will be useful,
+// *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+// *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// *  GNU General Public License for more details.
+// *
+// *  You should have received a copy of the GNU General Public License
+// *  along with Sentrifugo.  If not, see <http://www.gnu.org/licenses/>.
+// *
+// *  Sentrifugo Support <support@sentrifugo.com>
+// ********************************************************************************/
+//
+//
+//if (count($this->messages)) {?>
+<!--	<div id="dispmsgemp" class="settingssuccess">-->
+<!--		--><?php //
+//			foreach ($this->messages as $message)
+//			{
+//				$flag = array();
+//				$flag = array_keys($message);
+//				echo "<div id='messageData' class='ml-alert-1-$flag[0]'><div style='display:block;'><span class='style-1-icon $flag[0]'></span>";
+//				echo $message[$flag[0]];
+//				echo "</div></div>";
+//			}
+//		?>
+<!--	</div>	-->
+<!--	-->
+<?php //}
+//if($this->dataArray[0]['emptyroles'] == 1)
+//{
+// ?>
+<!--	 <div class="ml-alert-1-info m1-info-set">-->
+<!--		<div class="style-1-icon info"></div>-->
+<!--			Employees grid will not work as Roles are not added yet.-->
+<!--	</div>-->
+<!-- --><?php	//} else	{	?>
+<!---->
+<?php
+//if($this->call != 'ajaxcall')
+//{
+//    if(!empty($this->popConfigPermission))
+//    {
+//?>
+<!--<div>-->
+<!---->
+<!--<!-- For excel Upload -->
+<!--<div class="profile-tabs-right-2">-->
+<!--    <div class="flt_right">-->
+<!--      	-->
+<!--        <div class="actions_div">-->
+<!---->
+<!--            <span class="uploadbut_exel uploadbutsel flt_left marginfiv" id="upload_custom_div" >Import Employees</span>-->
+<!--			<a target="_blank" href="--><?php //echo DOMAIN; ?><!--public/downloads/import_employees.xlsx" class="importformatlink flt_left">Import format</a>-->
+<!--			<a target="_blank" href="--><?php //echo DOMAIN; ?><!--public/downloads/importguide.pdf" class="importformatlink flt_left">Help</a>-->
+<!--            <div id="loaderimgprofile" style="display:none;"><img src="--><?php //echo DOMAIN; ?><!--public/media/images/loaderwhite_21X21.gif" style="width:21px; height: 21px; float: none; "/></div>								-->
+<!--        </div>                 					-->
+<!--    </div>-->
+<!--    <input type="hidden" id="uploadimagepath" name="uploadimagepath" value=""/>-->
+<!--    <input type="hidden" name="emp_excel" value=""/>							    	-->
+<!--               				                        					-->
+<!--</div>-->
+<!--</div>-->
+<!---->
+<!--<span id="error_message"></span>-->
+<!--<div id="upload_error" style="display:none;clear:both;"></div>	-->
+<!--<!-- End excel Upload -->
+<?php
+//    }
+//}
+//
+//
+//if($this->call == 'ajaxcall'){
+//	$div = ''; $endDiv = '';
+//} else {
+//	$div = '<div id="grid_'.$this->dataArray[0]['objectname'].'" class="all-grid-control">'; $endDiv = '</div>';
+//}
+//	echo $div.'<div id="msg" style="display:none;font-style: oblique; font-weight: bold; color: green;""></div>'.$this->employeegrid($this->dataArray[0]).$endDiv;
+//?>
+<?php	//}	?>
+<!--<script type='text/javascript'>-->
+<!--$(document).ready(function(){-->
+<?php //if (count($this->messages)) {?>
+<!--//      setTimeout(function(){-->
+<!--//			$('#dispmsgemp').fadeOut('slow');-->
+<!--//		},3000);-->
+
+<?php //} ?>
+<!--//-->
+<!--//})-->
+<!--</script>-->
+
+<?php //
+//if($this->call != "ajaxcall")
+//{
+//    if(!empty($this->popConfigPermission))
+//    {
+//?>
+<!--<script type="text/javascript">-->
+<!---->
+<!--var btnUpload = $('#upload_custom_div');-->
+<!--new AjaxUpload(btnUpload, {-->
+<!---->
+<!--	action :  base_url+'/employee/uploadexcel',-->
+<!--	name   : 'emp_excel',  //we can rename it -->
+<!--	dataType: 'json',-->
+<!--	onSubmit: function(file,ext){-->
+<!--	if($("#upload_error").is(":visible"))-->
+<!--	 $("#upload_error").hide();-->
+<!--	  $("#loaderimgprofile").show();-->
+<!--									 -->
+<!--	},-->
+<!--	onComplete: function(file, response){-->
+<!--	    try-->
+<!--            {-->
+<!--                var result = JSON.parse(response);-->
+<!--                if(result.result == 'success')-->
+<!--                {                        -->
+<!--                    $('#upload_error').show();-->
+<!--                    $("#loaderimgprofile").hide();-->
+<!--                    refreshgrid("employee","No","");-->
+<!--                    $('#upload_error').html('<div  class="ml-alert-1-success"><div style="display:block;"><span class="style-1-icon success"></span>'+result.msg+'</div></div>');-->
+<!--                    setTimeout(function()-->
+<!--                    {-->
+<!--                        $('#upload_error').fadeOut('slow');               -->
+<!--                    },3000);-->
+<!--                }-->
+<!--                else-->
+<!--                {-->
+<!--                    $('#upload_error').show();-->
+<!--                    $("#loaderimgprofile").hide();-->
+<!--                    if(result.msg)-->
+<!--                        $('#upload_error').html('<div  class="ml-alert-1-error"><div style="display:block;"><span class="style-1-icon error"></span>'+result.msg+'</div></div>');-->
+<!--                    else-->
+<!--                        $('#upload_error').html('<div  class="ml-alert-1-error"><div style="display:block;"><span class="style-1-icon error"></span>Please choose different file.</div></div>');-->
+<!--                }-->
+<!--            }-->
+<!--            catch(e)-->
+<!--            {-->
+<!--                $('#upload_error').show();-->
+<!--                $("#loaderimgprofile").hide();-->
+<!--                $('#upload_error').html('<div  class="ml-alert-1-error"><div style="display:block;"><span class="style-1-icon error"></span>Something went wrong, please try again.</div></div>');-->
+<!--            }-->
+<!--	}	-->
+<!--},'json');-->
+<!--</script>-->
+<?php //
+//}
+//}
+//?>
+<!---->
+
+<!---->
+<!--<div class="page-content">-->
+
+
+    <!-- END BREADCRUMB -->
+
+    <!-- PAGE TITLE -->
+<?php //echo "<pre>"; print_r($this->dataArray); ?>
+    <div class="page-title">
+        <h2><span class="fa fa-users"></span> Employees  <small> <?php echo count($this->dataArray);?> Employees</small></h2>
+    </div>
+    <!-- END PAGE TITLE -->
+
+    <!-- PAGE CONTENT WRAPPER -->
+    <div class="page-content-wrap">
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <p>Use search to find Employees. </p>
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <div class="col-md-8">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <span class="fa fa-search"></span>
+                                        </div>
+                                        <input type="text" class="form-control" id="emp_search" placeholder="Who are you looking for?"/>
+                                        <div class="input-group-btn">
+                                            <button type="button" id="btnEmpsearch" class="btn btn-primary">Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-success btn-block"><span class="fa fa-plus"></span> Add new contact</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <?php foreach ($this->dataArray as $data){?>
+
+            <div class="col-md-3">
+
+                <!-- CONTACT ITEM -->
+                <div class="panel panel-default">
+                    <div class="panel-body profile">
+                        <div class="profile-image">
+                            <?php if( $data[profileimg] !=''){ ?>
+
+                            <img src="<?php echo DOMAIN;?>public/uploads/profile/<?php echo $data[profileimg]; ?>" alt="Dmitry Ivaniuk"/>
+                            <?php } else{?>
+                                <img src="<?php echo DOMAIN;?>public/media/images/profile__pic.jpg" alt="Dmitry Ivaniuk"/>
+
+                            <?php }?>
+                        </div>
+                        <div class="profile-data">
+                            <div class="profile-data-name"><?php echo $data[userfullname]; ?></div>
+                            <div class="profile-data-title"><?php echo $data[jobtitle_name]; ?></div>
+                        </div>
+                        <div class="profile-controls">
+                            <a href="<?php echo DOMAIN .'index.php/employee/edit/id/'.$data[user_id]; ?>" class="profile-control-right"><span class="fa fa-info"></span></a>
+<!--                            <a href="#" class="profile-control-right"><span class="fa fa-phone"></span></a>-->
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="contact-info">
+
+                            <p><small>Employee ID </small><br/><?php echo $data[employeeId]; ?></p>
+                            <p><small>Office/Extn</small><br/>(+9140) 446 08 100/<?php echo $data[extension_number]; ?></p>
+                            <p><small>Email</small><br/><?php echo $data[emailaddress]; ?></p>
+<!--                            <p><small>Address</small><br/>123 45 Street San Francisco, CA, USA</p>-->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- END CONTACT ITEM -->
+
+            </div>
+
+            <?php } ?>
+                <!-- END CONTACT ITEM -->
+            </div>
+
+        </div>
+<!--        <div class="row">-->
+<!--            <div class="col-md-12">-->
+<!--                <ul class="pagination pagination-sm pull-right push-down-10 push-up-10">-->
+<!--                    <li class="disabled"><a href="#">«</a></li>-->
+<!--                    <li class="active"><a href="#">1</a></li>-->
+<!--                    <li><a href="#">2</a></li>-->
+<!--                    <li><a href="#">3</a></li>-->
+<!--                    <li><a href="#">4</a></li>-->
+<!--                    <li><a href="#">»</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--    </div>-->
+    <!-- END PAGE CONTENT WRAPPER -->
+<!--</div>-->
+<script type="text/javascript" language="javascript">
+$(document).ready(function() {
+        $("#btnEmpsearch").click(function() {
+               var empsearch =  $('#emp_search').val();
+             // var url = base_url + "/index/getempsearch";
+                          
+               $.post(base_url + "/index/getempsearch", {searchq: empsearch}, function (data) {
+                  // alert(data);
+                  // retun false;
+                });
+            
+             });
+             
+             return false;
+          });
+</script>
+

@@ -1,0 +1,39 @@
+ 
+<!doctype html>
+<html>
+<head>
+<?php
+$request = Zend_Controller_Front::getInstance();
+$controllerName = $request->getRequest()->getControllerName();
+$actionName = $request->getRequest()->getActionName();
+?>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<title><?php echo APPLICATION_NAME; ?> - VHRIS</title>
+<meta http-equiv="Content-Language" content="en-us" />
+
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+
+<meta name="description" content="Description" />
+<meta name="keywords" content="VHRIS, human resource management system" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Enlighten Designs" />
+<link rel="shortcut icon" href="<?php echo $this->baseUrl("public/media/images/favicon.ico"); ?>"/>
+
+<link rel="stylesheet" type="text/css" id="theme" href="<?php echo MEDIA_PATH_NEW; ?>css/theme-default.css" />
+<!--[if IE 9]>  
+<link rel="stylesheet" type="text/css" href="<?php echo MEDIA_PATH; ?>css/ie9.css">  
+<![endif]-->  
+
+<!--[if IE 8]>  
+<link rel="stylesheet" type="text/css" href="<?php echo MEDIA_PATH; ?>css/ie8.css">  
+<![endif]-->  
+
+<!-- css3-mediaqueries.js for IE less than 9 -->
+<!--[if lt IE 9]>
+<script src="<?php echo MEDIA_PATH;?>js/css3-mediaqueries.js"></script>
+<![endif]-->
+</head>
+  <body>
+    <!-- START PAGE CONTAINER -->
+    <div class="page-container">
