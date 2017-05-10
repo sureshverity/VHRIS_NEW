@@ -1,5 +1,5 @@
 <?php
-	           defined('SENTRIFUGO_HOST') || define('SENTRIFUGO_HOST','localhost');
+	           defined('SENTRIFUGO_HOST') || define('SENTRIFUGO_HOST','192.168.5.89');
 	           defined('SENTRIFUGO_USERNAME') || define('SENTRIFUGO_USERNAME','root');
 	           defined('SENTRIFUGO_PASSWORD') || define('SENTRIFUGO_PASSWORD','');
 	          // defined('SENTRIFUGO_DBNAME') || define('SENTRIFUGO_DBNAME','vhris_20-3-2017');
