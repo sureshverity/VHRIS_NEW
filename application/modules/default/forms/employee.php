@@ -68,7 +68,7 @@ class Default_Form_employee extends Zend_Form
         $empstatus->getValidator('Db_RecordExists')->setMessage('Selected employment status is deleted.');
                 
 		$businessunit = new Zend_Form_Element_Select('businessunit_id');
-        $businessunit->setAttrib("class", "form-control");
+        $businessunit->setAttrib("class", "form-control select");
         $businessunit->setLabel("Business Unit");
 		$businessunit->setAttrib('onchange', 'displayEmployeeDepartments(this,"department_id","")');
 		$businessunit->addValidator(new Zend_Validate_Db_RecordExists(
@@ -79,7 +79,7 @@ class Default_Form_employee extends Zend_Form
 		$businessunit->getValidator('Db_RecordExists')->setMessage('Selected business unit is deleted.');
 		
 		$department = new Zend_Form_Element_Select('department_id');
-        $department->setAttrib("class", "form-control");
+        $department->setAttrib("class", "form-control select");
         $department->setLabel("Department");
 		$department->addMultiOption('','Select Department');
 		$department->setRegisterInArrayValidator(false);	
@@ -115,7 +115,7 @@ class Default_Form_employee extends Zend_Form
 		$department->getValidator('Db_RecordExists')->setMessage('Selected department is deleted.');
 
 		$jobtitle = new Zend_Form_Element_Select('jobtitle_id');
-        $jobtitle->setAttrib("class", "form-control");
+        $jobtitle->setAttrib("class", "form-control select");
 		$jobtitle->setLabel("Job Title");
         $jobtitle->addMultiOption('','Select Job Title');
 		$jobtitle->setAttrib('onchange', 'displayPositions(this,"position_id","")');
@@ -128,7 +128,7 @@ class Default_Form_employee extends Zend_Form
 		$jobtitle->getValidator('Db_RecordExists')->setMessage('Selected job title is deleted.');	                
 		
 		$position = new Zend_Form_Element_Select('position_id');
-        $position->setAttrib("class", "form-control");
+        $position->setAttrib("class", "form-control select");
 		$position->setLabel("Position");
 		$position->addMultiOption('','Select Position');
 		$position->setRegisterInArrayValidator(false);
@@ -140,7 +140,7 @@ class Default_Form_employee extends Zend_Form
 		$position->getValidator('Db_RecordExists')->setMessage('Selected position is deleted.');	
 		
 		$prefix_id = new Zend_Form_Element_Select('prefix_id');
-        $prefix_id->setAttrib("class", "form-control");
+        $prefix_id->setAttrib("class", "form-control select");
 		$prefix_id->addMultiOption('','Select Prefix');
 		$prefix_id->setLabel("Prefix");
 		$prefix_id->setRegisterInArrayValidator(false);
@@ -287,7 +287,7 @@ class Default_Form_employee extends Zend_Form
 													'Other' => 'Other',
                                                     'Reference' => 'Reference'
                                                     ));	
-                $modeofentry->setAttrib("class", "form-control");
+                $modeofentry->setAttrib("class", "form-control select");
                 if($controller_name != 'organisationinfo')
                 {
                     if($id_val == '')
@@ -299,12 +299,12 @@ class Default_Form_employee extends Zend_Form
                 $candidatereferredby = new Zend_Form_Element_Select("candidatereferredby");
                 $candidatereferredby->setRegisterInArrayValidator(false);
                 $candidatereferredby->setLabel("Referred By");		
-                $candidatereferredby->setAttrib("class", "form-control");
+                $candidatereferredby->setAttrib("class", "form-control select");
 
                 $rccandidatename = new Zend_Form_Element_Select("rccandidatename");
                 $rccandidatename->setRegisterInArrayValidator(false);
                 $rccandidatename->setLabel("Candidate Name");		
-                $rccandidatename->setAttrib("class", "form-control");
+                $rccandidatename->setAttrib("class", "form-control select");
                 $rccandidatename->setAttrib("onchange", "disp_requisition(this.value,'disp_requi')");                
 
                 $emailaddress = new Zend_Form_Element_Text("emailaddress");
@@ -417,7 +417,7 @@ class Default_Form_employee extends Zend_Form
                 $emprole->setRegisterInArrayValidator(false);
                 $emprole->setRequired(true);
 				$emprole->setLabel("Role");
-                $emprole->setAttrib("class", "form-control");
+                $emprole->setAttrib("class", "form-control select");
                 $emprole->addValidator('NotEmpty', false, array('messages' => 'Please select role.'));
                 $emprole->addValidator(new Zend_Validate_Db_RecordExists(
 										array('table' => 'main_roles',

@@ -122,3 +122,65 @@
 /*div.slimScrollDiv div{
     background:none !important;
 }*/
+
+.music4
+{
+    background:url("../assets/images/gallery/music-4.jpg") !important;
+}
+
+        .list-group > .x-navigation
+        {
+            background: none !important;
+        }
+        .list-group >.x-navigation li > ul
+        {
+            background: none !important;
+        }
+        .list-group > .x-navigation li > a
+        {
+            border-color: #e5e5e5 !important;
+            padding:10px 15px !important;
+             color: #555 !important;
+        }
+        .list-group >.x-navigation li > a .fa, .list-group >.x-navigation li > a .glyphicon
+        {
+            color: #555 !important;
+            margin-right: 10px !important;
+        }
+        .list-group>.x-navigation li > a > .badge {
+        float: right;
+        }
+        .list-group>.x-navigation li.xn-openable::before
+        {
+            color: #555 !important;
+        }
+        .list-group > .x-navigation > li:last-child > a
+        {
+            border-radius : 0px !important;
+        }
+        .list-group > .x-navigation li > a:hover, .list-group > .x-navigation li > a:focus {
+    background: #f9f9f9 none repeat scroll 0 0;
+}
+        .list-group >.x-navigation li.active:not(.xn-openable) > a {
+        background: #33414e none repeat scroll 0 0 !important;
+        border-color: #33414e !important;
+        color: #fff !important;
+        transition: all 200ms ease 0s;
+        }
+        .list-group >.x-navigation li.active > a .fa, .list-group >.x-navigation li.active > a .glyphicon
+        {
+            color: #fff !important;
+           
+        }
+        .list-group>.x-navigation li.active:before
+        {
+            color: #fff !important;
+        }
+        
+         .list-group >.x-navigation li.active, .list-group >.x-navigation li.active:focus, .list-group >.x-navigation li.active:hover
+         {
+             background: #f9f9f9 none repeat scroll 0 0;
+            border-color: #f9f9f9;
+             
+         }
+

@@ -58,7 +58,8 @@ $(function() {
                     }
                 });
             }
-        }//END Bootstrap select
+        }
+        //END Bootstrap select
         
         
         //Validation Engine

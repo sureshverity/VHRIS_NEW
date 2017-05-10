@@ -77,28 +77,17 @@ if($actionName == 'viewsettings'){
 <!-- END META SECTION -->
 <!-- CSS INCLUDE -->
 <link rel="stylesheet" type="text/css" id="theme" href="<?php echo MEDIA_PATH_NEW;?>css/theme-default.css" />
-<!-- EOF CSS INCLUDE -->
+<!-- EOF CSS INCLUDE -->	
 <script  language="JavaScript" type="text/javascript" src="<?php echo MEDIA_PATH_NEW;?>js/plugins/jquery/jquery.min.js"></script>
     <script language="JavaScript" type="text/javascript" src="<?php echo MEDIA_PATH_NEW;?>js/plugins/jquery/jquery-ui.min.js"></script>
     <script language="JavaScript" type="text/javascript" src="<?php echo MEDIA_PATH_NEW;?>js/plugins/bootstrap/bootstrap.min.js"></script>
     <script language="JavaScript" type="text/javascript" src="<?php echo MEDIA_PATH; ?>jquery/js/slimScrollHorizontal.js"></script>
     <script language="JavaScript" type="text/javascript" src="<?php echo MEDIA_PATH;?>jquery/js/jquery.slimscroll.min.js"></script>
+	
+
 </head>
 <body>
-<input type= "hidden" value= "<?php echo $baseUrl;?>" id = "baseurl" />
-<input type= "hidden" value= "<?php echo DATEFORMAT_JS;?>" id = "dateformatjs" />
-<input type= "hidden" value= "<?php echo $tourflag;?>" id = "take-tour-flag" />
-<input type= "hidden" value= "<?php echo $loginUserId;?>" id = "loginuserId" name = "loginuserId" />
-<input type= "hidden" value= "" id = "dragid" />
 
-<script type="text/javascript"> var base_url = "<?php echo $baseUrl;?>";
-    var msg = '';  
-    var loginUserId = $('#loginuserId').val();
-    var domain_data = "<?php echo DOMAIN;?>";
-    var management_group = "<?php echo MANAGEMENT_GROUP;?>";
-    var superAdmin_id = "<?php echo SUPERADMIN;?>";
-    var clicked = '';		
-</script>
  <!-- START PAGE CONTAINER -->
     <div class="page-container">
        <div class="page-sidebar">
