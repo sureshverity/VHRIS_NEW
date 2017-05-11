@@ -77,17 +77,32 @@ if($actionName == 'viewsettings'){
 <!-- END META SECTION -->
 <!-- CSS INCLUDE -->
 <link rel="stylesheet" type="text/css" id="theme" href="<?php echo MEDIA_PATH_NEW;?>css/theme-default.css" />
+<link rel="stylesheet" type="text/css" id="theme" href="<?php echo MEDIA_PATH;?>/jquery/css/cupertino/jquery-ui-1.8.16.custom.css" />
 <!-- EOF CSS INCLUDE -->	
 <script  language="JavaScript" type="text/javascript" src="<?php echo MEDIA_PATH_NEW;?>js/plugins/jquery/jquery.min.js"></script>
-    <script language="JavaScript" type="text/javascript" src="<?php echo MEDIA_PATH_NEW;?>js/plugins/jquery/jquery-ui.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="<?php echo MEDIA_PATH;?>js/jquery-ui.js"></script>
+	<script language="JavaScript" type="text/javascript" src="<?php echo MEDIA_PATH;?>jquery/js/jquery-ui-1.10.3.custom.js"></script>
     <script language="JavaScript" type="text/javascript" src="<?php echo MEDIA_PATH_NEW;?>js/plugins/bootstrap/bootstrap.min.js"></script>
     <script language="JavaScript" type="text/javascript" src="<?php echo MEDIA_PATH; ?>jquery/js/slimScrollHorizontal.js"></script>
     <script language="JavaScript" type="text/javascript" src="<?php echo MEDIA_PATH;?>jquery/js/jquery.slimscroll.min.js"></script>
-	
+	<script language="JavaScript" type="text/javascript" src="<?php echo MEDIA_PATH_NEW;?>js/plugins/hrms.js"></script>	
 
 </head>
 <body>
+<input type= "hidden" value= "<?php echo $baseUrl;?>" id = "baseurl" />
+<input type= "hidden" value= "<?php echo DATEFORMAT_JS;?>" id = "dateformatjs" />
+<input type= "hidden" value= "<?php echo $tourflag;?>" id = "take-tour-flag" />
+<input type= "hidden" value= "<?php echo $loginUserId;?>" id = "loginuserId" name = "loginuserId" />
+<input type= "hidden" value= "" id = "dragid" />
 
+<script type="text/javascript"> var base_url = "<?php echo $baseUrl;?>";
+    var msg = '';  
+    var loginUserId = $('#loginuserId').val();
+    var domain_data = "<?php echo DOMAIN;?>";
+    var management_group = "<?php echo MANAGEMENT_GROUP;?>";
+    var superAdmin_id = "<?php echo SUPERADMIN;?>";
+    var clicked = '';		
+</script>
  <!-- START PAGE CONTAINER -->
     <div class="page-container">
        <div class="page-sidebar">
@@ -189,28 +204,28 @@ if($loginuserRole == SUPERADMINROLE)
                             <a href="#" class="list-group-item">
                                 <div class="list-group-status status-online">
                                 </div>
-                                <img src="assets/images/users/user2.jpg" class="pull-left" alt="John Doe" />
+                                <img src="<?php echo MEDIA_PATH_NEW;?>assets/images/users/user2.jpg" class="pull-left" alt="John Doe" />
                                 <span class="contacts-title">John Doe</span>
                                 <p>
                                     Praesent placerat tellus id augue condimentum</p>
                             </a><a href="#" class="list-group-item">
                                 <div class="list-group-status status-away">
                                 </div>
-                                <img src="assets/images/users/user.jpg" class="pull-left" alt="Dmitry Ivaniuk" />
+                                <img src="<?php echo MEDIA_PATH_NEW;?>assets/images/users/user.jpg" class="pull-left" alt="Dmitry Ivaniuk" />
                                 <span class="contacts-title">Dmitry Ivaniuk</span>
                                 <p>
                                     Donec risus sapien, sagittis et magna quis</p>
                             </a><a href="#" class="list-group-item">
                                 <div class="list-group-status status-away">
                                 </div>
-                                <img src="assets/images/users/user3.jpg" class="pull-left" alt="Nadia Ali" />
+                                <img src="<?php echo MEDIA_PATH_NEW;?>assets/images/users/user3.jpg" class="pull-left" alt="Nadia Ali" />
                                 <span class="contacts-title">Nadia Ali</span>
                                 <p>
                                     Mauris vel eros ut nunc rhoncus cursus sed</p>
                             </a><a href="#" class="list-group-item">
                                 <div class="list-group-status status-offline">
                                 </div>
-                                <img src="assets/images/users/user6.jpg" class="pull-left" alt="Darth Vader" />
+                                <img src="<?php echo MEDIA_PATH_NEW;?>assets/images/users/user6.jpg" class="pull-left" alt="Darth Vader" />
                                 <span class="contacts-title">Darth Vader</span>
                                 <p>
                                     I want my money back!</p>

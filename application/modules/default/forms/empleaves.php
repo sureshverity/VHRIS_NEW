@@ -34,6 +34,7 @@ class Default_Form_empleaves extends Zend_Form
 			
 		
 		$emp_leave_limit = new Zend_Form_Element_Text('leave_limit');
+        $emp_leave_limit->setAttrib('class', 'form-control');
         $emp_leave_limit->setAttrib('maxLength', 3);
         $emp_leave_limit->addFilter(new Zend_Filter_StringTrim());
 		$emp_leave_limit->setRequired(true);
@@ -49,22 +50,26 @@ class Default_Form_empleaves extends Zend_Form
         	));	
 			
 		$used_leaves = new Zend_Form_Element_Text('used_leaves');
+        $used_leaves->setAttrib('class', 'form-control');
         $used_leaves->setAttrib('maxLength', 3);
 		$used_leaves->setAttrib('readonly', 'true');
         $used_leaves->setAttrib('onfocus', 'this.blur()'); 		
         
 		$alloted_year = new Zend_Form_Element_Text('alloted_year');
+        $alloted_year->setAttrib('class', 'form-control');
         $alloted_year->setAttrib('maxLength', 4);
 		$alloted_year->setAttrib('readonly', 'true');
 		$alloted_year->setAttrib('onfocus', 'this.blur()');
 				
 		$submit = new Zend_Form_Element_Submit('submit');
 		$submit->setAttrib('id', 'submitbutton');
+        $submit->setAttrib('class', 'btn btn-success');
 		$submit->setLabel('Save');
 		
 		$submitbutton = new Zend_Form_Element_Button('submitbutton');
 		
 		 $submitbutton->setAttrib('id', 'submitbuttons');
+         $submitbutton->setAttrib('class', 'btn btn-success');
 		$submitbutton->setLabel('Save');
 		
 		$this->addElements(array($id,$userid,$emp_leave_limit,$used_leaves,$alloted_year,$submit,$submitbutton));

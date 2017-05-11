@@ -68,42 +68,51 @@ if($this->emptyFlag != 0)
 ?>
 
 
-<div class="right-block-data"> 
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">Holidays</div>
+  </div>
+  <div class="panel-body">
 <div id="error_message" style="display:none;"></div>
 	<form name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
 		<?php echo $this->form->id;
                 sapp_Global::generateClientValidations($this->form);
                 ?>
 			<div class="total-form-controller">
-            <div class="view-form-detail fullwidth">
-			    <div class="new-form-ui inputheight" style="width:400px;">
-				  <label class="required">Holiday Group Name</label>
-				  <div class="division division_new"><?php echo $this->form->holiday_group_name; ?></div>
-				</div>
-			 </div>	
-			 <div class="position_rel">
-				<div class="new-form-ui inputheight">
-				  <label class="required">Holiday Group</label>
-				<div class="division"><?php echo $this->form->holiday_group; ?>
-                                    <?php if(isset($this->msgarray['holiday_group'])){?>
-				   <span class="errors" id="errors-<?php echo $this->form->holiday_group->getId(); ?>"><?php echo $this->msgarray['holiday_group'];?></span>
-				<?php }?>
-				  <?php if($this->holidayGroupConfigPermission == 'Yes') { ?>	
-					<span class="add-coloum" onclick="displaydeptform('<?php echo BASE_URL.'holidaygroups/addpopup' ?>','Holiday Group');"> Add Holiday Group</span>			
-				<?php } ?>
-                </div>
-				
-				</div>
-            
-			<div class="new-form-ui-submit empedit-submit-setup">
-					<?php echo $this->form->submit; ?>
-					<button onclick="window.location.href='<?php echo BASE_URL; ?>employee';" type="button" id="Cancel" name="Cancel">Cancel</button>
-			</div>
+        <div class="form-group">
+          <div class="row">
+            <label class="col-md-4 control-label required">Holiday Group Name</label>
+            <div class="col-md-5">
+              <?php echo $this->form->holiday_group_name; ?>
             </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <label class="col-md-4 control-label required">Holiday Group</label>
+            <div class="col-md-5">
+              <?php echo $this->form->holiday_group; ?>
+              <?php if(isset($this->msgarray['holiday_group'])){?>
+              <span class="errors" id="errors-"<?php echo $this->form->holiday_group->getId(); ?>"><?php echo $this->msgarray['holiday_group'];?>
+              </span>
+              <?php }?>
+              <?php if($this->holidayGroupConfigPermission == 'Yes') { ?>
+              <span class="add-coloum" onclick="displaydeptform('<?php echo BASE_URL.'holidaygroups/addpopup' ?>','Holiday Group');"> Add Holiday Group
+              </span>
+              <?php } ?>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <?php echo $this->form->submit; ?>
+          <button class="btn btn-danger" onclick="window.location.href='"
+            <?php echo BASE_URL; ?>employee';" type="button" id="Cancel" name="Cancel">Cancel
+          </button>
+        </div>
 			<input type="hidden" id="userid" name="userid" value="<?php echo $this->id;?>" />
 	</div>    
 	</form>
-	
+  </div>
 	<?php } 
 if($this->call == 'ajaxcall'){
 	$div = ''; $endDiv = ''; 

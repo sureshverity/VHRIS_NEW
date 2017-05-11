@@ -1,8 +1,8 @@
-<?php
-/*********************************************************************************
+<?php 
+/********************************************************************************* 
  *  This file is part of Sentrifugo.
  *  Copyright (C) 2014 Sapplica
- *
+ *   
  *  Sentrifugo is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -19,7 +19,6 @@
  *  Sentrifugo Support <support@sentrifugo.com>
  ********************************************************************************/
 ?>
-
 <?php
 if (!empty($this->messages)) {
     ?>
@@ -56,97 +55,124 @@ if(empty($this->empdata)){?>
     echo $this->employeedetails($this->employeedata,'edit',$this->id);
     ?>
     <script type="text/javascript" src="<?php echo MEDIA_PATH;?>js/jquery.uploadfile.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="<?php echo MEDIA_PATH; ?>css/uploadfile.css" />
 
     <script type="text/javascript" src="<?php echo MEDIA_PATH;?>js/jquery.prettyPhoto.js"></script>
     <link rel="stylesheet" type="text/css" href="<?php echo MEDIA_PATH; ?>css/prettyPhoto.css" />
 
-    <div id="right_block_data" class="right-block-data no_selection">
+
+      <div id="right_block_data" class="panel panel-default">
         <div id="error_message" style="display:none;"></div>
-        <button class="btn btn-primary pull-right"  onclick="toggleformadd('emp_doc_form');" title="Add">Add Record</button>
-<!--        <input type="button" class="sprite adddocment" value="Add Record" onclick="toggleformadd('emp_doc_form');" title="Add">-->
-        <div id="emp_doc_form" style="display:none;" class="new_docment_row">
-            <div class="form-group">
-                <label  class="col-md-5 control-label">Document</label>
-                <div  class="col-md-9">
-                    <input type="text" class="form-control" id="document_name" name="document_name" maxlength="50">
-                    <span id="errors-document_name" class="errors"></span>
+        <div class="panel-heading">
+          <div class="panel-title">
+            Documents Upload
+          </div>
+          <ul class="panel-controls">
+            <li>
+              <a href="#" onclick="toggleformadd('emp_doc_form');" title="Add">
+                <span class="fa fa-plus"></span>
+              </a> </li>
+          </ul>
+          </div>
+        <div class="panel-body list-group">
+          <div  class="new_docment_row form-horizontal">
+            <div class="row push-up-30 push-down-30" id="emp_doc_form">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="col-md-3 control-label">Document</label>
+                <div class="col-md-9">
+                  <input type="text" id="document_name" name="document_name" class="form-control" maxlength="50"></input>
+                  <span id="errors-document_name" class="errors"></span>
                 </div>
+              </div>
             </div>
-
-            <div class="new-form-ui-1" id="doc_attachment">
-                <label>&nbsp;</label>
-                <div class="division">
-		        	<span class="upload-attachment uploadbutsel" id="fileupload">
-		        		<b class="sprite upload-icon" style="cursor:pointer;">Upload Attachment</b>
-		        	</span>
+            <div class="col-md-6">
+              <div class="form-group">
+                <div class="col-md-12">
+                  <span class="upload-attachment uploadbutsel btn btn-danger" id="fileupload">
+                    <b class="btn btn-danger" style="cursor:pointer;">
+                      <span class="fa fa-upload"></span>Upload Attachment</b>
+                  </span>
                 </div>
-                <div id="loaderimgprofile" style="display:none;left: 127px;">
-                    <img src="<?php echo $this->baseUrl("public/media/images/loaderwhite_21X21.gif");?>" style="width:21px; height: 21px; float: none; "/>
+                <div class="col-md-12">
+                  <span id="errors-doc_attachment" class="errors"></span>
                 </div>
-                <span id="errors-doc_attachment" class="errors"></span>
+              </div>
             </div>
-            <div class="new-form-ui-submit padd-left10">
+            <div class="col-md-6 push-up-30 ">
                 <input type="hidden" name="file_original_names" id="file_original_names" value="">
-                <input type="hidden" name="file_new_names" id="file_new_names" value="">
-                <input type="hidden" name="userid" id="userid" value="<?php echo $this->id;?>">
-                <input type="button"  class="btn btn-success"  value="Save" onclick="validateEmpDoc();">
-                <button class="btn btn-danger"  onclick="toggleformadd('emp_doc_form');" type="button">Cancel</button>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div id="max_files"></div>
-
-        <?php
-        $empDoc = $this->empDocuments;
-        if(sizeof($empDoc)>0) {
-            for($i=0; $i<sizeof($empDoc); $i++){
-                $atts = 0;
-                if($empDoc[$i]['attachments']){
-                    $atts_arr = json_decode($empDoc[$i]['attachments'],true);
-                    $atts = count($atts_arr);
-                }
-                ?>
-                <div id="emp_docs_<?php echo $empDoc[$i]['id'];?>" class="docment_row">
-                    <div class="view_list">
-                        <div class="doc_name_div"><?php echo $empDoc[$i]['name'];?>
-                            <?php if($atts>0){?>
-                                <span class="attach_count js_photo_gallery">
-								<?php $j=0; foreach ($atts_arr as $k => $v){
-                                    if(in_array(strtolower(sapp_Htmlhelper::getExtension($v["new_name"])), array('jpg','png','gif','jpeg'))) {?>
-                                        <a class="click_view_link_class js_click_view" href="<?php echo EMP_DOC_FILES_PATH.$v["new_name"];?>" rel="prettyPhoto[pp_gal<?php echo $empDoc[$i]['id'];?>]" title="<?php echo $v["original_name"];?>">
-		                        			<?php if($j == 0){ ?><?php echo $atts;?> Attachment(s)<?php }?>
-		                        		</a>
-                                    <?php } else {?>
-                                        <a class="click_view_link_class js_click_view" href="<?php echo EMP_DOC_FILES_PATH.$v["new_name"];?>?iframe=true&width=80%&height=90%" rel="prettyPhoto[pp_gal<?php echo $empDoc[$i]['id'];?>]" title="<?php echo $v["original_name"];?>">
-		                        			<?php if($j == 0){ ?><?php echo $atts;?> Attachment(s)<?php }?>
-		                        		</a>
-                                    <?php }$j++;}?>
-							</span>
-                            <?php }?>
-                        </div>
-                        <input type="button" class="edit_doc btn-primary" value="Edit" onclick="editEmpDoc(<?php echo $empDoc[$i]['id'];?>);">
-                        <input type="button" class="delete_doc btn-primary" value="Delete" onclick="deleteEmpDoc(<?php echo $empDoc[$i]['id'];?>,<?php echo $empDoc[$i]['user_id'];?>);">
-                        <?php
-                        // Hide 'Download' button when there are no attachments
-                        if ($atts > 0) {
-                            ?>
-                            <input id="download_doc_<?php echo $empDoc[$i]['id']; ?>" type="button" class="download_doc btn-primary" value="Download" onclick="downloadEmpDoc(<?php echo $empDoc[$i]['id'];?>,'',<?php echo $empDoc[$i]['user_id'];?>);">
-                            <?php
-                        }
-                        ?>
-
-                        <div class="clear"></div>
+                  <input type="hidden" name="file_new_names" id="file_new_names" value="">
+                    <input type="hidden" name="userid" id="userid" value=""<?php echo $this->id;?>">
+                    <div class="col-md-2">
+                    <button type="button" class="btn btn-success" onclick="validateEmpDoc();">Save</button>
                     </div>
-                    <div id="edit_emp_doc_<?php echo $empDoc[$i]['id'];?>" class="edit_emp_docs"></div>
-                </div>
-            <?php }}else{?>
-            <p class="no-data-docs">No data found</p>
-        <?php }?>
-
-        <input type="hidden" name="file_count" id="file_count" value="<?php echo sizeof($empDoc);?>">
-    </div>
-    </div>
+                      <div class="col-md-2">
+                      <button class="btn btn-danger" onclick="toggleformadd('emp_doc_form');" type="button">Cancel</button>
+                        </div
+              
+            </div>
+            </div>
+          </div>
+          <div id="max_files"></div>
+          <?php
+            $empDoc = $this->empDocuments; 
+            if(sizeof($empDoc)>0) {
+				      for($i=0; $i<sizeof($empDoc); $i++){
+				      $atts = 0;
+				      if($empDoc[$i]['attachments']){
+					      $atts_arr = json_decode($empDoc[$i]['attachments'],true);
+					      $atts = count($atts_arr);
+				    }
+          ?>
+          
+          
+          <div  class="list-group-item docment_row" id="emp_docs_<?php echo $empDoc[$i]['id'];?>">
+            <p><?php echo $empDoc[$i]['name'];?>
+            <?php if($atts>0){?>
+            <span class="attach_count js_photo_gallery">
+              <?php $j=0; foreach ($atts_arr as $k => $v){
+									if(in_array(strtolower(sapp_Htmlhelper::getExtension($v["new_name"])), array('jpg','png','gif','jpeg'))) {?>
+              <a class="click_view_link_class js_click_view" href="
+                <?php echo EMP_DOC_FILES_PATH.$v["new_name"];?>" rel="prettyPhoto[pp_gal<?php echo $empDoc[$i]['id'];?>]" title="<?php echo $v["original_name"];?>">
+                <?php if($j == 0){ ?><?php echo $atts;?> Attachment(s)<?php }?>
+              </a>
+              <?php } else {?>
+              <a class="click_view_link_class js_click_view" href=""
+                <?php echo EMP_DOC_FILES_PATH.$v["new_name"];?>?iframe=true&width=80%&height=90%" rel="prettyPhoto[pp_gal<?php echo $empDoc[$i]['id'];?>]" title="<?php echo $v["original_name"];?>">
+                <?php if($j == 0){ ?><?php echo $atts;?> Attachment(s)<?php }?>
+              </a>
+              <?php }$j++;}?>
+            </span>
+            </p>
+            <div class="list-group-controls pull-right">
+              <button class="btn btn-primary btn-rounded edit_doc" onclick="editEmpDoc(<?php echo $empDoc[$i]['id'];?>);">
+                <span class="fa fa-pencil"></span>
+              </button>
+              <button class="btn btn-primary btn-rounded" onclick="deleteEmpDoc(<?php echo $empDoc[$i]['id'];?>,<?php echo $empDoc[$i]['user_id'];?>);">
+                <span class="fa fa-trash-o"></span>
+              </button>
+              <?php 
+              // Hide 'Download' button when there are no attachments
+              if ($atts > 0) {
+              ?>
+              <button class="btn btn-primary btn-rounded" onclick="downloadEmpDoc(<?php echo $empDoc[$i]['id'];?>,<?php echo $empDoc[$i]['user_id'];?>);">
+                <span class="fa fa-download"></span>
+              </button>
+              <?php	
+              } 
+                ?>
+            </div>
+            <div id="edit_emp_doc_"
+              <?php echo $empDoc[$i]['id'];?>" class="edit_emp_docs">
+            </div>
+            <?php }?>
+          </div>
+          <?php }}else{?>
+          <p class="list-group-item">No data found</p>
+          <?php }?>
+          <input type="hidden" name="file_count" id="file_count" value=""<?php echo sizeof($empDoc);?>">
+        </div>
+        </div>
+      </div>
     <script type='text/javascript'>
 
         function downloadEmpDoc(doc_id,file_name,user_id)
@@ -189,6 +215,7 @@ if(empty($this->empdata)){?>
                 onSelect:function(files)
                 {
                     // Clear previous error
+                    
                     $("#fileupload_error").remove();
                     $("span#errors-doc_attachment").html('');
 

@@ -35,16 +35,19 @@ class Default_Form_empholidays extends Zend_Form
 		$holiday_group_name = new Zend_Form_Element_Text('holiday_group_name');
         $holiday_group_name->setAttrib('readonly', 'true');	
 		$holiday_group_name->setAttrib('onfocus', 'this.blur()');  
+        $holiday_group_name->setAttrib('class', 'form-control');
 			
 		$holiday_group = new Zend_Form_Element_Select('holiday_group');
         $holiday_group->setRegisterInArrayValidator(false);
 		$holiday_group->addMultiOption('','Select Holiday Group');
+        $holiday_group->setAttrib('class', 'form-control select');
 		$holiday_group->setAttrib('onchange', 'displayHolidayDates(this)');
 		$holiday_group->setRequired(true);
 		$holiday_group->addValidator('NotEmpty', false, array('messages' => 'Please select holiday group.'));
 			
 						
 		$submit = new Zend_Form_Element_Submit('submit');
+        $submit->setAttrib('class', 'btn btn-primary pull-right');
 		$submit->setAttrib('id', 'submitbutton');
 		$submit->setLabel('Save');
 		

@@ -9568,7 +9568,11 @@
     <Content Include="public\media_new\css\animate\animate.min.css" />
     <Content Include="public\media_new\css\blueimp\blueimp-gallery.min.css" />
     <Content Include="public\media_new\css\bootstrap\bootstrap.css.map" />
-    <Content Include="public\media_new\css\bootstrap\bootstrap.min.css" />
+    <Content Include="public\media_new\css\bootstrap\bootstrap.css" />
+    <Content Include="public\media_new\css\bootstrap\bootstrap.min.css">
+      <SubType>Content</SubType>
+      <DependentUpon>public\media_new\css\bootstrap\bootstrap.css</DependentUpon>
+    </Content>
     <Content Include="public\media_new\css\bootstrap\bootstrap_3.3.1.min.css" />
     <Content Include="public\media_new\css\bootstrap\bootstrap_3.3.2.min.css" />
     <Content Include="public\media_new\css\codemirror\codemirror.css" />
@@ -10197,6 +10201,7 @@
     <Content Include="public\media_new\js\plugins\fullcalendar\lang\zh-cn.js" />
     <Content Include="public\media_new\js\plugins\fullcalendar\lang\zh-tw.js" />
     <Content Include="public\media_new\js\plugins\highlight\jquery.highlight-4.js" />
+    <Content Include="public\media_new\js\plugins\hrms.js" />
     <Content Include="public\media_new\js\plugins\icheck\icheck.min.js" />
     <Content Include="public\media_new\js\plugins\ion\ion.rangeSlider.min.js" />
     <Content Include="public\media_new\js\plugins\jquery-validation\additional\accept.js" />

@@ -63,13 +63,13 @@ if(!empty($this->employeedata))
  } 
 ?>
 
-<div class="right-block-data right-over-border">
+<div class="panel panel-default">
 	<div id="error_message" style="display:none;"></div>
 	<form name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
 		<?php echo $this->form->id;
           echo $this->form->user_id; 
 		?>
-        <div class="panel-body form-group-separated">
+        <div class="panel-body">
 
             <div class="row">
                 <div class="col-md-6">
@@ -172,10 +172,11 @@ if(!empty($this->employeedata))
 				<?php if(!empty($this->identitydocument)) {
 						$mandatory = '';
 					?>
-				
-				        <div class="separetor-heading">Identity Documents</div>
 
-				  <div id = 'parent'>
+    
+
+				  <div id = 'parent' class ='panel-body'>
+            <h3>Identity Documents</h3>
 				        <?php for($i=0;$i<sizeof($this->identitydocument);$i++){
 				        ?>
 				         

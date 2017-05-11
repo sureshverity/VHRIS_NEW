@@ -196,9 +196,9 @@ class Zend_View_Helper_Employeegrid extends Zend_View_Helper_Abstract {
 			if($dataArray['menuName'] !='')
 			  $menunamestr = $dataArray['menuName'];
 			
-			$viewpopup_str = '<a onclick="displaydeptform(\''.BASE_URL.$dataArray['objectname'].'/'.$viewaction.'/id/{{id}}'.$con.'/popup/1\',\''.$menunamestr.'\')" name="{{id}}" class="sprite view"  title=\'View\'></a>';
-			$editpopup_str = '<a onclick="displaydeptform(\''.BASE_URL.$dataArray['objectname'].'/'.$editaction.'/id/{{id}}'.$con.'/popup/1\',\''.$menunamestr.'\')" name="{{id}}" class="sprite edit"  title=\'Edit\' ></a>';
-			$deletepopup_str = '<a name="{{id}}" onclick= changeEmployeestatus(\''.$dataArray['objectname'].'\',\'{{id}}\',\''.$msgdta.'\',\''.$dataArray['userid'].'\')	href= javascript:void(0) title=\'Delete\' class="sprite delete" ></a>';
+			$viewpopup_str = '<a onclick="displaydeptform(\''.BASE_URL.$dataArray['objectname'].'/'.$viewaction.'/id/{{id}}'.$con.'/popup/1\',\''.$menunamestr.'\')" name="{{id}}" class="btn btn-default btn-condensed"  title=\'View\'><span class="fa fa-eye"></span></a>';
+			$editpopup_str = '<a onclick="displaydeptform(\''.BASE_URL.$dataArray['objectname'].'/'.$editaction.'/id/{{id}}'.$con.'/popup/1\',\''.$menunamestr.'\')" name="{{id}}" class="btn btn-default btn-condensed"  title=\'Edit\' ><span class="fa fa-pencil"></span></a>';
+			$deletepopup_str = '<a name="{{id}}" onclick= changeEmployeestatus(\''.$dataArray['objectname'].'\',\'{{id}}\',\''.$msgdta.'\',\''.$dataArray['userid'].'\')	href= javascript:void(0) title=\'Delete\' class="btn btn-default btn-condensed" ><span class="fa fa-times"></span></a>';
 			
 			
 			if(!in_array('view',$actions_arr) && !in_array('edit',$actions_arr) && !in_array('delete',$actions_arr))
@@ -206,9 +206,9 @@ class Zend_View_Helper_Employeegrid extends Zend_View_Helper_Abstract {
 				if($dataArray['objectname'] == 'processes')
 				{					
 					 $extra['action'] = array('name' => 'edit', 'value' =>'<div class="grid-action-align">
-								<a onclick="displaydeptform(\''.BASE_URL.$dataArray['objectname'].'/'.$viewaction.'/id/{{id}}'.$con.'/popup/1\',\''.$menunamestr.'\')" name="{{id}}" class="sprite view"  title=\'View\'></a>
-								<a onclick="displaydeptform(\''.BASE_URL.$dataArray['objectname'].'/'.$editaction.'/id/{{id}}'.$con.'/popup/1\',\''.$menunamestr.'\')" name="{{id}}" class="sprite edit"  title=\'Edit\' ></a>
-								<a name="{{id}}" onclick= changeEmployeestatus(\''.$dataArray['objectname'].'\',\'{{id}}\',\''.$msgdta.'\',\''.$dataArray['userid'].'\')	href= javascript:void(0) title=\'Delete\' class="sprite delete" ></a>
+								<a onclick="displaydeptform(\''.BASE_URL.$dataArray['objectname'].'/'.$viewaction.'/id/{{id}}'.$con.'/popup/1\',\''.$menunamestr.'\')" name="{{id}}" class="btn btn-default btn-condensed"  title=\'View\'><span class="fa fa-eye"></span></a>
+								<a onclick="displaydeptform(\''.BASE_URL.$dataArray['objectname'].'/'.$editaction.'/id/{{id}}'.$con.'/popup/1\',\''.$menunamestr.'\')" name="{{id}}" class="btn btn-default btn-condensed"  title=\'Edit\' ><span class="fa fa-pencil"></span></a>
+								<a name="{{id}}" onclick= changeEmployeestatus(\''.$dataArray['objectname'].'\',\'{{id}}\',\''.$msgdta.'\',\''.$dataArray['userid'].'\')	href= javascript:void(0) title=\'Delete\' class="btn btn-default btn-condensed" ><span class="fa fa-times"></span></a>
 							</div>'); 
 				  }
 				  else 
@@ -228,15 +228,15 @@ class Zend_View_Helper_Employeegrid extends Zend_View_Helper_Abstract {
 		else
 		{
 			$formgridVal = '';
-			            $view_str = '<a href= "'.BASE_URL.$dataArray['objectname'].'/view/id/{{id}}" name="{{id}}" class="sprite view"  title=\'View\'></a>'; 
-                        $edit_str = '<a href= "'.BASE_URL.$dataArray['objectname'].'/edit/id/{{id}}" name="{{id}}" class="sprite edit"  title=\'Edit\'></a>';
+			            $view_str = '<a href= "'.BASE_URL.$dataArray['objectname'].'/view/id/{{id}}" name="{{id}}" class="btn btn-default btn-condensed"  title=\'View\'><span class="fa fa-eye"></span></a>'; 
+                        $edit_str = '<a href= "'.BASE_URL.$dataArray['objectname'].'/edit/id/{{id}}" name="{{id}}" class="btn btn-default btn-condensed"  title=\'Edit\'><span class="fa fa-pencil"></span></a>';
 						if($dataArray['objectname'] == 'employee')
 						{
 							
 							$delete_str  = '';
 						}
 						else
-                        $delete_str = '<a name="{{id}}" onclick= changeEmployeestatus(\''.$dataArray['objectname'].'\',\'{{id}}\',\''.$msgdta.'\',\''.$dataArray['userid'].'\')	href= javascript:void(0) title=\'Delete\' class="sprite delete" ></a>';
+                        $delete_str = '<a name="{{id}}" onclick= changeEmployeestatus(\''.$dataArray['objectname'].'\',\'{{id}}\',\''.$msgdta.'\',\''.$dataArray['userid'].'\')	href= javascript:void(0) title=\'Delete\' class="btn btn-default btn-condensed" ><span class="fa fa-times"></span></a>';
 			
 						if(!in_array('view',$actions_arr) && !in_array('edit',$actions_arr) && !in_array('delete',$actions_arr))
 						{
@@ -350,7 +350,7 @@ class Zend_View_Helper_Employeegrid extends Zend_View_Helper_Abstract {
 			}
 			
 			
-			$output ="<div class='table-header'><span>".$menuName."</span><input type='button'   title = 'Add' onclick='displaydeptform(\"".BASE_URL.$name.'/'.$popupaction."/$con/popup/1\",\"".$menunamestr."\")' value='Add Record' class='sprite addrecord' /></div>";
+			$output ="<div class='panel panel-default'><div class='panel-heading'><h3 class='panel-title'>".$menuName."</h3><input type='button'   title = 'Add' onclick='displaydeptform(\"".BASE_URL.$name.'/'.$popupaction."/$con/popup/1\",\"".$menunamestr."\")' value='Add Record' class='sprite addrecord' /></div>";
 		}
 		else
 		{	
@@ -358,20 +358,20 @@ class Zend_View_Helper_Employeegrid extends Zend_View_Helper_Abstract {
 			if($name == "employee" && $action == "edit")
 			{	
 				$actionStr = 'add';
-				$output ="<div class='table-header'><span>".$menuName."</span><input type='button' title = 'Add' onclick='window.location.href=\"".BASE_URL.$name.'/'.$actionStr."\"' value='Add Record' class='sprite addrecord' /></div>";
+				$output ="<div class='panel panel-default'><div class='panel-heading'><h3 class='panel-title'>".$menuName."</h3><input type='button' title = 'Add' onclick='window.location.href=\"".BASE_URL.$name.'/'.$actionStr."\"' value='Add Record' class='sprite addrecord' /></div>";
 			}
 			else
 			{	
-				$output ="<div class='table-header'><span>".$menuName."</span><input type='button' title = 'Add' onclick='window.location.href=\"".BASE_URL.$name.'/'.$action."\"' value='Add Record' class='sprite addrecord' /></div>";
+				$output ="<div class='panel panel-default'><div class='panel-heading'><h3 class='panel-title'>".$menuName."</h3><input type='button' title = 'Add' onclick='window.location.href=\"".BASE_URL.$name.'/'.$action."\"' value='Add Record' class='sprite addrecord' /></div>";
 			}
 		} 
 		
 		if($addpermission == 'false')
 		{		 
-		  $output ="<div class='table-header'><span>".$menuName."</span></div>";
+		  $output ="<div class='panel panel-default'><div class='panel-heading'><h3 class='panel-title'>".$menuName."</h3></div>";
 		}
 		$output .="<div id='".$name."' class='details_data_display_block newtablegrid'>";
-		$output .= "<table class='grid' align='center'  width='100%' cellspacing='0' cellpadding='4' border='0'><thead><tr>";
+		$output .= "<table class='table table-striped' align='center'  width='100%' cellspacing='0' cellpadding='4' border='0'><thead><tr>";
 		// this foreach loop display the column header  in �th� tag.
 		$colinr = 0;
 		
@@ -499,7 +499,7 @@ class Zend_View_Helper_Employeegrid extends Zend_View_Helper_Abstract {
 								
 							}
 							else
-								$output .= "<input tabIndex=$tabindx type='text' name='$name' id='$key' style='$display' class='searchtxtbox_$name table_inputs grid_search_inputs' value='$sText' onkeydown='getsearchdata(\"$name\",\"$conText\",\"$key\",event,\"text\")' />";
+								$output .= "<input tabIndex=$tabindx type='text' name='$name' id='$key' style='$display' class='form-control searchtxtbox_$name table_inputs grid_search_inputs' value='$sText' onkeydown='getsearchdata(\"$name\",\"$conText\",\"$key\",event,\"text\")' />";
 						}
 					}
 				}  else {
@@ -525,7 +525,7 @@ class Zend_View_Helper_Employeegrid extends Zend_View_Helper_Abstract {
 		$ii=0;
                 
 		foreach($paginator as $p) {
-			$cell_color = ($ii % 2 == 0 ? "row1" : "row2");
+			$cell_color = ($ii % 2 == 0 ? "odd" : "even");
 			$ii++;$bodyCount = 0;
 			$output.="<tr onclick='selectrow($name,this);' class='$cell_color'>";
 			// Reset Fields Array to Top
@@ -630,8 +630,8 @@ class Zend_View_Helper_Employeegrid extends Zend_View_Helper_Abstract {
 									  alwaysVisible: false,
 									  start: 'left',
 									  position: 'bottom',
-									 
-									}).css({ background: '#ccc', paddingBottom: '10px' }); </script>";
+									 width: '750px'
+									}).css({ background: '#fff'}); </script>";
 		$output .= "<script type='text/javascript'>
 						var id = $('#columnId').val();
 						var coldata = $('#'+id).val();
