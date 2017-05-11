@@ -65,8 +65,9 @@ class Default_Form_positions extends Zend_Form
 		$jobtitleid->addValidator('NotEmpty', false, array('messages' => 'Please select job title.'));		
    	
 		$description = new Zend_Form_Element_Textarea('description');
-        $description->setAttrib('rows', 10);
+        $description->setAttrib('rows', 5);
         $description->setAttrib('cols', 50);
+        $description->setAttrib("class", "form-control");
 		$description ->setAttrib('maxlength', '200');
 
         $submit = new Zend_Form_Element_Submit('submit');
