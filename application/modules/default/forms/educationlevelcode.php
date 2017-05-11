@@ -35,6 +35,7 @@ class Default_Form_educationlevelcode extends Zend_Form
         $educationlevelcode->setAttrib('maxLength', 20);
         
         $educationlevelcode->setRequired(true);
+        $educationlevelcode->setAttrib("class", "form-control");
         $educationlevelcode->addValidator('NotEmpty', false, array('messages' => 'Please enter education level.'));
 		$educationlevelcode->addValidator("regex",true,array(                           
 							   
@@ -52,12 +53,14 @@ class Default_Form_educationlevelcode extends Zend_Form
         $educationlevelcode->getValidator('Db_NoRecordExists')->setMessage('Education level already exists.');		
    	
 		$description = new Zend_Form_Element_Textarea('description');
-        $description->setAttrib('rows', 10);
-        $description->setAttrib('cols', 50);
+                $description->setAttrib("class", "form-control");
+        $description->setAttrib('rows', 4);
+        $description->setAttrib('cols', 30);
 		$description ->setAttrib('maxlength', '200');
 
         $submit = new Zend_Form_Element_Submit('submit');
 		$submit->setAttrib('id', 'submitbutton');
+                 $submit->setAttrib("class", "btn btn-primary pull-right");
 		$submit->setLabel('Save');
 
 		 $this->addElements(array($id,$educationlevelcode,$description,$submit));

@@ -35,6 +35,7 @@ class Default_Form_militaryservice extends Zend_Form
         $militaryservicetype->setAttrib('maxLength', 20);
         $militaryservicetype->addFilter(new Zend_Filter_StringTrim());
         $militaryservicetype->setRequired(true);
+        $militaryservicetype->setAttrib("class", "form-control");
         $militaryservicetype->addValidator('NotEmpty', false, array('messages' => 'Please enter military service type.'));  
 		$militaryservicetype->addValidators(array(
 						 array(
@@ -57,12 +58,14 @@ class Default_Form_militaryservice extends Zend_Form
         $militaryservicetype->getValidator('Db_NoRecordExists')->setMessage('Military service type already exists.');
 		
 		$description = new Zend_Form_Element_Textarea('description');
-        $description->setAttrib('rows', 10);
-        $description->setAttrib('cols', 50);
+        $description->setAttrib('rows', 4);
+        $description->setAttrib('cols', 30);
+        $description->setAttrib("class", "form-control");
 		$description ->setAttrib('maxlength', '200');
 
         $submit = new Zend_Form_Element_Submit('submit');
 		 $submit->setAttrib('id', 'submitbutton');
+                 $submit->setAttrib("class", "btn btn-primary pull-right");
 		 $submit->setLabel('Save');
 
 		$url = "'gender/saveupdate/format/json'";

@@ -33,7 +33,7 @@ class Default_Form_attendancestatuscode extends Zend_Form
 		
 		$attendancestatuscode = new Zend_Form_Element_Text('attendancestatuscode');
         $attendancestatuscode->setAttrib('maxLength', 20);
-        //$attendancestatuscode->addFilter(new Zend_Filter_StringTrim());
+        $attendancestatuscode->setAttrib("class", "form-control");
         $attendancestatuscode->setRequired(true);
         $attendancestatuscode->addValidator('NotEmpty', false, array('messages' => 'Please enter attendance status.'));  
 		$attendancestatuscode->addValidator("regex",true,array(
@@ -55,12 +55,14 @@ class Default_Form_attendancestatuscode extends Zend_Form
 		
    	
 		$description = new Zend_Form_Element_Textarea('description');
-        $description->setAttrib('rows', 10);
-        $description->setAttrib('cols', 50);
+                $description->setAttrib("class", "form-control");
+        $description->setAttrib('rows', 4);
+        $description->setAttrib('cols', 30);
 		$description ->setAttrib('maxlength', '200');
 
         $submit = new Zend_Form_Element_Submit('submit');
 		$submit->setAttrib('id', 'submitbutton');
+                $submit->setAttrib("class", "btn btn-primary pull-right");
 		$submit->setLabel('Save');
 
 		 $this->addElements(array($id,$attendancestatuscode,$description,$submit));

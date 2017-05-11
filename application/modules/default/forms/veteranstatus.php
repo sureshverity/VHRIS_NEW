@@ -33,6 +33,7 @@ class Default_Form_veteranstatus extends Zend_Form
 		
 		$veteranstatus = new Zend_Form_Element_Text('veteranstatus');
         $veteranstatus->setAttrib('maxLength', 20);
+         $veteranstatus->setAttrib("class", "form-control");
         $veteranstatus->setRequired(true);
         $veteranstatus->addValidator('NotEmpty', false, array('messages' => 'Please enter veteran status.'));  
 		$veteranstatus->addValidators(array(
@@ -56,12 +57,14 @@ class Default_Form_veteranstatus extends Zend_Form
         $veteranstatus->getValidator('Db_NoRecordExists')->setMessage('Veteran status already exists.');
 		
 		$description = new Zend_Form_Element_Textarea('description');
-        $description->setAttrib('rows', 10);
-        $description->setAttrib('cols', 50);
+        $description->setAttrib('rows', 4);
+        $description->setAttrib('cols', 30);
+         $description->setAttrib("class", "form-control");
 		$description ->setAttrib('maxlength', '200');
 
         $submit = new Zend_Form_Element_Submit('submit');
 		 $submit->setAttrib('id', 'submitbutton');
+                 $submit->setAttrib("class", "btn btn-primary pull-right");
 		 $submit->setLabel('Save');
 
 		$url = "'gender/saveupdate/format/json'";

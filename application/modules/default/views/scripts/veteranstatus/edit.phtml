@@ -33,26 +33,33 @@ if($this->ermsg !='')
 {
 sapp_Global::generateClientValidations($this->form);?>
 <div id="error_message" style="display:none;"></div>
-
-<form name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
-		<div class="form_cntr_block"><?php echo $this->form->id; ?>
-        <div class="total-form-controller">
-		    <div class="new-form-ui clearb">
-			  <label class="required">Veteran Status <img class="tooltip" title="Ex: Disabled Veteran, Protected Veteran" src="<?php echo MEDIA_PATH;?>images/help.png"></label>
-			<div class="division"><?php echo $this->form->veteranstatus; ?></div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">Veteran Status</div>
+    </div>
+<form class="form-horizontal" name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
+		<?php echo $this->form->id; ?>
+         <div class="panel-body"> 
+                    <div class="row">                                       
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-3 control-label required">Veteran Status <img class="tooltip" title="Ex: Disabled Veteran, Protected Veteran" src="<?php echo MEDIA_PATH;?>images/help.png"></label>
+			<div class="col-md-9"><?php echo $this->form->veteranstatus; ?></div>
 			<?php if(isset($this->msgarray['veteranstatus'])){?>
 			   <span class="errors" id="errors-<?php echo $this->form->veteranstatus->getId(); ?>"><?php echo $this->msgarray['veteranstatus'];?></span>
 			<?php }?>
 			</div>
 			
-			<div class="new-form-ui clearb textareaheight">
-			  <label>Description</label>
-			<div class="division"><?php echo $this->form->description; ?></div>
+			<div class="form-group">
+                        <label class="col-md-3 control-label">Description</label>
+			<div class="col-md-9"><?php echo $this->form->description; ?></div>
 			</div>
-		<div class="new-form-ui-submit">
+		</div></div></div>
+		<div class="panel-footer">
 		<?php echo $this->form->submit; ?>
-		<button onclick="window.location.href='<?php echo BASE_URL; ?>veteranstatus';" type="button" id="Cancel" name="Cancel">Cancel</button>
+                    <button onclick="window.location.href='<?php echo BASE_URL; ?>veteranstatus';" type="button" id="Cancel" class="btn btn-danger" name="Cancel">Cancel</button>
 		</div>
-</div></div>
+
 </form>
+</div>
 <?php }?>

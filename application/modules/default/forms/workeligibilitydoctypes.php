@@ -33,6 +33,7 @@ class Default_Form_workeligibilitydoctypes extends Zend_Form
 		
 		$documenttype = new Zend_Form_Element_Text('documenttype');
         $documenttype->setAttrib('maxLength', 50);
+        $documenttype->setAttrib("class", "form-control");
         $documenttype->setRequired(true);
         $documenttype->addValidator('NotEmpty', false, array('messages' => 'Please enter document type.'));  
 		$documenttype->addValidator("regex",true,array(
@@ -50,6 +51,7 @@ class Default_Form_workeligibilitydoctypes extends Zend_Form
         $documenttype->getValidator('Db_NoRecordExists')->setMessage('Document type already exists.');	
 
         $issuingauthority = new Zend_Form_Element_Select('issuingauthority');
+        $issuingauthority->setAttrib("class", "form-control select");
         $issuingauthority->setRegisterInArrayValidator(false);
 		$issuingauthority->setMultiOptions(array(
                             ''=>'Select issuing authority',		
@@ -61,12 +63,14 @@ class Default_Form_workeligibilitydoctypes extends Zend_Form
 		$issuingauthority->addValidator('NotEmpty', false, array('messages' => 'Please select issuing authority.'));		
    	
 		$description = new Zend_Form_Element_Textarea('description');
-        $description->setAttrib('rows', 10);
-        $description->setAttrib('cols', 50);
+        $description->setAttrib('rows', 4);
+        $description->setAttrib('cols', 30);
+         $description->setAttrib("class", "form-control");
 		$description ->setAttrib('maxlength', '200');
 
         $submit = new Zend_Form_Element_Submit('submit');
 		$submit->setAttrib('id', 'submitbutton');
+                $submit->setAttrib("class", "btn btn-primary pull-right");
 		$submit->setLabel('Save');
 
 		 $this->addElements(array($id,$documenttype,$issuingauthority,$description,$submit));

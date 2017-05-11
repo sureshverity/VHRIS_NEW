@@ -33,50 +33,69 @@ if($this->ermsg !='')
 else
 {	sapp_Global::generateClientValidations($this->form);?>
 <div id="error_message" style="display:none;"></div>
-
-<form name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">Leave Type</div>
+    </div>
+<form  class="form-horizontal" name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
 		<?php echo $this->form->id; ?>
-        <div class="total-form-controller">
-		    <div class="new-form-ui">
-			  <label class="required">Leave Type <img class="tooltip" title="Ex: Sick Leave, Pregnancy-Disability and Child Care Leave" src="<?php echo MEDIA_PATH;?>images/help.png"></label>
-			<div class="division"><?php echo $this->form->leavetype; ?></div>
+         <div class="panel-body"> 
+                    <div class="row">                                       
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Leave Type <img class="tooltip" title="Ex: Sick Leave, Pregnancy-Disability and Child Care Leave" src="<?php echo MEDIA_PATH;?>images/help.png"></label>
+			<div class="col-md-9"><?php echo $this->form->leavetype; ?></div>
 			<?php if(isset($this->msgarray['leavetype'])){?>
 			   <span class="errors" id="errors-<?php echo $this->form->leavetype->getId(); ?>"><?php echo $this->msgarray['leavetype'];?></span>
 			<?php }?>
 			</div>
-			
-			<div class="new-form-ui">
-			  <label class="required">Number of Days</label>
-			<div class="division"><?php echo $this->form->numberofdays; ?></div>
-			<?php if(isset($this->msgarray['numberofdays'])){?>
-			   <span class="errors" id="errors-<?php echo $this->form->numberofdays->getId(); ?>"><?php echo $this->msgarray['numberofdays'];?></span>
-			<?php }?>
-			</div>
-			
-			<div class="new-form-ui">
-			  <label >Leave Short Code</label>
-			<div class="division"><?php echo $this->form->leavecode; ?></div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Leave Short Code</label>
+			<div class="col-md-9"><?php echo $this->form->leavecode; ?></div>
 			<?php if(isset($this->msgarray['leavecode'])){?>
 			   <span class="errors" id="errors-<?php echo $this->form->leavecode->getId(); ?>"><?php echo $this->msgarray['leavecode'];?></span>
 			<?php }?>
 			</div>
-			<div class="new-form-ui">
-			  <label >Is Pre Allocated</label>
-			<div class="division"><?php echo $this->form->leavepreallocated; ?></div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Is Deductible</label>
+			<div class="col-md-9"><?php echo $this->form->leavepredeductable; ?></div>
 			</div>
-			<div class="new-form-ui">
-			  <label >Is Deductible</label>
-			<div class="division"><?php echo $this->form->leavepredeductable; ?></div>
+                    
+                    
+                    </div>
+                     <div class="col-md-6">
+                          <div class="form-group">
+                        <label class="col-md-3 control-label">Number of Days</label>
+			<div class="col-md-9"><?php echo $this->form->numberofdays; ?></div>
+			<?php if(isset($this->msgarray['numberofdays'])){?>
+			   <span class="errors" id="errors-<?php echo $this->form->numberofdays->getId(); ?>"><?php echo $this->msgarray['numberofdays'];?></span>
+			<?php }?>
 			</div>
+                         <div class="form-group">
+                        <label class="col-md-3 control-label">Is Pre Allocated</label>
+			<div class="col-md-9"><?php echo $this->form->leavepreallocated; ?></div>
+			</div>
+                         <div class="form-group">
+                        <label class="col-md-3 control-label">Description</label>
+			<div class="col-md-9"><?php echo $this->form->description; ?></div>
+			</div>
+                         
+                     </div>
+                    
+			
+			
+			
+			
+			
+			
 					
-			<div class="new-form-ui textareaheight">
-			  <label>Description</label>
-			<div class="division"><?php echo $this->form->description; ?></div>
-			</div>
-		<div class="new-form-ui-submit">
+			
+		</div></div>
+		<div class="panel-footer">
 		<?php echo $this->form->submit; ?>
-		<button onclick="window.location.href='<?php echo BASE_URL; ?>employeeleavetypes';" type="button" id="Cancel" name="Cancel">Cancel</button>
+                    <button onclick="window.location.href='<?php echo BASE_URL; ?>employeeleavetypes';" type="button" class="btn btn-danger" id="Cancel" name="Cancel">Cancel</button>
 		</div>
-</div>
+
 </form>
+</div>
 <?php	}	?>

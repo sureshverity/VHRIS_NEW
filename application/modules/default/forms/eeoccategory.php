@@ -33,7 +33,7 @@ class Default_Form_eeoccategory extends Zend_Form
 		
 		$eeoccategory = new Zend_Form_Element_Text('eeoccategory');
         $eeoccategory->setAttrib('maxLength', 20);
-        
+        $eeoccategory->setAttrib("class", "form-control");
         $eeoccategory->setRequired(true);
         $eeoccategory->addValidator('NotEmpty', false, array('messages' => 'Please enter EEOC category.'));
 		$eeoccategory->addValidator("regex",true,array(
@@ -54,12 +54,14 @@ class Default_Form_eeoccategory extends Zend_Form
         	
       
 		$description = new Zend_Form_Element_Textarea('description');
-        $description->setAttrib('rows', 10);
-        $description->setAttrib('cols', 50);
+        $description->setAttrib('rows', 4);
+        $description->setAttrib('cols', 30);
+        $description->setAttrib("class", "form-control");
 		$description ->setAttrib('maxlength', '200');
 
         $submit = new Zend_Form_Element_Submit('submit');
 		$submit->setAttrib('id', 'submitbutton');
+                $submit->setAttrib("class", "btn btn-primary pull-right");
 		$submit->setLabel('Save');
 
 		 $this->addElements(array($id,$eeoccategory,$description,$submit));

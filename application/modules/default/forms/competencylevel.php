@@ -33,7 +33,7 @@ class Default_Form_competencylevel extends Zend_Form
 		
 		$competencylevel = new Zend_Form_Element_Text('competencylevel');
         $competencylevel->setAttrib('maxLength', 20);
-        
+        $competencylevel->setAttrib("class", "form-control");
         $competencylevel->setRequired(true);
         $competencylevel->addValidator('NotEmpty', false, array('messages' => 'Please enter competency level.')); 
 		$competencylevel->addValidator("regex",true,array(
@@ -55,12 +55,14 @@ class Default_Form_competencylevel extends Zend_Form
 		
    	
 		$description = new Zend_Form_Element_Textarea('description');
-        $description->setAttrib('rows', 10);
-        $description->setAttrib('cols', 50);
+        $description->setAttrib('rows', 4);
+        $description->setAttrib("class", "form-control");
+        $description->setAttrib('cols', 30);
 		$description ->setAttrib('maxlength', '200');
 
         $submit = new Zend_Form_Element_Submit('submit');
 		$submit->setAttrib('id', 'submitbutton');
+                 $submit->setAttrib("class", "btn btn-primary pull-right");
 		$submit->setLabel('Save');
 
 		 $this->addElements(array($id,$competencylevel,$description,$submit));

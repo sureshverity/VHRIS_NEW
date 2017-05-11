@@ -35,6 +35,7 @@ class Default_Form_employeeleavetypes extends Zend_Form
         $leavetype->setAttrib('maxLength', 50);
         $leavetype->addFilter(new Zend_Filter_StringTrim());
         $leavetype->setRequired(true);
+        $leavetype->setAttrib("class", "form-control");
         $leavetype->addValidator('NotEmpty', false, array('messages' => 'Please enter leave type.'));
 		$leavetype->addValidators(array(
 						 array(
@@ -61,6 +62,7 @@ class Default_Form_employeeleavetypes extends Zend_Form
         $numberofdays->setAttrib('maxLength', 2);
         $numberofdays->addFilter(new Zend_Filter_StringTrim());
         $numberofdays->setRequired(true);
+        $numberofdays->setAttrib("class", "form-control");
         $numberofdays->addValidator('NotEmpty', false, array('messages' => 'Please enter number of days.')); 
 		$numberofdays->addValidator("regex",true,array(
                            'pattern'=>'/^[0-9]+$/', 
@@ -72,6 +74,7 @@ class Default_Form_employeeleavetypes extends Zend_Form
 		
 		$leavecode = new Zend_Form_Element_Text('leavecode');
         $leavecode->setAttrib('maxLength', 50);
+        $leavecode->setAttrib("class", "form-control");
         $leavecode->addFilter(new Zend_Filter_StringTrim());
 		$leavecode->addValidators(array(
 						 array(
@@ -95,6 +98,7 @@ class Default_Form_employeeleavetypes extends Zend_Form
         
 		$leavepreallocated = new Zend_Form_Element_Select('leavepreallocated');
 		$leavepreallocated->setRegisterInArrayValidator(false);
+                $leavepreallocated->setAttrib("class", "form-control select");
 		$leavepreallocated->setMultiOptions(array(							
 							'1'=>'Yes' ,
 							'2'=>'No',
@@ -106,14 +110,16 @@ class Default_Form_employeeleavetypes extends Zend_Form
 							'1'=>'Yes' ,
 							'2'=>'No',
 							));		
-          	
+          	$leavepredeductable->setAttrib("class", "form-control select");
 		$description = new Zend_Form_Element_Textarea('description');
-        $description->setAttrib('rows', 10);
-        $description->setAttrib('cols', 50);
-		$description ->setAttrib('maxlength', '200');
-
+        $description->setAttrib('rows', 4);
+        $description->setAttrib('cols', 30);
+	$description ->setAttrib('maxlength', '200');
+        $description->setAttrib("class", "form-control");
+        
         $submit = new Zend_Form_Element_Submit('submit');
 		$submit->setAttrib('id', 'submitbutton');
+                $submit->setAttrib("class", "btn btn-primary pull-right");
 		$submit->setLabel('Save');
 
 		 $this->addElements(array($id,$leavetype,$numberofdays,$leavecode,$leavepreallocated,$leavepredeductable,$description,$submit));

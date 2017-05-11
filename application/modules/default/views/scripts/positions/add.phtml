@@ -36,12 +36,16 @@ if ($this->emptyFlag != 0) {
             <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
         </ul>
     </div>
-    <div class="panel-body"> 
-        <form name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction(); ?>" method="<?php echo $this->form->getMethod(); ?>">
+   <div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">Positions</div>
+    </div>
+        <form class="form-horizontal" name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction(); ?>" method="<?php echo $this->form->getMethod(); ?>">
             <?php
             echo $this->form->id;
             echo $this->form->emptyFlag;
             ?>
+             <div class="panel-body"> 
             <div class="row">                                       
                 <div class="col-md-6">
                     <div class="form-group">
@@ -82,7 +86,7 @@ if ($this->emptyFlag != 0) {
     </div>
 
 </form>
-
+   </div>
 <div id="jobtitlesContainer"  style="display: none; overflow: auto;">
     <div class="heading">
         <a href="javascript:void(0)">

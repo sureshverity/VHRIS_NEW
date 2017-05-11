@@ -48,36 +48,42 @@ else
 	
 <?php } ?>
 <div id="error_message" style="display:none;"></div>
-
-<form name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
-		<div class="form_cntr_block"><?php echo $this->form->id; ?>
-        <div class="total-form-controller">
-		    <div class="new-form-ui clearb">
-			  <label class="required">Document Type <img class="tooltip" title="Ex: U.S.Passport, Permanent Resident Card" src="<?php echo MEDIA_PATH;?>images/help.png"></label>
-			<div class="division"><?php echo $this->form->documenttype; ?></div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">Work Eligibility Document</div>
+    </div>
+<form class="form-horizontal" name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
+		<?php echo $this->form->id; ?>
+       <div class="panel-body"> 
+                    <div class="row">                                       
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-3 control-label required">Document Type <img class="tooltip" title="Ex: U.S.Passport, Permanent Resident Card" src="<?php echo MEDIA_PATH;?>images/help.png"></label>
+			<div class="col-md-9"><?php echo $this->form->documenttype; ?></div>
 			<?php if(isset($this->msgarray['documenttype'])){?>
 			   <span class="errors" id="errors-<?php echo $this->form->documenttype->getId(); ?>"><?php echo $this->msgarray['documenttype'];?></span>
 			<?php }?>
 			</div>
 			
-			<div class="new-form-ui clearb">
-			  <label class="required">Issuing Authority</label>
-			<div class="division"><?php echo $this->form->issuingauthority; ?></div>
+			 <div class="form-group">
+                        <label class="col-md-3 control-label required">Issuing Authority</label>
+			<div class="col-md-9"><?php echo $this->form->issuingauthority; ?></div>
 			<?php if(isset($this->msgarray['issuingauthority'])){?>
 			   <span class="errors" id="errors-<?php echo $this->form->issuingauthority->getId(); ?>"><?php echo $this->msgarray['issuingauthority'];?></span>
 			<?php }?>
 			</div>
 					
-			<div class="new-form-ui clearb textareaheight">
-			  <label>Description</label>
-			<div class="division"><?php echo $this->form->description; ?></div>
+			 <div class="form-group">
+                        <label class="col-md-3 control-label">Description</label>
+			<div class="col-md-9"><?php echo $this->form->description; ?></div>
 			</div>
-		<div class="new-form-ui-submit">
+		</div></div></div>
+		<div class="panel-footer">
 		<?php echo $this->form->submit; ?>
-		<button onclick="window.location.href='<?php echo BASE_URL; ?>workeligibilitydoctypes';" type="button" id="Cancel" name="Cancel">Cancel</button>
-		</div></div>
-</div>        
+                    <button onclick="window.location.href='<?php echo BASE_URL; ?>workeligibilitydoctypes';" type="button" class="btn btn-danger" id="Cancel" name="Cancel">Cancel</button>
+		</div>
 </form>
+</div>
 <?php	}	?>
 <script type='text/javascript'>
 $(document).ready(function(){
