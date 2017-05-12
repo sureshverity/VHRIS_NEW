@@ -64,8 +64,9 @@ if(!empty($this->employeedata))
 ?>
 
 <div class="panel panel-default">
+  <div class="panel-heading"><h3 class="panel-title">Personal</h3></div>
 	<div id="error_message" style="display:none;"></div>
-	<form name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
+	<form class="form-horizontal" name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
 		<?php echo $this->form->id;
           echo $this->form->user_id; 
 		?>
@@ -165,18 +166,14 @@ if(!empty($this->employeedata))
 
                 </div>
             </div>
-        </div>
-
-
-
 				<?php if(!empty($this->identitydocument)) {
 						$mandatory = '';
 					?>
 
-    
 
-				  <div id = 'parent' class ='panel-body'>
-            <h3>Identity Documents</h3>
+          <h3>Identity Documents</h3>
+				  <div id = 'parent' class ='row'>
+            
 				        <?php for($i=0;$i<sizeof($this->identitydocument);$i++){
 				        ?>
 				         
@@ -287,7 +284,7 @@ if(!empty($this->employeedata))
 				
 			</div>
 
-			<div class="new-form-ui-submit">
+			<div class="panel-footer">
 					<?php echo $this->form->submitbutton; ?>
 			</div>  
 	</form>

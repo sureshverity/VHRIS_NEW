@@ -56,62 +56,74 @@ else
     }
 
     ?>
-<div class="right-block-data right-over-border">
+<div class="panel panel-default">
+  <div class="panel-heading"><h3 class="panel-title">Contact</h3></div>
     <div id="error_message" style="display:none;"></div>
-    <form name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
+    <form class="form-horizontal" name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
         <?php echo $this->form->id;
         echo $this->form->user_id;
         ?>
 
-
-       <div class="row">
-            <div class="col-md-6">
+        <div class="panel-body">
                 <div class="form-group">
-                    <h3>Personal Email</h3>
+                  <div class="col-md-6">
+                  <label  class="col-md-3 control-label">Personal Email</label>
                     <div class="col-md-9"><?php echo $this->form->personalemail; ?></div>
             <?php if(isset($this->msgarray['personalemail'])){?>
                 <span class="errors" id="errors-<?php echo $this->form->personalemail->getId(); ?>"><?php echo $this->msgarray['personalemail'];?></span>
             <?php }?>
-       </div> </div>  </div>
-
-        <div class="row">
-            <h3>Permanent Address</h3>
-            <div class="col-md-6">
+                  </div>
+       </div>
+          
+          <h3>Permanent Address</h3>
 
                 <div class="form-group">
+                  <div class="col-md-6">
                     <label  class="col-md-3 control-label">Street Address</label>
-                    <div class="col-md-9"><?php echo $this->form->perm_streetaddress; ?></div>
+                    <div class="col-md-9">
+                      <?php echo $this->form->perm_streetaddress; ?>
+                    </div>
                     <?php if(isset($this->msgarray['perm_streetaddress'])){?>
-                        <span class="errors" id="errors-<?php echo $this->form->perm_streetaddress->getId(); ?>"><?php echo $this->msgarray['perm_streetaddress'];?></span>
+                    <span class="errors" id="errors-"
+                      <?php echo $this->form->perm_streetaddress->getId(); ?>"><?php echo $this->msgarray['perm_streetaddress'];?>
+                    </span>
                     <?php }?>
-                </div>
-                <div class="form-group">
-                    <label  class="col-md-3 control-label">State</label>
-                    <div class="col-md-9"><?php echo $this->form->perm_state; ?>
-                        <?php if(isset($this->msgarray['perm_state'])){?>
-                            <span class="errors" id="errors-<?php echo $this->form->perm_state->getId(); ?>"><?php echo $this->msgarray['perm_state'];?></span>
-                        <?php } else {?>
-                            <span class="errors" id="errors-<?php echo $this->form->perm_state->getId(); ?>" style="display:none;"></span>
-                        <?php }?>
-
-                        <?php if(in_array('state',$this->popConfigPermission)) { ?>
-                            <span class="add-coloum" onclick="displaydeptform('<?php echo BASE_URL.'states/addnewstate' ?>','State');"> Add State</span>
-                        <?php } ?>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-3 control-label">Postal Code</label>
-                        <div class="col-md-9"><?php echo $this->form->perm_pincode; ?></div>
-                        <?php if(isset($this->msgarray['perm_pincode'])){?>
-                            <span class="errors" id="errors-<?php echo $this->form->perm_pincode->getId(); ?>"><?php echo $this->msgarray['perm_pincode'];?></span>
-                        <?php }?>
-                    </div>
-                </div>
-
-
-            </div>
+                  </div>
             <div class="col-md-6">
-                <div class="form-group"></div>
+              <label  class="col-md-3 control-label">State</label>
+              <div class="col-md-9">
+                <?php echo $this->form->perm_state; ?>
+                <?php if(isset($this->msgarray['perm_state'])){?>
+                <span class="errors" id="errors-"
+                  <?php echo $this->form->perm_state->getId(); ?>"><?php echo $this->msgarray['perm_state'];?>
+                </span>
+                <?php } else {?>
+                <span class="errors" id="errors-"
+                  <?php echo $this->form->perm_state->getId(); ?>" style="display:none;">
+                </span>
+                <?php }?>
+
+                <?php if(in_array('state',$this->popConfigPermission)) { ?>
+                <span class="add-coloum" onclick="displaydeptform('"
+                  <?php echo BASE_URL.'states/addnewstate' ?>','State');"> Add State
+                </span>
+                <?php } ?>
+              </div>
+            </div>
+            </div>
                 <div class="form-group">
+                      <div class="col-md-6">
+                        <label class="col-md-3 control-label">Postal Code</label>
+                        <div class="col-md-9">
+                          <?php echo $this->form->perm_pincode; ?>
+                        </div>
+                        <?php if(isset($this->msgarray['perm_pincode'])){?>
+                        <span class="errors" id="errors-"
+                          <?php echo $this->form->perm_pincode->getId(); ?>"><?php echo $this->msgarray['perm_pincode'];?>
+                        </span>
+                        <?php }?>
+                      </div>
+                  <div class="col-md-6">
                     <label  class="col-md-3 control-label">Country</label>
                     <div class="col-md-9"><?php echo $this->form->perm_country; ?>
                         <?php if(isset($this->msgarray['perm_country'])){?>
@@ -122,58 +134,80 @@ else
                         <?php } ?>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label  class="col-md-3 control-label">City</label>
-                    <div class="col-md-9"><?php echo $this->form->perm_city; ?>
-                        <?php if(isset($this->msgarray['perm_city'])){?>
-                            <span class="errors" id="errors-<?php echo $this->form->perm_city->getId(); ?>"><?php echo $this->msgarray['perm_city'];?></span>
-                        <?php } else {?>
-                            <span class="errors" id="errors-<?php echo $this->form->perm_city->getId(); ?>" style="display:none;"></span>
-                        <?php }?>
-
-                        <?php if(in_array('city',$this->popConfigPermission)) { ?>
-                            <span class="add-coloum" onclick="displaydeptform('<?php echo BASE_URL.'cities/addnewcity' ?>','City');"> Add City</span>
-                        <?php } ?>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-9"><?php echo $this->form->address_flag; ?>Check if permanent and current address are same.</div>
-                        <span class="errors" id="errors-<?php echo $this->form->address_flag->getId(); ?>" style="display:none;"><?php echo isset($this->msgarray['address_flag'])?$this->msgarray['address_flag']:"";?></span>
-                    </div>
-
                 </div>
-
-            </div>
-        </div>
-        <div class="row">
-            <h3>Current Address</h3>
-            <div class="col-md-6">
                 <div class="form-group">
+            <div class="col-md-6">
+              <label  class="col-md-3 control-label">City</label>
+              <div class="col-md-9">
+                <?php echo $this->form->perm_city; ?>
+                <?php if(isset($this->msgarray['perm_city'])){?>
+                <span class="errors" id="errors-"
+                  <?php echo $this->form->perm_city->getId(); ?>"><?php echo $this->msgarray['perm_city'];?>
+                </span>
+                <?php } else {?>
+                <span class="errors" id="errors-"
+                  <?php echo $this->form->perm_city->getId(); ?>" style="display:none;">
+                </span>
+                <?php }?>
+
+                <?php if(in_array('city',$this->popConfigPermission)) { ?>
+                <span class="add-coloum" onclick="displaydeptform('"
+                  <?php echo BASE_URL.'cities/addnewcity' ?>','City');"> Add City
+                </span>
+                <?php } ?>
+              </div>
+            </div>
+          </div>
+                <div class="form-group">
+                      <div class="col-md-12">
+                        <label class="checkbox" >
+                          <?php echo $this->form->address_flag; ?>Check if permanent and current address are same.
+                        </label>
+                      </div>
+                      <span class="errors" id="errors-"
+                        <?php echo $this->form->address_flag->getId(); ?>" style="display:none;"><?php echo isset($this->msgarray['address_flag'])?$this->msgarray['address_flag']:"";?>
+                      </span>
+                    </div>
+
+          <h3>Current Address</h3>
+
+                <div class="form-group">
+                  <div class="col-md-6">
                     <label  class="col-md-3 control-label">Street Address</label>
-                    <div class="col-md-9"><?php echo $this->form->current_streetaddress; ?></div>
+                    <div class="col-md-9"><?php echo $this->form->current_streetaddress; ?>
                     <?php if(isset($this->msgarray['current_streetaddress'])){?>
                         <span class="errors" id="errors-<?php echo $this->form->current_streetaddress->getId(); ?>"><?php echo $this->msgarray['current_streetaddress'];?></span>
                     <?php }?>
-                </div>
-                <div class="form-group">
-                    <label  class="col-md-3 control-label">State</label>
-                    <div class="col-md-9"><?php echo $this->form->current_state; ?>
-                        <?php if(isset($this->msgarray['current_state'])){?>
-                            <span class="errors" id="errors-<?php echo $this->form->current_state->getId(); ?>"><?php echo $this->msgarray['current_state'];?></span>
-                        <?php } else {?>
-                            <span class="errors" id="errors-<?php echo $this->form->current_state->getId(); ?>" style="display:none;"></span>
-                        <?php }?>
                     </div>
-                    <div class="form-group">
+                    </div>
+                
+            <div class="col-md-6">
+              <label  class="col-md-3 control-label">State</label>
+              <div class="col-md-9">
+                <?php echo $this->form->current_state; ?>
+                <?php if(isset($this->msgarray['current_state'])){?>
+                <span class="errors" id="errors-"
+                  <?php echo $this->form->current_state->getId(); ?>"><?php echo $this->msgarray['current_state'];?>
+                </span>
+                <?php } else {?>
+                <span class="errors" id="errors-"
+                  <?php echo $this->form->current_state->getId(); ?>" style="display:none;">
+                </span>
+                <?php }?>
+              </div>
+            </div>
+          </div>
+                <div class="form-group">
+                      <div class="col-md-6">
                         <label  class="col-md-3 control-label">Postal Code</label>
-                        <div class="col-md-9"><?php echo $this->form->current_pincode; ?></div>
+                        <div class="col-md-9"><?php echo $this->form->current_pincode; ?>
                         <?php if(isset($this->msgarray['current_pincode'])){?>
                             <span class="errors" id="errors-<?php echo $this->form->current_pincode->getId(); ?>"><?php echo $this->msgarray['current_pincode'];?></span>
                         <?php }?>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
+              
+                  <div class="col-md-6">
                     <label  class="col-md-3 control-label">Country</label>
                     <div class="col-md-9"><?php echo $this->form->current_country; ?>
                         <?php if(isset($this->msgarray['current_country'])){?>
@@ -181,7 +215,9 @@ else
                         <?php }?>
                     </div>
                 </div>
+                </div>
                 <div class="form-group">
+                  <div class="col-md-6">
                     <label  class="col-md-3 control-label">City</label>
                     <div class="col-md-9"><?php echo $this->form->current_city; ?>
                         <?php if(isset($this->msgarray['current_city'])){?>
@@ -190,43 +226,49 @@ else
                             <span class="errors" id="errors-<?php echo $this->form->current_city->getId(); ?>" style="display:none;"></span>
                         <?php }?>
                     </div>
-
+                  </div>
                 </div>
-            </div>
-        </div>
+          <h3>Emergency Details</h3>
 
-        <div class="row">
-            <h3>Emergency Details</h3>
-            <div class="col-md-6">
                 <div class="form-group">
+                  <div class="col-md-6">
                     <label  class="col-md-3 control-label">Name</label>
-                    <div class="col-md-9"><?php echo $this->form->emergency_name; ?></div>
+                    <div class="col-md-9"><?php echo $this->form->emergency_name; ?>
                     <?php if(isset($this->msgarray['emergency_name'])){?>
                         <span class="errors" id="errors-<?php echo $this->form->emergency_name->getId(); ?>"><?php echo $this->msgarray['emergency_name'];?></span>
                     <?php }?>
                 </div>
-
-                    <div class="form-group">
+                </div>
+                
+                      <div class="col-md-6">
                         <label  class="col-md-3 control-label">Number</label>
-                        <div class="col-md-9"><?php echo $this->form->emergency_number; ?></div>
+                        <div class="col-md-9">
+                          <?php echo $this->form->emergency_number; ?>
+                        </div>
                         <?php if(isset($this->msgarray['emergency_number'])){?>
-                            <span class="errors" id="errors-<?php echo $this->form->emergency_number->getId(); ?>"><?php echo $this->msgarray['emergency_number'];?></span>
+                        <span class="errors" id="errors-"
+                          <?php echo $this->form->emergency_number->getId(); ?>"><?php echo $this->msgarray['emergency_number'];?>
+                        </span>
                         <?php }?>
+                      </div>
                     </div>
-                </div>
-
-            <div class="col-md-6">
                 <div class="form-group">
+                  <div class="col-md-6">
                     <label  class="col-md-3 control-label">Email</label>
-                    <div class="col-md-9"><?php echo $this->form->emergency_email; ?></div>
-                    <?php if(isset($this->msgarray['emergency_email'])){?>
-                        <span class="errors" id="errors-<?php echo $this->form->emergency_email->getId(); ?>"><?php echo $this->msgarray['emergency_email'];?></span>
-                    <?php }?>
-                </div>
-
-                <div class="col-md-3 control-label">Work Address</div>
-                <div class="form-group">
                     <div class="col-md-9">
+                      <?php echo $this->form->emergency_email; ?>
+                    <?php if(isset($this->msgarray['emergency_email'])){?>
+                    <span class="errors" id="errors-"
+                      <?php echo $this->form->emergency_email->getId(); ?>"><?php echo $this->msgarray['emergency_email'];?>
+                    </span>
+                    <?php }?>
+                  </div>
+                </div>
+              </div>
+                <h3>Work Address</h3>
+                <div class="form-group">
+                    <div class="col-md-12">
+                      <address>
                         <?php
                         if(!empty($this->dataArray))
                         {
@@ -253,21 +295,19 @@ else
                                 echo $this->dataArray['country'].'.';
                         }
                         ?>
+                      </address>
                     </div>
                 </div>
-            </div>
-
-
-            </div>
+            
         </div>
 
 
-            <div class="new-form-ui-submit">
+            <div class="panel-footer">
                 <?php echo $this->form->submit; ?>
             </div>
     </form>
 </div>
-
+</div>
 
 
     <div id="countriesContainer"  style="display: none; overflow: auto;">

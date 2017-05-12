@@ -38,7 +38,7 @@ class Default_Form_emppersonaldetails extends Zend_Form
                 $prefix_id = new Zend_Form_Element_Select('prefix_id');
 		$prefix_id->addMultiOption('','Select Prefix');
 		$prefix_id->setLabel("Prefix");
-        $prefix_id->setAttrib("class", "form-control");
+        $prefix_id->setAttrib("class", "form-control select");
 		$prefix_id->setRegisterInArrayValidator(false);
 		$prefix_id->addValidator(new Zend_Validate_Db_RecordExists(
 										array('table' => 'main_prefix',
@@ -61,32 +61,32 @@ class Default_Form_emppersonaldetails extends Zend_Form
 		$genderid = new Zend_Form_Element_Select('genderid');
 		$genderid->addMultiOption('','Select Gender');
     	$genderid->setRegisterInArrayValidator(false);
-        $genderid->setAttrib("class", "form-control");
+        $genderid->setAttrib("class", "form-control select");
 
         $maritalstatusid = new Zend_Form_Element_Select('maritalstatusid');
 		$maritalstatusid->addMultiOption('','Select Marital Status');
         $maritalstatusid->setRegisterInArrayValidator(false);
-        $maritalstatusid->setAttrib("class", "form-control");
+        $maritalstatusid->setAttrib("class", "form-control select");
 		
 		$ethniccodeid = new Zend_Form_Element_Select('ethniccodeid');
 		$ethniccodeid->addMultiOption('','Select Ethnic Code');
 		$ethniccodeid->setLabel('Ethnic Code');
         $ethniccodeid->setRegisterInArrayValidator(false);
-        $ethniccodeid->setAttrib("class", "form-control");
+        $ethniccodeid->setAttrib("class", "form-control select");
         
 		
 
         $racecodeid = new Zend_Form_Element_Select('racecodeid');
 		$racecodeid->addMultiOption('','Select Race Code');
 		$racecodeid->setLabel('Race Code');
-        $racecodeid->setAttrib("class", "form-control");
+        $racecodeid->setAttrib("class", "form-control select");
         $racecodeid->setRegisterInArrayValidator(false);
         
 		
         
         $languageid = new Zend_Form_Element_Select('languageid');
 		$languageid->addMultiOption('','Select Language');
-        $languageid->setAttrib("class", "form-control");
+        $languageid->setAttrib("class", "form-control select");
 		$languageid->setLabel('Language');
         $languageid->setRegisterInArrayValidator(false);
         
@@ -94,11 +94,11 @@ class Default_Form_emppersonaldetails extends Zend_Form
 
         $nationalityid = new Zend_Form_Element_Select('nationalityid');
 		$nationalityid->addMultiOption('','Select Nationality');
-        $nationalityid->setAttrib("class", "form-control");
+        $nationalityid->setAttrib("class", "form-control select");
         $nationalityid->setRegisterInArrayValidator(false);
 
         $dob = new ZendX_JQuery_Form_Element_DatePicker('dob');
-		$dob->setOptions(array('class' => 'brdr_none'));	
+		$dob->setOptions(array('class' => 'brdr_none form-control'));	
 		$dob->setAttrib('readonly', 'true');
 		$dob->setAttrib('onfocus', 'this.blur()');
 		//DOB should not be current date....
