@@ -40,10 +40,14 @@ if($this->ermsg !='')
 		 	  $viewclass = '';  
 		 ?>
 			<div id="error_message" style="display:none;"></div>
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">Categories</div>
+    </div>
 			<form  class="form-horizontal" name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
-		<div class="panel-body form-group-separated">
-                <div class="row">
-                    <div class="col-md-6">
+		 <div class="panel-body"> 
+                    <div class="row">                                       
+                <div class="col-md-6">
 					<?php $this->form->getAction();?>
 			        <div class="total-form-controller <?php echo $viewclass;?>">
 			               <?php  if($this->flag!='view'){?>
@@ -55,7 +59,10 @@ if($this->ermsg !='')
                                 sapp_Helper::viewFooter();
 								}
 							 ?>	
-					<div class="new-form-ui-submit">
+					</div></div>
+		
+		</div></div>
+		<div class="panel-footer">
 					<?php echo $this->form->submit; ?>
 					<?php if($actionName == 'addpopup') { ?>
 					    <button onclick="closeiframepopup('<?php echo $this->controllername;?>','cancel');"  type="button" >Cancel</button>
@@ -66,12 +73,12 @@ if($this->ermsg !='')
                                                         <button onclick="window.location.href='<?php echo BASE_URL; ?>servicedeskdepartment';" type="button" id="Cancel" class="btn btn-danger" name="Cancel">Cancel</button>
 					<?php }?>	
 					</div>
-				</div>
 				
-				</div>
-				</div></div>
+				
+				
 			</form>
-<?php }?>
+                            </div>
+<?php }?>  
 <script language='javascript' type='text/javascript'>
 
 	<?php if($this->popup != '') { ?>
