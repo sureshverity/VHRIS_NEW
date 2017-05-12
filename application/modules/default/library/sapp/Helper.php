@@ -387,9 +387,9 @@ class sapp_Helper
     	else
     	   $labelimg = '';       		
 ?>
-        <div class="new-form-ui <?php echo $extra_class;?>">
-            <label class="<?php echo $required;?>"><?php echo $form->$element->getLabel();?> <?php echo $labelimg;?></label>
-            <div class="division"><?php echo $form->$element; ?>
+        <div class="form-group <?php echo $extra_class;?>">
+            <label class="col-md-3 control-label"<?php echo $required;?>"><?php echo $form->$element->getLabel();?> <?php echo $labelimg;?></label>
+            <div class="col-md-9"><?php echo $form->$element; ?>
                 <?php if(isset($msg_array[$element])){?>
                     <span class="errors" id="errors-<?php echo $form->$element->getId(); ?>"><?php echo $msg_array[$element];?></span>
                 <?php }?>
