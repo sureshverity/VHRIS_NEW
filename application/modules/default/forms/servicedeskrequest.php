@@ -33,7 +33,7 @@ class Default_Form_servicedeskrequest extends Zend_Form
 		$servicedeskdepartment = new Zend_Form_Element_Select('service_desk_id');
 		$servicedeskdepartment->setLabel("Category");
        // $servicedeskdepartment->setAttrib('class', 'selectoption');
-        $servicedeskdepartment->setAttrib("class", "form-control");
+        $servicedeskdepartment->setAttrib("class", "form-control select");
         $servicedeskdepartment->addMultiOption('','Select category');
         $servicedeskdepartment->setRegisterInArrayValidator(false);
         $servicedeskdepartment->setRequired(true);
@@ -66,8 +66,8 @@ class Default_Form_servicedeskrequest extends Zend_Form
 			$description = new Zend_Form_Element_Textarea('description');
 			$description->setLabel("Description");
                          $description->setAttrib("class", "form-control");
-	        $description->setAttrib('rows', 10);
-	        $description->setAttrib('cols', 50);
+	        $description->setAttrib('rows', 4);
+	        $description->setAttrib('cols', 30);
 			$description ->setAttrib('maxlength', '200');
 			
 			$submit = new Zend_Form_Element_Submit('submitbutton');
