@@ -75,7 +75,7 @@ if(empty($this->empdata)){?>
           </div>
         <div class="panel-body list-group">
           <div  class="new_docment_row form-horizontal">
-            <div class="row push-up-30 push-down-30" id="emp_doc_form">
+            <div class="row push-up-30 push-down-30" id="emp_doc_form"  style="display:none;">
             <div class="col-md-6">
               <div class="form-group">
                 <label class="col-md-3 control-label">Document</label>
@@ -98,17 +98,13 @@ if(empty($this->empdata)){?>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 push-up-30 ">
+            <div class="col-md-12 push-up-30 ">
                 <input type="hidden" name="file_original_names" id="file_original_names" value="">
                   <input type="hidden" name="file_new_names" id="file_new_names" value="">
                     <input type="hidden" name="userid" id="userid" value=""<?php echo $this->id;?>">
-                    <div class="col-md-2">
-                    <button type="button" class="btn btn-success" onclick="validateEmpDoc();">Save</button>
-                    </div>
-                      <div class="col-md-2">
-                      <button class="btn btn-danger" onclick="toggleformadd('emp_doc_form');" type="button">Cancel</button>
-                        </div
-              
+                    
+                    <button type="button" class="btn btn-primary pull-right" onclick="validateEmpDoc();">Save</button>
+                      <button class="btn btn-danger pull-left" onclick="toggleformadd('emp_doc_form');" type="button">Cancel</button>
             </div>
             </div>
           </div>

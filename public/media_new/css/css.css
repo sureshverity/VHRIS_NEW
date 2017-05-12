@@ -266,3 +266,20 @@
 .ui-dialog-titlebar-close :before {
     content: "\f00d" !important;
 }
+
+.hasDatepicker {
+    float: left;
+    margin-right: 7px;
+    width: 80% !important;
+}
+    .add-coloum { clear: both;
+    color: #208bbd;
+    cursor: pointer;
+    float: right;
+    font-size: 12px;
+    font-weight: normal;
+    margin-right: 10px;
+    margin-top: 3px;
+    text-align: left;
+    width: auto;
+}
