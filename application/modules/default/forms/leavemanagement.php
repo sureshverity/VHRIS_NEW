@@ -34,34 +34,34 @@ class Default_Form_leavemanagement extends Zend_Form
 		
 		$startmonth = new Zend_Form_Element_Select('cal_startmonth');
         $startmonth->setRegisterInArrayValidator(false);
-        $startmonth->setAttrib("class", "form-control");
+        $startmonth->setAttrib("class", "form-control select");
         $startmonth->addMultiOption('','Select Calendar Start Month');
         $startmonth->setRequired(true);
 		$startmonth->addValidator('NotEmpty', false, array('messages' => 'Please select calendar start month.'));
 		
 		$weekend_startday = new Zend_Form_Element_Select('weekend_startday');
-        $weekend_startday->setAttrib("class", "form-control");
+        $weekend_startday->setAttrib("class", "form-control select");
         $weekend_startday->setRegisterInArrayValidator(false);
 		$weekend_startday->addMultiOption('','Select Weekend Start Day');
         $weekend_startday->setRequired(true);
 		$weekend_startday->addValidator('NotEmpty', false, array('messages' => 'Please select weekend day 1.'));
 				
 		$weekend_endday = new Zend_Form_Element_Select('weekend_endday');
-        $weekend_endday->setAttrib("class", "form-control");
+        $weekend_endday->setAttrib("class", "form-control select");
         $weekend_endday->setRegisterInArrayValidator(false);
 		$weekend_endday->addMultiOption('','Select Weekend End Day');
         $weekend_endday->setRequired(true);
 		$weekend_endday->addValidator('NotEmpty', false, array('messages' => 'Please select weekend day 2.'));
 		
 		$businessunit = new Zend_Form_Element_Select('businessunit');
-        $businessunit->setAttrib("class", "form-control");
+        $businessunit->setAttrib("class", "form-control select");
 		$businessunit->setAttrib('onchange', 'displayEmployeeDepartments(this,"department_id","leavemanagement")');
 		$businessunit->setRegisterInArrayValidator(false);	
       	$businessunit->setRequired(true);
 		$businessunit->addValidator('NotEmpty', false, array('messages' => 'Please select business unit.'));
 	 
 		$department_id = new Zend_Form_Element_Select('department_id');
-        $department_id->setAttrib("class", "form-control");
+        $department_id->setAttrib("class", "form-control select");
 		$department_id->addMultiOption('','Select Department');
         $department_id->setRegisterInArrayValidator(false);
         $department_id->setRequired(true);
@@ -81,7 +81,7 @@ class Default_Form_leavemanagement extends Zend_Form
         	));
 
         $halfday = new Zend_Form_Element_Select('is_halfday');
-        $halfday->setAttrib("class", "form-control");
+        $halfday->setAttrib("class", "form-control select");
         $halfday->setRegisterInArrayValidator(false);
         $halfday->setMultiOptions(array(							
 							'1'=>'Yes' ,
@@ -91,7 +91,7 @@ class Default_Form_leavemanagement extends Zend_Form
 		$halfday->addValidator('NotEmpty', false, array('messages' => 'Please select option.'));
 
         $leavetransfer = new Zend_Form_Element_Select('is_leavetransfer');
-        $leavetransfer->setAttrib("class", "form-control");
+        $leavetransfer->setAttrib("class", "form-control select");
         $leavetransfer->setRegisterInArrayValidator(false);
         $leavetransfer->setMultiOptions(array(							
 							'1'=>'Yes' ,
@@ -101,7 +101,7 @@ class Default_Form_leavemanagement extends Zend_Form
 		$leavetransfer->addValidator('NotEmpty', false, array('messages' => 'Please select option.'));
 
         $skipholidays = new Zend_Form_Element_Select('is_skipholidays');
-        $skipholidays->setAttrib("class", "form-control");
+        $skipholidays->setAttrib("class", "form-control select");
         $skipholidays->setRegisterInArrayValidator(false);
         $skipholidays->setMultiOptions(array(							
 							'1'=>'Yes' ,
@@ -112,12 +112,13 @@ class Default_Form_leavemanagement extends Zend_Form
    	
 		$description = new Zend_Form_Element_Textarea('description');
         $description->setAttrib("class", "form-control");
-        $description->setAttrib('rows', 10);
-        $description->setAttrib('cols', 50);
+        $description->setAttrib('rows', 4);
+        $description->setAttrib('cols', 30);
 		$description ->setAttrib('maxlength', '200');
 
         $submit = new Zend_Form_Element_Submit('submit');
 		$submit->setAttrib('id', 'submitbutton');
+                $submit->setAttrib("class", "btn btn-primary pull-right");
 		$submit->setLabel('Save');
 
 		 $this->addElements(array($id,$startmonth,$weekend_startday,$weekend_endday,$businessunit,$department_id,$hours_day,$halfday,$skipholidays,$leavetransfer,$description,$submit));

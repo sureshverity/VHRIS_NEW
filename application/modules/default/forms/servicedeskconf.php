@@ -163,8 +163,8 @@ class Default_Form_servicedeskconf extends Zend_Form
 		$description = new Zend_Form_Element_Textarea('description');
 		$description->setLabel("Description");
                 $description->setAttrib('class', 'form-control');
-        $description->setAttrib('rows', 10);
-        $description->setAttrib('cols', 50);
+        $description->setAttrib('rows', 4);
+        $description->setAttrib('cols', 30);
 		$description ->setAttrib('maxlength', '200');
 
         $submit = new Zend_Form_Element_Submit('submit');

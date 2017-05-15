@@ -35,6 +35,7 @@ class Default_Form_holidaygroups extends Zend_Form
         $groupname->setAttrib('maxLength', 20);
         $groupname->addFilter(new Zend_Filter_StringTrim());
         $groupname->setRequired(true);
+        $groupname->setAttrib("class", "form-control");
         $groupname->addValidator('NotEmpty', false, array('messages' => 'Please enter group name.'));  
         $groupname->addValidator("regex",true,array(                           
                            'pattern'=>'/^[a-zA-Z0-9.\- ?]+$/',
@@ -53,12 +54,14 @@ class Default_Form_holidaygroups extends Zend_Form
 		
 		   	
 		$description = new Zend_Form_Element_Textarea('description');
-        $description->setAttrib('rows', 10);
-        $description->setAttrib('cols', 50);
+        $description->setAttrib('rows', 4);
+        $description->setAttrib('cols', 30);
+        $description->setAttrib("class", "form-control");
 		$description ->setAttrib('maxlength', '200');
 
         $submit = new Zend_Form_Element_Submit('submit');
 		$submit->setAttrib('id', 'submitbutton');
+                 $submit->setAttrib("class", "btn btn-primary pull-right");
 		$submit->setLabel('Save');
 
 		 $this->addElements(array($id,$groupname,$description,$submit));

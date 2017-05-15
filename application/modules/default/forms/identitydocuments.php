@@ -62,6 +62,7 @@ class Default_Form_identitydocuments extends Zend_Form
         $documentname = new Zend_Form_Element_Text('document_name');
 		$documentname->setAttrib('maxlength',50);
 		$documentname->setLabel('Document Name');
+                $documentname->setAttrib("class", "form-control");
 		$documentname->setRequired(true);
         $documentname->addValidator('NotEmpty', false, array('messages' => 'Please enter document name.'));
 		$documentname->addValidator("regex",true,array(
@@ -79,6 +80,7 @@ class Default_Form_identitydocuments extends Zend_Form
 		$documentname->getValidator('Db_NoRecordExists')->setMessage('Document name already exists.');
 		
 		$mandatory = new Zend_Form_Element_Radio('mandatory');
+                $mandatory->setAttrib("class", "iradio");
 		$mandatory->setLabel("Mandatory");
         $mandatory->addMultiOptions(array(
 										        '1' => 'Yes',
@@ -91,6 +93,7 @@ class Default_Form_identitydocuments extends Zend_Form
 		$mandatory->setRegisterInArrayValidator(false);
 		
 		$expiry = new Zend_Form_Element_Radio('expiry');
+                $expiry->setAttrib("class", "iradio");
 		$expiry->setLabel("Expiry");
         $expiry->addMultiOptions(array(
 										        '1' => 'Yes',
@@ -105,13 +108,15 @@ class Default_Form_identitydocuments extends Zend_Form
 		
 		$description = new Zend_Form_Element_Textarea('description');
 		$description->setLabel("Description");
-        $description->setAttrib('rows', 10);
-        $description->setAttrib('cols', 50);
+                $description->setAttrib('rows', 4);
+                $description->setAttrib('cols', 30);
+                $description->setAttrib("class", "form-control");
 		$description ->setAttrib('maxlength', '200');
         	
 		
 		
 		$submit = new Zend_Form_Element_Submit('submit');
+                $submit->setAttrib("class", "btn btn-primary pull-right");
 		$submit->setAttrib('id', 'submitbutton');
 		$submit->setLabel('Save');
 

@@ -54,8 +54,8 @@ class Default_Form_remunerationbasis extends Zend_Form
 	
 	
 		$description = new Zend_Form_Element_Textarea('remdesc');
-        $description->setAttrib('rows', 10);
-        $description->setAttrib('cols', 50);
+        $description->setAttrib('rows', 4);
+        $description->setAttrib('cols', 30);
         $description->setAttrib("class", "form-control");
 		$description ->setAttrib('maxlength', '200');
 

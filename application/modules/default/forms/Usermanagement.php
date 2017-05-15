@@ -33,7 +33,7 @@ class Default_Form_Usermanagement extends Zend_Form
 		$employeeId = new Zend_Form_Element_Select("employeeId");
         $employeeId->setRegisterInArrayValidator(false);        
         $employeeId->setLabel("User Type");        
-        $employeeId->setAttrib("class", "formDataElement");
+        $employeeId->setAttrib("class", "form-control select");
         if($id_val == '')
         {
             $employeeId->setRequired(true);        
@@ -53,7 +53,7 @@ class Default_Form_Usermanagement extends Zend_Form
         	
        $firstname = new Zend_Form_Element_Text("firstname");
         $firstname->setLabel("First Name");	
-        $firstname->setAttrib("class", "formDataElement");
+        $firstname->setAttrib("class", "form-control");
         $firstname->setRequired("true");
         $firstname->addValidator('NotEmpty', false, array('messages' => 'Please enter first name.'));
         $firstname->addValidator("regex",true,array(                           
@@ -65,7 +65,7 @@ class Default_Form_Usermanagement extends Zend_Form
 
        $lastname = new Zend_Form_Element_Text("lastname");
         $lastname->setLabel("Last Name");	
-        $lastname->setAttrib("class", "formDataElement");
+        $lastname->setAttrib("class", "form-control");
         $lastname->setRequired("true");
         $lastname->addValidator('NotEmpty', false, array('messages' => 'Please enter last name.'));
         $lastname->addValidator("regex",true,array(                           
@@ -77,12 +77,13 @@ class Default_Form_Usermanagement extends Zend_Form
                 
 	$entrycomments = new Zend_Form_Element_Textarea("entrycomments");
         $entrycomments->setLabel("Comments")
-                      ->setAttrib("COLS", "40")
+                      ->setAttrib("COLS", "30")
                       ->setAttrib("ROWS", "4");        
-        $entrycomments->setAttrib("class", "formDataElement");
+        $entrycomments->setAttrib("class", "form-control");
 					
 	$selecteddate = new Zend_Form_Element_Text("selecteddate");     
-        $selecteddate->setLabel("Date of Selection");			
+        $selecteddate->setLabel("Date of Selection");	
+        $selecteddate->setAttrib("class", "form-control");
         $selecteddate->setAttrib('readonly', 'readonly');
 		$selecteddate->setAttrib('onfocus', 'this.blur()');
 
@@ -99,7 +100,7 @@ class Default_Form_Usermanagement extends Zend_Form
                            )
         	));		
         $emailaddress->setLabel("Email");
-        $emailaddress->setAttrib("class", "formDataElement");        
+        $emailaddress->setAttrib("class", "form-control");        
         $emailaddress->addValidator(new Zend_Validate_Db_NoRecordExists(
         						array('table' => 'main_users',
         						'field' => 'emailaddress',
@@ -113,9 +114,9 @@ class Default_Form_Usermanagement extends Zend_Form
         
 	$empreasonlocked = new Zend_Form_Element_Textarea("empreasonlocked");
         $empreasonlocked->setLabel("Reason Locked")
-                        ->setAttrib("COLS", "40")
+                        ->setAttrib("COLS", "30")
                         ->setAttrib("ROWS", "4");		
-        $empreasonlocked->setAttrib("class", "formDataElement");
+        $empreasonlocked->setAttrib("class", "form-control");
 
 		$emplockeddate = new Zend_Form_Element_Text("emplockeddate");
         $emplockeddate->setLabel("Date Locked");
@@ -129,14 +130,14 @@ class Default_Form_Usermanagement extends Zend_Form
 	$emprole = new Zend_Form_Element_Select("emprole");        
         $emprole->setRegisterInArrayValidator(false);
         $emprole->setRequired("true");
-        $emprole->setLabel("Assign Role");	
-        $emprole->setAttrib("class", "formDataElement");
+        $emprole->setLabel("Assign Role");
+        $emprole->setAttrib("class", "form-control select");
         $emprole->addValidator('NotEmpty', false, array('messages' => 'Please select role.'));
 
 	$submit = new Zend_Form_Element_Submit("submit");
         $submit->setLabel("Save");  
         $submit->setAttrib('id', 'submitbutton');
-        $submit->setAttrib("class", "formSubmitButton");
+        $submit->setAttrib("class", "btn btn-primary pull-right");
         $url = "'usermanagement/saveupdate/format/json'";
         $dialogMsg = "''";
         $toggleDivId = "''";
