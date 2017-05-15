@@ -42,15 +42,23 @@ else
 	// Get appraisal text Ex:'Yearly Appraisal (Q 1) - 2015'
 	$appstring = ''; 	 
 	$appstring = sapp_PerformanceHelper::getAppraisalText($appraisalInfo);
-?>	  
+?>	
+
+<div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-title">Ratings</div>
+        </div>
 	<div id="appraisalinfo" class="appraisalinfo">
 		<?php echo $appstring; ?>
 	</div>
+    <div class="panel-body">            
+                <div class="col-md-6">
+                   
 <!--  Display Business unit and department for hr -->
-	<div class="new-form-ui">
-	<label >Business Unit</label>
-	<div class="division">
-		<select id="bunit_id" name="bunit_id" >
+	 <div class="form-group">
+         <label class="col-md-3 control-label">Business Unit</label>
+	<div class="col-md-9">
+            <select id="bunit_id" class="form-control select" name="bunit_id" >
 		<?php if($this->buOptions !='')
 				{
 					echo $this->buOptions;
@@ -62,10 +70,10 @@ else
 	</div>
 	
 	<?php if($this->performanceappflag == 0) { ?>
-		<div class="new-form-ui" id="deptdiv">
-		<label >Department </label>
-		<div class="division">
-			<select id="dept_id" name="dept_id" >
+		<div class="form-group" id="deptdiv">
+		<label class="col-md-3 control-label">Department </label>
+		<div class="col-md-9">
+			<select id="dept_id" class="form-control select" name="dept_id" >
 				<?php if($this->deptOptions !='')
 					{
 						echo $this->deptOptions;
@@ -76,7 +84,7 @@ else
 		</div>
 		</div>
 	<?php } ?>
-	<form name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" onsubmit = "validateratingsonsubmit()" method="<?php echo $this->form->getMethod(); ?>">
+	<form class="form-horizontal" name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" onsubmit = "validateratingsonsubmit()" method="<?php echo $this->form->getMethod(); ?>">
 	<div class="form_cntr_block">
 		<input type="hidden" value="<?php echo $appraisalInfo['id'];?>" id="appraisalid" name="appraisalid">
 		<input type="hidden" value="<?php echo $this->appraisal_rating;?>" id="appraisal_rating" name="appraisal_rating">
@@ -88,36 +96,37 @@ else
 			?>
 				<input type="hidden" value="<?php echo $data['id'];?>" id="<?php echo $data['id'];?>" name="update_id_<?php echo $data['rating_value']; ?>">
 				
-				<div class="new-form-ui clearb">
-				  <label class="required">Rating Value</label>
-				<div class="division">
+				<div class="form-group">
+                                    <label class="col-md-3 control-label required">Rating Value</label>
+				<div class="col-md-9">
 					<input type='text' maxlength='2' id='rating_value_<?php echo $data['rating_value']; ?>' name='rating_value_<?php echo $data['rating_value']; ?>'  value="<?php echo $data['rating_value'];?>" disabled="disabled" > 
 				</div>
 				</div>
 				
-				<div class="new-form-ui clearb">
-				  <label class="required">Rating Text</label>
-				<div class="division">
-					<input type='text' maxlength='30' id='rating_text_<?php echo $data['rating_value']; ?>' name='rating_text_<?php echo $data['rating_value']; ?>' value="<?php echo $data['rating_text'];?>" onblur='validateratingtext(this)' >
+				<div class="form-group">
+                                    <label class="col-md-3 control-label required">Rating Text</label>
+				<div class="col-md-9">
+                                    <input class="form-control" type='text' maxlength='30' id='rating_text_<?php echo $data['rating_value']; ?>' name='rating_text_<?php echo $data['rating_value']; ?>' value="<?php echo $data['rating_text'];?>" onblur='validateratingtext(this)' >
 				</div> 
 				</div>
 		<?php   } ?>
 		<?php } else { ?>
 		<?php  for($i=0;$i<$ratings;$i++){?>	
-			<div class="new-form-ui clearb">
-			<label class="required">Rating Value</label>
-			<div class="division">
+			<div class="form-group">
+                                    <label class="col-md-3 control-label required">Rating Value</label>
+			<div class="col-md-9">
 				<input type='text' maxlength='2' id='rating_value_<?php echo $i; ?>' name='rating_value_<?php echo $i; ?>'  value="<?php echo $i+1;?>" disabled="disabled" > 
 			</div>
 			</div>
-			<div class="new-form-ui clearb">
-				<label class="required">Rating Text</label>
-				<div class="division">
+			<div class="form-group">
+                                    <label class="col-md-3 control-label required">Rating Text</label>
+				<div class="col-md-9">
 					<input type='text' maxlength='30' id='rating_text_<?php echo $i; ?>' name='rating_text_<?php echo $i; ?>' value="" onblur='validateratingtext(this)' >
 				</div> 
-			</div>
+			</div></div>
 		<?php }}?>
-			<div class="new-form-ui-submit mrgetop60">
+			 </div></div></div>
+                        <div class="panel-footer">
 			<?php if(!empty($this->form) && !empty($this->data) && $actionName != 'view') { ?>
 			<button name="submitbutton" id="submitbuttons" type="button" onclick = "validateratingsonsubmit()" >Update</button>
 			<?php } else if(empty($this->data) && $actionName != 'view'){ ?>
@@ -128,8 +137,8 @@ else
 			<?php }?>
 			<button onclick="window.location.href='<?php echo BASE_URL; ?>appraisalratings';" type="button" id="Cancel" name="Cancel">Cancel</button>
 			</div> 
-		</div>	</div>
-	</form>
+		
+	</form></div> 
 	<?php echo sapp_Helper::popup_helper('appraisalratings');?>
 	<div id="error_message" style="display:none;"></div>
 <?php }?>

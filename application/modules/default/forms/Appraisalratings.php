@@ -32,6 +32,7 @@ class Default_Form_Appraisalratings extends Zend_Form
 		$rating_value = new Zend_Form_Element_Text("Rating Value");
 
 		$rating_value->setLabel("Rating Value");
+                $rating_value->setAttrib("class", "form-control");
 		$rating_value->setAttrib('maxLength', 30);
 		$rating_value->addFilter(new Zend_Filter_StringTrim());
 		$rating_value->setRequired(true);
@@ -45,6 +46,7 @@ class Default_Form_Appraisalratings extends Zend_Form
         	
         $rating_text = new Zend_Form_Element_Text("Rating Text");
 		$rating_text->setLabel("Rating Text");
+                $rating_text->setAttrib("class", "form-control");
 		$rating_text->setAttrib('maxLength', 30);
 		$rating_text->addFilter(new Zend_Filter_StringTrim());
 		$rating_text->setRequired(true);
@@ -60,6 +62,7 @@ class Default_Form_Appraisalratings extends Zend_Form
 	
         $submit = new Zend_Form_Element_Submit('submit');
 		$submit->setAttrib('id', 'submitbutton');
+                 $submit->setAttrib("class", "btn btn-primary pull-right");
 		$submit->setLabel('Save');
 
 		 $this->addElements(array($id,$rating_value,$rating_text,$submit));

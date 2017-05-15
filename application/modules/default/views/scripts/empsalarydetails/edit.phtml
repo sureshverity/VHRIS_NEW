@@ -65,17 +65,13 @@
 		 } 
 		 //echo 2;exit;
 ?>
-    <div class="panel panel-default">
-
-      <div class="panel-heading">
-        <h3 class="panel-title">Salary</h3>
-      </div>
+    <div class="right-block-data right-over-border">
         <div id="error_message" style="display:none;"></div>
         <form class="form-horizontal" name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
 		<?php echo $this->form->id;
           echo $this->form->user_id; 
 		?>
-			<div class="panel-body">
+			<div class="panel-body form-group-separated">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
@@ -171,12 +167,13 @@
 
                         </div>
                 </div>
- 
+                <div class="panel-footer">
+
+					<?php echo $this->form->submit; ?>
+			    </div>  
 			</div>
-          <div class="panel-footer">
-            <?php echo $this->form->submit; ?>
-          </div>
-        </form>
+			
+	</form>
 </div>
 </div>
 

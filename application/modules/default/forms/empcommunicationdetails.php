@@ -135,6 +135,7 @@ class Default_Form_empcommunicationdetails extends Zend_Form
         	));	
 		
         $address_flag = new Zend_Form_Element_Checkbox('address_flag');
+        $address_flag->setAttrib("class", "form-control");
         $address_flag->setAttrib('onclick', 'populateCurrentAddress(this)');
 		
 		

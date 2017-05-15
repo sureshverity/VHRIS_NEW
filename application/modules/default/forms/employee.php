@@ -208,8 +208,9 @@ class Default_Form_employee extends Zend_Form
         	));
 			
 		$date_of_joining = new ZendX_JQuery_Form_Element_DatePicker('date_of_joining');
+        $date_of_joining->setAttrib("class", "form-control");
         $date_of_joining->setLabel("Date of Joining");
-		$date_of_joining->setOptions(array('class' => 'brdr_none form-control'));
+		$date_of_joining->setOptions(array('class' => 'brdr_none'));
 		$date_of_joining->setAttrib('onchange', 'validatejoiningdate(this)');
 		$date_of_joining->setRequired(true);
 		$date_of_joining->setAttrib('readonly', 'true');
@@ -217,7 +218,8 @@ class Default_Form_employee extends Zend_Form
         $date_of_joining->addValidator('NotEmpty', false, array('messages' => 'Please select date of joining.'));	
 
         $date_of_leaving = new ZendX_JQuery_Form_Element_DatePicker('date_of_leaving');
-        $date_of_leaving->setOptions(array('class' => 'brdr_none form-control'));
+        $date_of_leaving->setAttrib("class", "form-control");
+        $date_of_leaving->setOptions(array('class' => 'brdr_none'));
         $date_of_leaving->setAttrib('onchange', 'validateleavingdate(this)'); 		
 		$date_of_leaving->setAttrib('readonly', 'true');
 		$date_of_leaving->setAttrib('onfocus', 'this.blur()');

@@ -60,9 +60,12 @@ if($this->ermsg !='')
 
 
 </style> 
-
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">Settings</div>
+    </div>
 <form  class="form-horizontal" name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
-<div class="form_cntr_block">
+
 		<?php echo $this->form->id; ?>
 				<?php if(!empty($this->data)){?>
 					<input type="hidden" value="<?php echo $this->data['businessunit_id'];?>" id="businessunit_id" name="businessunit_id">
@@ -77,7 +80,11 @@ if($this->ermsg !='')
 				<?php }
 				if($this->flag=='view'){	
 sapp_Helper::viewHeader();?>
- <div class="form-group"> <div class="col-md-4"> <?php
+                    <div class="panel-body"> 
+                    <div class="row">                                       
+                <div class="col-md-6">
+ <div class="form-group">
+                         <?php
 sapp_Helper::viewBody('alt','Business Unit ',(!empty($this->data['businessunit_id']))?$this->data['businessunit_id']:"...",'Applicability',(isset($this->data['service_desk_flag']))?$this->data['service_desk_flag']:"...");
 ?></div></div>
  <div class="hidden">
@@ -125,12 +132,12 @@ sapp_Helper::viewBody('nor','Executors',(!empty($this->data['request_recievers']
 sapp_Helper::viewFooter();
 }else{
 ?>
- <div class="panel-body form-group-separated">
+ 
                 <div class="row">
                     <div class="col-md-6">
-		 <div class="total-form-controller <?php echo $viewclass;?>">
+		 <?php echo $viewclass;?>
 		
-		 <div class="total-form-controlle-left">
+		 
 				 <?php echo sapp_Helper::sd_form_helper($this->msgarray, $this->form, 'businessunit_id','', '','required',array());?>
 				 <?php echo sapp_Helper::sd_form_helper($this->msgarray, $this->form, 'service_desk_flag','', 'radioclass','required',array());?>
 				 <?php echo sapp_Helper::sd_form_helper($this->msgarray, $this->form, 'request_for','', '','required',array());?>
@@ -142,31 +149,29 @@ sapp_Helper::viewFooter();
 				 <?php echo sapp_Helper::sd_form_helper($this->msgarray, $this->form, 'approver_3','', 'hiddenclass','required',array());?>
 				 <?php echo sapp_Helper::sd_form_helper($this->msgarray, $this->form, 'attachment','', '','',array());?>
 			     <?php echo sapp_Helper::sd_form_helper($this->msgarray, $this->form, 'description','', 'textareaheight','',array());?>
-		 </div>
+		
 		  
-		  <div class="total-form-controlle-right">
+		  
 				 <?php echo sapp_Helper::sd_form_helper($this->msgarray, $this->form, 'service_desk_id','', '','required',array());?>
-				 <div class="new-form-ui-multi">
-						<label class="required"><?php echo $this->form->request_recievers->getLabel(); ?> </label>
-						<div class="division">
-							<div class="division_sub">
+				 <div class="form-group">
+                        <label class="col-md-3 control-label required"><?php echo $this->form->request_recievers->getLabel(); ?> </label>
+						<div class="col-md-9">
 								<?php echo $this->form->request_recievers; ?>
 					            <?php if(isset($this->msgarray['request_recievers'])){?>
 									   <span class="errors" id="errors-<?php echo $this->form->request_recievers->getId(); ?>"><?php echo $this->msgarray['request_recievers'];?></span>
 								  <?php }?>
-				             </div>
+				            
 						</div>
 				</div>
-				 <div class="new-form-ui-multi">
-						 <label ><?php echo $this->form->cc_mail_recievers->getLabel(); ?> </label>
-							<div class="division">
-								<div class="division_sub">
+				 <div class="form-group">
+                        <label class="col-md-3 control-label required"><?php echo $this->form->cc_mail_recievers->getLabel(); ?> </label>
+							<div class="col-md-9">
 									<?php echo $this->form->cc_mail_recievers; ?>
 						             <?php if(isset($this->msgarray['cc_mail_recievers'])){?>
 										   <span class="errors" id="errors-<?php echo $this->form->cc_mail_recievers->getId(); ?>"><?php echo $this->msgarray['cc_mail_recievers'];?></span>
 									  <?php }?>
 								</div>
-						 </div>
+						 
 				  </div>
 		 
 		  </div>
@@ -174,17 +179,18 @@ sapp_Helper::viewFooter();
 		<?php //echo sapp_Helper::sd_form_helper($this->msgarray, $this->form, 'cc_mail_recievers','', '','',array());?>		
 		 
 		<?php }?>
-		<div>
-		<div class="new-form-ui-submit">
+		</div></div>
+		<div class="panel-footer">
 		<?php echo $this->form->submit; ?>
 		<?php if($actionName == 'view'){?>
 			<input type="button" onclick="changeeditscreen('<?php echo $this->controllername;?>',<?php echo $this->id;?>);" value="Edit" />
 		<?php }?>
 		<button onclick="window.location.href='<?php echo BASE_URL; ?>servicedeskconf';" type="button" id="Cancel" class="btn btn-danger" name="Cancel">Cancel</button>
 		</div>
-		</div>
-	</div></div>
+		
+	</div>
 </form>
+                            </div>
 
 	<?php echo sapp_Helper::popup_helper('servicedeskdepartment');?>
 	

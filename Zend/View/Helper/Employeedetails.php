@@ -703,12 +703,9 @@ class Zend_View_Helper_Employeedetails extends Zend_View_Helper_Abstract {
 				$tabHeightClass="mydetails-height";
 			}
 		}
-            
-		    $tabsHtml = '<div class="panel-body list-group border-bottom " >';
-            $tabsHtml .='<a href="#" class="list-group-item"><span class="fa fa-bar-chart-o"></span>Activity</a>';
-            $tabsHtml .='<a href="#" class="list-group-item"><span class="fa fa-coffee"></span>Groups <span class="badge badge-default">18</span></a>';
-            $tabsHtml .='<li class="list-group-item"><span class="fa fa-sitemap"></span>Navigation</li>';
-            $tabsHtml .='<ul class="x-navigation scrollinner" style="color: Black;">';
+
+		    $tabsHtml = '<div class="panel-body list-group border-bottom" >';
+            $tabsHtml .='<ul class="x-navigation" style="color: Black;">';
             //$tabsHtml .='<li ><a href="#" class=""><span class="fa fa-bar-chart-o"></span>Activity</a></li>';
             //$tabsHtml .='<li><a href="#" class=""><span class="fa fa-coffee"></span>Groups<span class="badge badge-default"> 18</sp</a></li>';
             //$tabsHtml .='<li><a href="#" class=""><span class="fa fa-users"></span>Friends <span class="badge badge-danger">+7</span></a></li>';
@@ -1082,9 +1079,7 @@ class Zend_View_Helper_Employeedetails extends Zend_View_Helper_Abstract {
 		}
             //$tabsHtml .='</ul>';
             $tabsHtml .='</li></ul>';
-            $tabsHtml .='<script type="text/javascript">';
-            $tabsHtml .='$(document).ready(function(){callscrollInner();});';
-            $tabsHtml .='</script>';
+
             //tabs Completed
             $tabsHtml .='</div>';
             return $tabsHtml;

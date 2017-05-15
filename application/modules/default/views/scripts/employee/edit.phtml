@@ -71,8 +71,7 @@ $report_opt = $this->report_opt;
             echo $this->employeedetails($this->employeedata,'edit',$this->id); 
          } 
 ?>
-<div class="panel panel-default">
-  <div class="panel-heading"><h3 class="panel-title">Offical</h3></div>
+<div class="panel"> 
 	<div id="error_message" style="display:none;"></div>
 
 	<form class="form-horizontal" name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
@@ -83,8 +82,8 @@ $report_opt = $this->report_opt;
 			<?php echo $this->form->final_emp_id; ?>
 			 <!--<input type="hidden" id="active" name ="active" value="<?php echo $this->data['isactive'];?>" />-->
 		<?php echo $this->form->id; ?><?php echo $this->form->user_id; ?>
-        <div class="panel-body">
-      
+        <div class="panel-body form-group-separated">
+
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">

@@ -31,6 +31,7 @@ class Default_Form_Appraisalcategory extends Zend_Form
 		
 		$appraisalcategory = new Zend_Form_Element_Text("category_name");
 		$appraisalcategory->setLabel('Parameter');
+                $appraisalcategory->setAttrib("class", "form-control");
 		$appraisalcategory->setAttrib('maxLength', 30);
 		$appraisalcategory->addFilter(new Zend_Filter_StringTrim());
 		$appraisalcategory->setRequired(true);
@@ -51,12 +52,14 @@ class Default_Form_Appraisalcategory extends Zend_Form
 
 		$description = new Zend_Form_Element_Textarea('description');
 		$description->setLabel("Description");
-        $description->setAttrib('rows', 10);
-        $description->setAttrib('cols', 50);
+       $description->setAttrib('rows', 4);
+        $description->setAttrib('cols', 30);
+        $description->setAttrib("class", "form-control");
 		$description ->setAttrib('maxlength', '200');
 
         $submit = new Zend_Form_Element_Submit('submit');
 		$submit->setAttrib('id', 'submitbutton');
+                $submit->setAttrib("class", "btn btn-primary pull-right");
 		$submit->setLabel('Save');
 
 		 $this->addElements(array($id,$appraisalcategory,$description,$submit));

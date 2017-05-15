@@ -63,13 +63,13 @@ class Default_Form_empleaves extends Zend_Form
 				
 		$submit = new Zend_Form_Element_Submit('submit');
 		$submit->setAttrib('id', 'submitbutton');
-        $submit->setAttrib('class', 'btn btn-primary pull-right');
+        $submit->setAttrib('class', 'btn btn-success');
 		$submit->setLabel('Save');
 		
 		$submitbutton = new Zend_Form_Element_Button('submitbutton');
 		
 		 $submitbutton->setAttrib('id', 'submitbuttons');
-         $submitbutton->setAttrib('class', 'btn btn-primary pull-right');
+         $submitbutton->setAttrib('class', 'btn btn-success');
 		$submitbutton->setLabel('Save');
 		
 		$this->addElements(array($id,$userid,$emp_leave_limit,$used_leaves,$alloted_year,$submit,$submitbutton));
