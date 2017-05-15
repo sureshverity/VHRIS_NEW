@@ -22,27 +22,32 @@
 
 <?php sapp_Global::generateClientValidations($this->form);?>
 <div id="error_message" style="display:none;"></div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">Manage External Users</div>
+    </div>
+<form class="form-horizontal"  name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
 
-<form name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
-<div class="form_cntr_block">
 		<?php echo $this->form->id; ?>
-        <div class="total-form-controller">
-		    <div class="new-form-ui clearb">
-			  <label class="required">Group Name</label>
-			<div class="division"><?php echo $this->form->groupname; ?></div>
+        <div class="panel-body">
+            
+                <div class="col-md-6">
+                    <div class="form-group">
+                <label class="col-md-3 control-label required">Group Name</label>
+			<div class="col-md-9"><?php echo $this->form->groupname; ?></div>
 			<?php if(isset($this->msgarray['groupname'])){?>
 			   <span class="errors" id="errors-<?php echo $this->form->groupname->getId(); ?>"><?php echo $this->msgarray['groupname'];?></span>
 			<?php }?>
 			</div>
 								
-			<div class="new-form-ui clearb textareaheight">
-			  <label>Description</label>
-			<div class="division"><?php echo $this->form->description; ?></div>
-			</div>
-	
-		<div class="new-form-ui-submit">
+			
+                           <div class="form-group">
+			  <label class="col-md-3 control-label">Description</label>
+			<div class="col-md-9"><?php echo $this->form->description; ?></div>
+			</div></div>
+	</div>
+		<div class="panel-footer">
 		<?php echo $this->form->submit; ?>
-		<button onclick="window.location.href='<?php echo BASE_URL; ?>holidaygroups';" type="button" id="Cancel" name="Cancel">Cancel</button>
-		</div></div>
-</div>
-</form>
+                    <button onclick="window.location.href='<?php echo BASE_URL; ?>holidaygroups';" type="button" id="Cancel" class="btn btn-danger" name="Cancel">Cancel</button>
+		</div>
+</form></div>

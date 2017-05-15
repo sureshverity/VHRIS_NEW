@@ -43,20 +43,24 @@
 } //else { ?>
 <?php sapp_Global::generateClientValidations($this->form);?>
 <div id="error_message" style="display:none;"></div>
-
-<form name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>"><div class="form_cntr_block">
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">Leave Management</div>
+    </div>
+<form class="form-horizontal" name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>"><div class="form_cntr_block">
 		<?php echo $this->form->id; ?>
 
         <div class="panel-body">
 <!--            <div class="col-md-6">-->
             <div class="form-group">
+                <div class="col-md-6">
                 <label class="col-md-3 control-label">Business Unit</label>
                 <div class="col-md-9"><?php echo $this->form->businessunit; ?></div>
                 <?php if(isset($this->msgarray['businessunit'])){?>
                     <span class="errors" id="errors-<?php echo $this->form->businessunit->getId(); ?>"><?php echo $this->msgarray['businessunit'];?></span>
                 <?php }?>
             </div>
-            <div class="form-group">
+           <div class="col-md-6">
                 <label class="col-md-3 control-label">Department <img class="tooltip" title="Select business unit to populate departments" src="<?php echo MEDIA_PATH;?>images/help.png"></label>
                 <div class="col-md-9"><?php echo $this->form->department_id; ?></div>
 
@@ -66,66 +70,76 @@
                     <span class="errors" id="errors-<?php echo $this->form->department_id->getId(); ?>" style="display:none;"></span>
                 <?php }?>
             </div>
+            </div>
             <div class="form-group">
+                <div class="col-md-6">
                 <label class="col-md-3 control-label">Calendar Start Month</label>
                 <div class="col-md-9"><?php echo $this->form->cal_startmonth; ?></div>
                 <?php if(isset($this->msgarray['cal_startmonth'])){?>
                     <span class="errors" id="errors-<?php echo $this->form->cal_startmonth->getId(); ?>"><?php echo $this->msgarray['cal_startmonth'];?></span>
                 <?php }?>
             </div>
-            <div class="form-group">
+            <div class="col-md-6">
                 <label class="col-md-3 control-label">Weekend day 1</label>
                 <div class="col-md-9"><?php echo $this->form->weekend_startday; ?></div>
                 <?php if(isset($this->msgarray['weekend_startday'])){?>
                     <span class="errors" id="errors-<?php echo $this->form->weekend_startday->getId(); ?>"><?php echo $this->msgarray['weekend_startday'];?></span>
                 <?php }?>
             </div>
+            </div>
             <div class="form-group">
+                <div class="col-md-6">
                 <label class="col-md-3 control-label">Weekend day 2</label>
                 <div class="col-md-9"><?php echo $this->form->weekend_endday; ?></div>
                 <?php if(isset($this->msgarray['weekend_endday'])){?>
                     <span class="errors" id="errors-<?php echo $this->form->weekend_endday->getId(); ?>"><?php echo $this->msgarray['weekend_endday'];?></span>
                 <?php }?>
             </div>
-            <div class="form-group">
+            <div class="col-md-6">
                 <label class="col-md-3 control-label">Working Hours</label>
                 <div class="col-md-9"><?php echo $this->form->hours_day; ?></div>
                 <?php if(isset($this->msgarray['hours_day'])){?>
                     <span class="errors" id="errors-<?php echo $this->form->hours_day->getId(); ?>"><?php echo $this->msgarray['hours_day'];?></span>
                 <?php }?>
             </div>
+            </div>
             <div class="form-group">
+                <div class="col-md-6">
                 <label class="col-md-3 control-label">Half Day Requests</label>
                 <div class="col-md-9"><?php echo $this->form->is_halfday; ?></div>
                 <?php if(isset($this->msgarray['is_halfday'])){?>
                     <span class="errors" id="errors-<?php echo $this->form->is_halfday->getId(); ?>"><?php echo $this->msgarray['is_halfday'];?></span>
                 <?php }?>
             </div>
-            <div class="form-group">
+           <div class="col-md-6">
                 <label class="col-md-3 control-label">Allow Leave Transfers?</label>
                 <div class="col-md-9"><?php echo $this->form->is_leavetransfer; ?></div>
                 <?php if(isset($this->msgarray['is_leavetransfer'])){?>
                     <span class="errors" id="errors-<?php echo $this->form->is_leavetransfer->getId(); ?>"><?php echo $this->msgarray['is_leavetransfer'];?></span>
                 <?php }?>
             </div>
+            </div>
             <div class="form-group">
+                <div class="col-md-6">
                 <label class="col-md-3 control-label">Skip Holidays?</label>
                 <div class="col-md-9"><?php echo $this->form->is_skipholidays; ?></div>
                 <?php if(isset($this->msgarray['is_skipholidays'])){?>
                     <span class="errors" id="errors-<?php echo $this->form->is_skipholidays->getId(); ?>"><?php echo $this->msgarray['is_skipholidays'];?></span>
                 <?php }?>
             </div>
-            <div class="form-group">
+            
+            <div class="col-md-6">
                 <label class="col-md-3 control-label">Description</label>
-                <div class="col-md-6 col-xs-12"><?php echo $this->form->description; ?></div>
+                <div class="col-md-9 col-xs-12"><?php echo $this->form->description; ?></div>
+            </div>
             </div>
 
-
-            <div class="form-group">
+</div></div>
+		<div class="panel-footer">
 		<?php echo $this->form->submit; ?>
-		<button onclick="window.location.href='<?php echo BASE_URL; ?>leavemanagement';" id="Cancel" name="Cancel" type="button" >Cancel</button>
+                    <button onclick="window.location.href='<?php echo BASE_URL; ?>leavemanagement';" id="Cancel" class="btn btn-danger" name="Cancel" type="button" >Cancel</button>
 		</div>
 <!--</div>-->
-    </div>
-</form>
+    
+</form></div>
 <?php //} ?>

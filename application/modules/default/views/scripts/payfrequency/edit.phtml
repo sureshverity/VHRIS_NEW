@@ -34,36 +34,40 @@ else
 {
  sapp_Global::generateClientValidations($this->form);?>
 <div id="error_message" style="display:none;"></div>
-
-<form class="form-horizontal" name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
-	<div class="form_cntr_block">	<?php echo $this->form->id; ?>
-        <div class="panel-body form-group-separated">
-                <div class="row">
-                    <div class="col-md-6">
-		    <div class="new-form-ui clearb">
-			  <label class="required"><?php echo $this->form->freqtype->getLabel();?>  <img class="tooltip" title="Ex: Hour, Day, Week" src="<?php echo MEDIA_PATH;?>images/help.png"></label>
-			<div class="division"><?php echo $this->form->freqtype; ?></div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">Pay Frequency</div>
+    </div>
+<form class="form-horizontal"  name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
+	<?php echo $this->form->id; ?>
+         <div class="panel-body">
+            
+                <div class="col-md-6">
+                    <div class="form-group">
+                <label class="col-md-3 control-label required"><?php echo $this->form->freqtype->getLabel();?>  <img class="tooltip" title="Ex: Hour, Day, Week" src="<?php echo MEDIA_PATH;?>images/help.png"></label>
+			<div class="col-md-9"><?php echo $this->form->freqtype; ?></div>
 			<?php if(isset($this->msgarray['freqtype'])){?>
 			   <span class="errors" id="errors-<?php echo $this->form->freqtype->getId(); ?>"><?php echo $this->msgarray['freqtype'];?></span>
 			<?php }?>
 			</div>
 			
-			<div class="new-form-ui clearb">
-			  <label class="required"><?php echo $this->form->freqcode->getLabel();?> <img class="tooltip" title="Ex: Hr, Dy, Wk" src="<?php echo MEDIA_PATH;?>images/help.png"></label>
-			<div class="division"><?php echo $this->form->freqcode; ?></div>
+			 <div class="form-group">
+                <label class="col-md-3 control-label required"><?php echo $this->form->freqcode->getLabel();?> <img class="tooltip" title="Ex: Hr, Dy, Wk" src="<?php echo MEDIA_PATH;?>images/help.png"></label>
+			<div class="col-md-9"><?php echo $this->form->freqcode; ?></div>
 			<?php if(isset($this->msgarray['freqcode'])){?>
 			   <span class="errors" id="errors-<?php echo $this->form->freqcode->getId(); ?>"><?php echo $this->msgarray['freqcode'];?></span>
 			<?php }?>
 			</div>
 								
-			<div class="new-form-ui clearb textareaheight">
-			  <label>Description</label>
-			<div class="division"><?php echo $this->form->freqdescription; ?></div>
+			 <div class="form-group">
+                <label class="col-md-3 control-label">Description</label>
+			<div class="col-md-9"><?php echo $this->form->freqdescription; ?></div>
 			</div>
-		<div class="new-form-ui-submit">
+		</div>
+		<div class="panel-footer">
 		<?php echo $this->form->submit; ?>
                     <button onclick="window.location.href='<?php echo BASE_URL; ?>payfrequency';" type="button" id="Cancel" class="btn btn-danger" name="Cancel">Cancel</button>
 		</div>
-</div></div></div></div>
-</form>
+</div>
+</form></div>
 <?php	}	?>

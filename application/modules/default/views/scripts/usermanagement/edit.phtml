@@ -51,17 +51,22 @@ else
     $data = $this->data;
     sapp_Global::generateClientValidations($this->form);
 ?>
-
-<form name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" method="<?php echo $this->form->getMethod(); ?>">
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">Manage External Users</div>
+    </div>
+<form class="form-horizontal"  name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" method="<?php echo $this->form->getMethod(); ?>">
     <input type="hidden" name="tmp_emp_name" id="tmp_emp_name" />
-	<div class="form_cntr_block">
+	
 <?php echo $this->form->id;
       echo $this->form->company_id;
 ?>
-<div class="total-form-controller">       
-                    <div class="new-form-ui">
-                        <label><?php echo $this->form->employeeId->getLabel(); ?></label>
-                        <div class="division">                        
+<div class="panel-body">
+<!--            <div class="col-md-6">-->
+            <div class="form-group">
+                <div class="col-md-6">
+                <label class="col-md-3 control-label required"><?php echo $this->form->employeeId->getLabel(); ?></label>
+                       <div class="col-md-9">                       
                         <?php
                         if($this->form->id->getValue() == '')
                         {
@@ -94,32 +99,34 @@ else
                         <div class="division"><?php //echo $this->form->userfullname; ?></div>
                     </div>  
                    --> 
-                   <div id="iddiv_fullname">
-                    <div class="new-form-ui" >
-                        <label class="required"><?php echo $this->form->firstname->getLabel(); ?></label>
-                        <div class="division"><?php echo $this->form->firstname; ?></div>
+                   <div class="col-md-6">
+                <label class="col-md-3 control-label required"><?php echo $this->form->firstname->getLabel(); ?></label>
+                   <div class="col-md-9"><?php echo $this->form->firstname; ?></div>
                     </div>
-                    
-                    <div class="new-form-ui" >
-                        <label class="required"><?php echo $this->form->lastname->getLabel(); ?></label>
-                        <div class="division"><?php echo $this->form->lastname; ?></div>
                     </div>
-                  </div>                
+            
+                     <div class="form-group">
+                <div class="col-md-6">
+                <label class="col-md-3 control-label required"><?php echo $this->form->lastname->getLabel(); ?></label>
+                       <div class="col-md-9"><?php echo $this->form->lastname; ?></div>
+                    </div>
+                              
                    
-                    <div class="new-form-ui">
-                        <label class="required"><?php echo $this->form->emailaddress->getLabel(); ?></label>
-                        <div class="division"><?php echo $this->form->emailaddress; ?></div>
+                    <div class="col-md-6">
+                <label class="col-md-3 control-label required"><?php echo $this->form->emailaddress->getLabel(); ?></label>
+                        <div class="col-md-9"><?php echo $this->form->emailaddress; ?></div>
                     </div>
-                    
-                    <div class="new-form-ui">
-                        <label class="required"><?php echo $this->form->emprole->getLabel(); ?></label>
-                        <div class="division"><?php echo $this->form->emprole; ?>
+                    </div>
+                     <div class="form-group">
+                <div class="col-md-6">
+                <label class="col-md-3 control-label required"><?php echo $this->form->emprole->getLabel(); ?></label>
+                        <div class="col-md-9"><?php echo $this->form->emprole; ?>
                         <span id="errors-emprole" class="errors"><?php echo isset($messages['emprole'])?$messages['emprole']:"";?></span>
                         </div>
                     </div>
-                    <div class="new-form-ui textareaheight">
-                         <label><?php echo $this->form->entrycomments->getLabel(); ?></label>
-                        <div class="division"><?php echo $this->form->entrycomments; ?></div>
+                    <div class="col-md-6">
+                <label class="col-md-3 control-label"><?php echo $this->form->entrycomments->getLabel(); ?></label>
+                        <div class="col-md-9"><?php echo $this->form->entrycomments; ?></div>
                     </div>    
                     <?php
                     if($this->form->id->getValue() != '')
@@ -154,11 +161,12 @@ else
                     ?>
         
 </div><!-- end of total form div-->
-    <div class="new-form-ui-submit">
+   
+		<div class="panel-footer">
         <?php echo $this->form->submit; ?>
-        <button onclick="window.location.href='<?php echo BASE_URL; ?>usermanagement';" type="button" id="Cancel" name="Cancel" title='Go back to list.'>Cancel</button>
-    </div></div>
-</form>
+        <button onclick="window.location.href='<?php echo BASE_URL; ?>usermanagement';" type="button" id="Cancel" class="btn btn-danger" name="Cancel" title='Go back to list.'>Cancel</button>
+    </div>
+</form></div>
 <div id="identitycodesContainer"  style="display: none; overflow: auto;">
     <div class="heading">
         <a href="javascript:void(0)">

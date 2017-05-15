@@ -1,5 +1,5 @@
-<?php 
-/********************************************************************************* 
+<?php
+/* * ******************************************************************************* 
  *  This file is part of Sentrifugo.
  *  Copyright (C) 2014 Sapplica
  *   
@@ -17,75 +17,81 @@
  *  along with Sentrifugo.  If not, see <http://www.gnu.org/licenses/>.
  *
  *  Sentrifugo Support <support@sentrifugo.com>
- ********************************************************************************/
+ * ****************************************************************************** */
 ?>
 
-<?php sapp_Global::generateClientValidations($this->form);?>
+<?php sapp_Global::generateClientValidations($this->form); ?>
 <div id="error_message" style="display:none;"></div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">Request Type</div>
+    </div>
+    <form class="form-horizontal" name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction(); ?>" method="<?php echo $this->form->getMethod(); ?>">
+ <div class="panel-body"> 
+                <div class="row">                                       
+                    <div class="col-md-6">
+        
+            <?php echo $this->form->id; ?>
+            <div class="total-form-controller">
+                <div class="separetor-heading"><span class="required">Configure <?php echo $this->form->identitydoc->getLabel(); ?></span></div>
+                <div class="new-form-ui fullwidth inputheight">
+                    <div class="division id-text"><?php echo $this->form->identitydoc; ?></div>
+                    <?php if (isset($this->msgarray['identitydoc'])) { ?>
+                        <span class="errors" id="errors-<?php echo $this->form->identitydoc->getId(); ?>"><?php echo $this->msgarray['identitydoc']; ?></span>
+                    <?php } ?>
+                </div>
 
-<form name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
+                <div class="new-form-ui inputheight width120">
+                    <label>Other Document</label>
+                    <div class="division"><?php echo $this->form->othercheck; ?></div>
+                    <?php if (isset($this->msgarray['othercheck'])) { ?>
+                        <span class="errors" id="errors-<?php echo $this->form->othercheck->getId(); ?>"><?php echo $this->msgarray['othercheck']; ?></span>
+                    <?php } ?>
+                </div>
 
-<div class="form_cntr_block">
-		<?php echo $this->form->id; ?>
-        <div class="total-form-controller">
-	<div class="separetor-heading"><span class="required">Configure <?php echo $this->form->identitydoc->getLabel(); ?></span></div>
-			<div class="new-form-ui fullwidth inputheight">
-				<div class="division id-text"><?php echo $this->form->identitydoc; ?></div>
-				<?php if(isset($this->msgarray['identitydoc'])){?>
-				   <span class="errors" id="errors-<?php echo $this->form->identitydoc->getId(); ?>"><?php echo $this->msgarray['identitydoc'];?></span>
-				<?php }?>
-			</div>
-			
-			<div class="new-form-ui inputheight width120">
-				  <label>Other Document</label>
-				<div class="division"><?php echo $this->form->othercheck; ?></div>
-				<?php if(isset($this->msgarray['othercheck'])){?>
-				   <span class="errors" id="errors-<?php echo $this->form->othercheck->getId(); ?>"><?php echo $this->msgarray['othercheck'];?></span>
-				<?php }?>
-			</div>
-			
-			<div class="new-form-ui inputheight" style="display:none;"  id="otherdocumentdiv">
-				  <label class="required"><?php echo $this->form->otherdocument->getLabel(); ?></label>
-				<div class="division"><?php echo $this->form->otherdocument; ?></div>
-				<?php if(isset($this->msgarray['otherdocument'])){?>
-				   <span class="errors" id="errors-<?php echo $this->form->otherdocument->getId(); ?>"><?php echo $this->msgarray['otherdocument'];?></span>
-				<?php }?>
-			</div>
-			
-			
-		<div class="new-form-ui-submit">
-		<?php echo $this->form->submit; ?>
-		<button onclick="window.location.href='<?php echo BASE_URL; ?>identitydocuments';" type="button" id="Cancel" name="Cancel">Cancel</button>
-		</div>
-       </div></div>
-</form>
-<script type='text/javascript'>
-$(document).ready(function(){
-		
-        <?php if (isset($this->msgarray['otherdocument'])) {?>
-		setTimeout(function(){
-      		$('#otherdocumentdiv').show();
-		},0300);	
-        <?php }?> 
+                <div class="new-form-ui inputheight" style="display:none;"  id="otherdocumentdiv">
+                    <label class="required"><?php echo $this->form->otherdocument->getLabel(); ?></label>
+                    <div class="division"><?php echo $this->form->otherdocument; ?></div>
+                    <?php if (isset($this->msgarray['otherdocument'])) { ?>
+                        <span class="errors" id="errors-<?php echo $this->form->otherdocument->getId(); ?>"><?php echo $this->msgarray['otherdocument']; ?></span>
+                    <?php } ?>
+                </div>
 
-		<?php if (isset($_POST))
-			{
-		    if(isset($_POST['othercheck']) && isset($_POST['otherdocument']))
-				{
-				if($_POST['othercheck'] == 1 && $_POST['otherdocument'] !='')
-				 {
-				?>
-      		$('#otherdocumentdiv').show();
-        <?php 	 }else {
-					if (!isset($this->msgarray['otherdocument']))
-					{
-		?>
-		    $('#otherdocumentdiv').hide();
-		<?php 		}}
-				}
-			}
-		?>
-	
-});
- 
-</script>
+  </div></div>
+            <div class="panel-footer">
+                    <?php echo $this->form->submit; ?>
+                <button onclick="window.location.href = '<?php echo BASE_URL; ?>identitydocuments';" type="button" id="Cancel" class="btn btn-danger" name="Cancel">Cancel</button>
+                </div>
+            </div></div>
+    </form>
+</div>
+    <script type='text/javascript'>
+        $(document).ready(function () {
+
+<?php if (isset($this->msgarray['otherdocument'])) { ?>
+                setTimeout(function () {
+                    $('#otherdocumentdiv').show();
+                }, 0300);
+<?php } ?>
+
+<?php
+if (isset($_POST)) {
+    if (isset($_POST['othercheck']) && isset($_POST['otherdocument'])) {
+        if ($_POST['othercheck'] == 1 && $_POST['otherdocument'] != '') {
+            ?>
+                        $('#otherdocumentdiv').show();
+        <?php
+        } else {
+            if (!isset($this->msgarray['otherdocument'])) {
+                ?>
+                            $('#otherdocumentdiv').hide();
+            <?php
+            }
+        }
+    }
+}
+?>
+
+        });
+
+    </script>
