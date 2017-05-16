@@ -1,8 +1,4 @@
-
-
 <?php 
- 
-
 
 if($this->ermsg !='')
 		{
@@ -22,9 +18,13 @@ if($this->ermsg !='')
  	  
  ?>
 <div id="error_message" style="display:none;"></div>
-<form name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
-		<div class="form_cntr_block"><?php echo $this->form->id; ?>
-        <div class="total-form-controller <?php echo $viewclass;?>">
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">Questions</div>
+    </div>
+<form  class="form-horizontal" name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
+		<?php echo $this->form->id; ?>
+                <?php echo $viewclass;?>
 			<?php //echo sapp_Helper::sd_form_helper($this->msgarray, $this->form, 'pa_category_id','', '','required',$departmentArr);?>
 			<div id="multi_dept_div">
 			<?php if(!$_POST){?>
@@ -32,7 +32,7 @@ if($this->ermsg !='')
 					<div class="new-form-ui ">
 		            <label class="required">Question <img class="tooltip" title="Special characters allowed are - ? ' . , / # @ $ & * ( ) !" src="<?php echo $this->baseUrl().'/public/media/';?>images/help.png"></label>
 		            	<div class="division">
-							<input type="text" maxlength="100" value="" id="question_0" name="question[]" onblur='ff_validaterequestname(this)' onkeyup='ff_validaterequestname(this)'>                            
+					    <input type="text" maxlength="100" value="" id="question_0" name="question[]" onblur='ff_validaterequestname(this)' onkeyup='ff_validaterequestname(this)'>                            
 						</div>
 		        	</div>
 		        	
