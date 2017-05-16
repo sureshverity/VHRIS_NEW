@@ -1,8 +1,4 @@
-
-
 <?php 
- 
-
 
 if($this->ermsg !='')
 		{
@@ -22,23 +18,30 @@ if($this->ermsg !='')
  	  
  ?>
 <div id="error_message" style="display:none;"></div>
-<form name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
-		<div class="form_cntr_block"><?php echo $this->form->id; ?>
-        <div class="total-form-controller <?php echo $viewclass;?>">
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">Questions</div>
+    </div>
+<form  class="form-horizontal" name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
+		<?php echo $this->form->id; ?>
+                <?php echo $viewclass;?>
 			<?php //echo sapp_Helper::sd_form_helper($this->msgarray, $this->form, 'pa_category_id','', '','required',$departmentArr);?>
 			<div id="multi_dept_div">
+                        <div class="panel-body"> 
+                        <div class="row">                                       
+                        <div class="col-md-6">
 			<?php if(!$_POST){?>
-				<div id='parent_0' class="add_request" >
-					<div class="new-form-ui ">
-		            <label class="required">Question <img class="tooltip" title="Special characters allowed are - ? ' . , / # @ $ & * ( ) !" src="<?php echo $this->baseUrl().'/public/media/';?>images/help.png"></label>
-		            	<div class="division">
-							<input type="text" maxlength="100" value="" id="question_0" name="question[]" onblur='ff_validaterequestname(this)' onkeyup='ff_validaterequestname(this)'>                            
+			<div id='parent_0' class="add_request" >					
+                        <div class="form-group">
+                        <label class="col-md-3 control-label">Question <img class="tooltip" title="Special characters allowed are - ? ' . , / # @ $ & * ( ) !" src="<?php echo $this->baseUrl().'/public/media/';?>images/help.png"></label>
+		            	<div class="col-md-9">
+					    <input type="text" maxlength="100" value="" id="question_0" name="question[]" onblur='ff_validaterequestname(this)' onkeyup='ff_validaterequestname(this)'>                            
 						</div>
 		        	</div>
 		        	
-		        	<div class="new-form-ui textareaheight">
-		            <label class="">Description </label>
-			            <div class="division">
+		        	 <div class="form-group">
+                        <label class="col-md-3 control-label">Description </label>
+			            <div class="col-md-9">
 							<textarea maxlength="200" cols="50" rows="10" id="description_0" name="description[]" ></textarea>
 					    </div>
 		        	</div>
@@ -52,15 +55,16 @@ if($this->ermsg !='')
 		
 		<span id="errors-maxdiv" class="errors"></span>		
 
-		<div class="new-form-ui-submit mrgetop60">
+		</div></div>
+		<div class="panel-footer">
        	<?php echo $this->form->submit; ?>
 		<?php if($actionName == 'view'){?>
 			<input type="button" onclick="changeeditscreen('<?php echo $this->controllername;?>',<?php echo $this->id;?>);" value="Edit" />
 		<?php }?>
-		<button onclick="window.location.href='<?php echo BASE_URL; ?>feedforwardquestions';" type="button" id="Cancel" name="Cancel">Cancel</button>
+                        <button onclick="window.location.href='<?php echo BASE_URL; ?>feedforwardquestions';" type="button" class="btn btn-danger" id="Cancel" name="Cancel">Cancel</button>
 		</div>
-	</div></div>
-</form>
+	
+</form></div>
 
 	<?php //echo sapp_Helper::popup_helper('feedforwardcategory');?>
 	

@@ -45,9 +45,10 @@ class Default_Form_Feedforwardquestions extends Zend_Form
 			$question = new Zend_Form_Element_Text("question");
 			$question->setLabel("Question");
 			$question->setAttrib('maxLength', 100);
+                        $question->setAttrib("class", "form-control");
 			$question->addFilter(new Zend_Filter_StringTrim());
 			$question->setRequired(true);
-	        $question->addValidator('NotEmpty', false, array('messages' => 'Please enter question.'));
+                        $question->addValidator('NotEmpty', false, array('messages' => 'Please enter question.'));
 			$question->addValidator("regex",true,array(                           
 	                           'pattern'=>"/^[a-zA-Z0-9\- ?'.,\/#@$&*()!]+$/",
 	                           'messages'=>array(
@@ -64,13 +65,15 @@ class Default_Form_Feedforwardquestions extends Zend_Form
 	   	
 			$description = new Zend_Form_Element_Textarea('description');
 			$description->setLabel("Description");
-	        $description->setAttrib('rows', 10);
-	        $description->setAttrib('cols', 50);
+                        $description->setAttrib('rows', 4);
+                        $description->setAttrib('cols', 30);
+                        $description->setAttrib("class", "form-control");
 			$description ->setAttrib('maxlength', '200');
 		}
 
         $submit = new Zend_Form_Element_Submit('submit');
 		$submit->setAttrib('id', 'submitbutton');
+                $submit->setAttrib("class", "btn btn-primary pull-right");
 		$submit->setLabel('Save');
 		if($postid !='')
 			 $this->addElements(array($id,$question,$description,$submit));
