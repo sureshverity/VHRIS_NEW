@@ -2107,3 +2107,29 @@
     width: 100%;
     z-index: 4;
 }
+
+
+.panel-noclass
+{
+    border:none !important;
+    border-radius:0px !important;
+    background-color: transparent !important;
+}
+
+.panel-noclass .panel-heading{
+    padding : 0px !important;
+}
+
+.panel-noclass .panel-title
+{
+    color: inherit !important;
+}
+
+.panel-noclass  ul.panel-controls > li > a
+{
+    border-color:#fff !important;
+    color:#fff !important;
+}
+.panel-noclass .panel-footer{
+    background-color : transparent !important;
+}

@@ -69,7 +69,13 @@
 </script>
 <script type="text/javascript" src="<?php echo MEDIA_PATH_NEW;?>js/plugins/moment.min.js">
 </script>
+<script type='text/javascript' src='<?php echo MEDIA_PATH_NEW;?>js/plugins/noty/jquery.noty.js'></script>
+<script type='text/javascript' src='<?php echo MEDIA_PATH_NEW;?>js/plugins/noty/layouts/bottomRight.js'></script>
+<script type='text/javascript' src='<?php echo MEDIA_PATH_NEW;?>js/plugins/noty/themes/default.js'></script>
 
+<script type="text/javascript" src='<?php echo MEDIA_PATH_NEW;?>js/plugins/tour/bootstrap-tour-standalone.min.js'></script>        
+<script type="text/javascript" src='<?php echo MEDIA_PATH_NEW;?>js/plugins/tour/intro.min.js'></script>
+<script type="text/javascript" src='<?php echo MEDIA_PATH_NEW;?>js/intoscript.js'></script>
 <!-- END THIS PAGE PLUGINS-->
 <!-- START TEMPLATE -->
 <script type="text/javascript" src="<?php echo MEDIA_PATH_NEW;?>js/settings.js"></script>
@@ -84,6 +90,15 @@
       var selected_obj = $("li[menu-url='<?php echo rtrim(SERVICEDOMAIN.$_SERVER['REQUEST_URI'],"/") ;?>']");
   selected_obj.addClass('active');
   selected_obj.parent("li").addClass('active');
+  });
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+  $("#tourLink").click(function(){
+  notyConfirm();
+  });
+  
   });
 </script>
 </body>

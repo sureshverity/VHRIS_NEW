@@ -205,6 +205,26 @@ $(document).ready(function() {
 
 
 </script>
+<script type="text/javascript" language="javascrcipt">
+    function notyConfirm(){
+    noty({
+    text: 'Do you want to continue?',
+    layout: 'topRight',
+    buttons: [
+    {addClass: 'btn btn-success btn-clean', text: 'Ok', onClick: function($noty) {
+    $noty.close();
+    noty({text: 'You clicked "Ok" button', layout: 'topRight', type: 'success'});
+    }
+    },
+    {addClass: 'btn btn-danger btn-clean', text: 'Cancel', onClick: function($noty) {
+    $noty.close();
+    noty({text: 'You clicked "Cancel" button', layout: 'topRight', type: 'error'});
+    }
+    }
+    ]
+    })
+    }
+</script>
 <?php 
 /***
 *** check if the user has logged in for the first time and enable the script

@@ -137,7 +137,7 @@ class Zend_View_Helper_Menubuilder extends Zend_View_Helper_Abstract {
                     $parent_name  = $data['menuName'];$isopenable = "";
                     if(isset($data['childs']) && count($data['childs']) > 0)
                     {
-                        $isopenable = " xn-openable ";
+                        $isopenable = " xn-openable";
                         $childs_menu = "<ul>";
                         foreach($data['childs'] as $ch_menu_id => $ch_menu_data)
                         {

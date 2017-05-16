@@ -101,13 +101,16 @@ if($actionName == 'viewsettings'){
     var domain_data = "<?php echo DOMAIN;?>";
     var management_group = "<?php echo MANAGEMENT_GROUP;?>";
     var superAdmin_id = "<?php echo SUPERADMIN;?>";
-    var clicked = '';		
+    var clicked = '';	
+	// defining the project name for using in js files
+	var projectPath =  '/<?php echo APPLICATION_NAME; ?>/';
+	var application_name = '<?php echo APPLICATION_NAME; ?>';	
 </script>
  <!-- START PAGE CONTAINER -->
     <div class="page-container">
        <div class="page-sidebar">
 	   <ul class="x-navigation">
-	   <li class="xn-logo"><a href="<?php echo $baseUrl; ?>/welcome">ATLANT</a> <a href="#" class="x-navigation-control">
+	   <li class="xn-logo"><a href="<?php echo $baseUrl; ?>/welcome">VHRIS</a> <a href="#" class="x-navigation-control">
                 </a></li>
                 <li class="xn-profile"><a href="#" class="profile-mini">
                     <img src="<?php echo $loginProfileImgSrc;?>" alt="<?php if(strlen($userfullname)>14){ echo substr($userfullname, 0, 14).'..'; } else {echo $userfullname;}?>" />

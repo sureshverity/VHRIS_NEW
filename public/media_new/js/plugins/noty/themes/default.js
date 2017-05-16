@@ -45,7 +45,7 @@
 			});
 
 			this.$message.css({
-				fontSize: '11px',
+				fontSize: '12px',
 				lineHeight: '14px',
 				textAlign: 'center',
 				padding: '8px 10px 9px',
@@ -141,7 +141,10 @@
 					this.$buttons.css({borderTop: '1px solid #3FBAE4'}); break;
 				case 'success':
 					this.$bar.css({backgroundColor: '#95B75D', borderColor: '#95B75D', color: '#FFF', opacity: 1});
-					this.$buttons.css({borderTop: '1px solid #95B75D'});break;
+					this.$buttons.css({ borderTop: '1px solid #95B75D' }); break;
+			    case 'noclass':
+			        this.$bar.css({ backgroundColor: 'transparent', borderColor: 'transparent', color: '#000', opacity: 1 });
+			        this.$buttons.css({ borderTop: '1px solid #95B75D' }); break;
 				default:
 					this.$bar.css({backgroundColor: '#333', borderColor: '#333', color: '#FFF', opacity: 1}); break;
 			}
