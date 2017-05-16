@@ -1,30 +1,19 @@
-<div class="form_cntr_block"><?php 
-/********************************************************************************* 
- *  This file is part of Sentrifugo.
- *  Copyright (C) 2015 Sapplica
- *   
- *  Sentrifugo is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  Sentrifugo is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with Sentrifugo.  If not, see <http://www.gnu.org/licenses/>.
- *
- *  Sentrifugo Support <support@sentrifugo.com>
- ********************************************************************************/
-
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">Employee Status</div>
+    </div><div class="form_cntr_block">
+        <?php 
 
 if($this->ermsg !='')
 		{
 ?>
      <div class="ml-alert-1-info m1-info-set"><div class="style-1-icon info"></div><?php echo $this->ermsg;?></div>
 <?php }else { ?>
+     <div class="panel-body"> 
+    
+                        <div class="row">                                       
+                        <div class="col-md-6">
+			 
 
 <?php if($this->flag == 1) {?>
 	<?php if(!empty($this->checkActiveApp)) { ?>
@@ -35,10 +24,10 @@ if($this->ermsg !='')
 	<?php } ?> 
 <?php } else {?>
 
-			<div class="new-form-ui">
-				<label >Business Unit</label>
-				<div class="division">
-					<select id="bunit_id" name="bunit_id" onchange="checkempimp('1',this.value)">
+			<div class="form-group">
+                        <label class="col-md-3 control-label">Business Unit</label>
+				<div class="col-md-9">
+					<select id="bunit_id" class="form-control select" name="bunit_id" onchange="checkempimp('1',this.value)">
 					<option  value="">Select Business Unit</option>
 					<?php if(!empty($this->bunitdataarr)) { ?>
 					<?php 	foreach($this->bunitdataarr as $value) {
@@ -50,10 +39,10 @@ if($this->ermsg !='')
 				</div>	
 			</div>
 			
-			<div class="new-form-ui" id="deptdiv">
-            <label >Department <img class="tooltip" title="Select business unit to populate departments" src="<?php echo $this->baseUrl().'/public/media/';?>images/help.png"></label>
-            <div class="division">
-					<select id="dept_id" name="dept_id" onchange="checkempimp('2',this.value)">
+			<div class="form-group" id="deptdiv">
+            <label class="col-md-3 control-label"> Department <img class="tooltip" title="Select business unit to populate departments" src="<?php echo $this->baseUrl().'/public/media/';?>images/help.png"></label>
+            <div class="col-md-9">
+					<select id="dept_id" class="form-control select" name="dept_id" onchange="checkempimp('2',this.value)">
 					<option  value="">Select Department</option>
 					</select>
 					<span class="errors" id="errors-dept_id"></span>
@@ -62,7 +51,7 @@ if($this->ermsg !='')
         	
         	<?php echo sapp_PerformanceHelper::appraisal_status_dropdown($this->app_status_array,1);?>
         	
-        	
+        </div></div></div>	
         	<input type="hidden" id="perf_app_flag" name = "perf_app_flag" value="">
 <?php } ?>
 	
@@ -70,7 +59,7 @@ if($this->ermsg !='')
 
 <div id="employeeresponsediv" style="display:none;" class="employeeresponsediv">
 </div>
-</div>
+</div></div>
 <script type="text/javascript">
 function displappstatus(flag,value)
 {

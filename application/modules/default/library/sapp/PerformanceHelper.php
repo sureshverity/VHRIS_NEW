@@ -1587,11 +1587,11 @@ public static function manager_questions_privileges($questionarray,$appraisalid,
 			   {
 			   	
 			   	 ?>
-			   	 	<div class="new-form-ui" id="statusdiv">
-		            <label >Appraisal Status <img class="tooltip" title="Select business unit and check the status" src="<?php echo DOMAIN.'public/media/';?>images/help.png"></label>
+			   	 	<div class="form-group" id="statusdiv">
+		            <label class="col-md-3 control-label"> Appraisal Status <img class="tooltip" title="Select business unit and check the status" src="<?php echo DOMAIN.'public/media/';?>images/help.png"></label>
 					<button type="button" id="appraisalstatusclear" name="appraisalstatusclear" class="inputclear" style="display:none;"  onclick="clearappstatus('<?php echo $flag;?>')">Clear</button>
-		            <div class="division">
-							<select  id="appraisal_status" name="appraisal_status" onchange="displappstatus('<?php echo $flag;?>',this.value)">
+		            <div class="col-md-9">
+							<select  id="appraisal_status" class="form-control select" name="appraisal_status" onchange="displappstatus('<?php echo $flag;?>',this.value)">
 		        				<option value="">Select Appraisal Status</option>
 			        			<?php 
 			        					foreach($statusArr as $key => $val)
