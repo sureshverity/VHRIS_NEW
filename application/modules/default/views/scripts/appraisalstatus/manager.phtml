@@ -1,4 +1,8 @@
-<div class="form_cntr_block">
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">Manager Status</div>
+    </div><div class="form_cntr_block">
 
 <?php 
  
@@ -19,11 +23,15 @@ if($this->ermsg !='')
 	 <input type="hidden" id="completedmgrids" name="completedmgrids" value="<?php echo $this->checkActiveApp['manager_ids'];?>" >
 	<?php } ?> 
 <?php } else {?>
-
-			<div class="new-form-ui">
-				<label >Business Unit</label>
-				<div class="division">
-					<select id="bunit_id" name="bunit_id" onchange="checkimp('1',this.value)">
+         <div class="form-horizontal">
+<div class="panel-body"> 
+    
+                        <div class="row">                                       
+                        <div class="col-md-6">
+			 <div class="form-group">
+                        <label class="col-md-3 control-label">Business Unit</label>
+				<div class="col-md-9">
+					<select id="bunit_id" class="form-control select" name="bunit_id" onchange="checkimp('1',this.value)">
 					<option  value="">Select Business Unit</option>
 					
 					<?php if(!empty($this->bunitdataarr)) { ?>
@@ -38,18 +46,19 @@ if($this->ermsg !='')
 				</div>	
 			</div>
 			
-			<div class="new-form-ui" id="deptdiv">
-            <label >Department <img class="tooltip" title="Select business unit to populate departments" src="<?php echo $this->baseUrl().'/public/media/';?>images/help.png"></label>
-            <div class="division">
-					<select id="dept_id" name="dept_id" onchange="checkimp('2',this.value)">
+			<div class="form-group" id="deptdiv">
+            <label class="col-md-3 control-label">Department <img class="tooltip" title="Select business unit to populate departments" src="<?php echo $this->baseUrl().'/public/media/';?>images/help.png"></label>
+            <div class="col-md-9">
+					<select id="dept_id" class="form-control select" name="dept_id" onchange="checkimp('2',this.value)">
 					<option  value="">Select Department</option>
 					</select>
 					<span class="errors" id="errors-dept_id"></span>
 			</div>
         	</div>
+		
         	
         	<?php echo sapp_PerformanceHelper::manager_appraisal_status_dropdown(1);?>
-        	
+        	</div></div></div>
         	<input type="hidden" id="perf_app_flag" name = "perf_app_flag" value="">
         	<?php if(empty($this->bunitdataarr)) { ?> 
 	        	<div class="manager_feed_div_block">

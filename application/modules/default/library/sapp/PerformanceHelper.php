@@ -1609,15 +1609,15 @@ public static function manager_questions_privileges($questionarray,$appraisalid,
 	public static function manager_appraisal_status_dropdown($flag,$loginuserGroup = '') 
 			   {					
 			   	 ?>
-			   	 	<div class="new-form-ui" id="statusdiv">
-		            <label >Manager Appraisal Status 
+			   	 	<div class="form-group" id="statusdiv">
+		            <label class="col-md-3 control-label">Manager Appraisal Status 
 					<?php if(isset($loginuserGroup) && $loginuserGroup != HR_GROUP){ ?>
 					<img class="tooltip" title="Select business unit and check the status" src="<?php echo DOMAIN.'public/media/';?>images/help.png">
 					<?php } ?>
 					</label>
 					<button type="button" id="appraisalstatusclear" name="appraisalstatusclear" class="inputclear" style="display:none;"  onclick="clearappstatus('<?php echo $flag;?>')">Clear</button>					
-		            <div class="division">
-							<select  id="appraisal_status" name="appraisal_status" onchange="displmanagerappstatus('<?php echo $flag;?>',this.value)">
+		            <div class="col-md-9">
+							<select class="form-control select" id="appraisal_status" name="appraisal_status" onchange="displmanagerappstatus('<?php echo $flag;?>',this.value)">
 		        						<option value="">Select Appraisal Status</option>
 			        					<option value="2">Completed</option>
 			        					<option value="3">Not Completed</option>
