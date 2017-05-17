@@ -350,7 +350,7 @@ class Zend_View_Helper_Employeegrid extends Zend_View_Helper_Abstract {
 			}
 			
 			
-			$output ="<div class='panel panel-default'><div class='panel-heading'><h3 class='panel-title'>".$menuName."</h3><input type='button'   title = 'Add' onclick='displaydeptform(\"".BASE_URL.$name.'/'.$popupaction."/$con/popup/1\",\"".$menunamestr."\")' value='Add Record' class='sprite addrecord' /></div>";
+			$output ="<div class='panel panel-default'><div class='panel-heading'><h3 class='panel-title'>".$menuName."</h3><ul class='panel-controls col-md-pull-1'><li> <a href='#'  onclick='displaydeptform(\"".BASE_URL.$name.'/'.$popupaction."/$con/popup/1\",\"".$menunamestr."\")' ><span class='fa fa-plus'></span></a></li></ul></div>";
 		}
 		else
 		{	
@@ -358,11 +358,11 @@ class Zend_View_Helper_Employeegrid extends Zend_View_Helper_Abstract {
 			if($name == "employee" && $action == "edit")
 			{	
 				$actionStr = 'add';
-				$output ="<div class='panel panel-default'><div class='panel-heading'><h3 class='panel-title'>".$menuName."</h3><input type='button' title = 'Add' onclick='window.location.href=\"".BASE_URL.$name.'/'.$actionStr."\"' value='Add Record' class='sprite addrecord' /></div>";
+				$output ="<div class='panel panel-default'><div class='panel-heading'><h3 class='panel-title'>".$menuName."</h3><ul class='panel-controls col-md-pull-1'><li> <a href='#'  onclick='window.location.href=\"".BASE_URL.$name.'/'.$actionStr."\"' ><span class='fa fa-plus'></span></a></li></ul></div>";
 			}
 			else
 			{	
-				$output ="<div class='panel panel-default'><div class='panel-heading'><h3 class='panel-title'>".$menuName."</h3><input type='button' title = 'Add' onclick='window.location.href=\"".BASE_URL.$name.'/'.$action."\"' value='Add Record' class='sprite addrecord' /></div>";
+				$output ="<div class='panel panel-default'><div class='panel-heading'><h3 class='panel-title'>".$menuName."</h3><ul class='panel-controls col-md-pull-1'><li> <a href='#'  onclick='window.location.href=\"".BASE_URL.$name.'/'.$action."\"' ><span class='fa fa-plus'></span></a></li></ul></div>";
 			}
 		} 
 		

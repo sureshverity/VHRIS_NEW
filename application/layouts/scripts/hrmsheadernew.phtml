@@ -158,7 +158,11 @@ if($actionName == 'viewsettings'){
                     <input type="text" name="search" placeholder="Search..." />
                     </form>
                 </li>
-                <!-- END SEARCH -->
+				 <!-- END SEARCH -->
+				  <!-- CREATE NEW -->
+				  <?php sapp_Helper::createNewItems($loginUserId);?>	
+
+                <!-- END CREATE NEW -->
                 <!-- POWER OFF -->
                 <li class="xn-icon-button pull-right last"><a href="#"><span class="fa fa-power-off">
                 </span></a>
@@ -299,6 +303,22 @@ if($loginuserRole == SUPERADMINROLE)
                     </ul>
                 </li>
                 <!-- END LANG BAR -->
+				<!-- Configuration Wizard -->
+				<?php if($loginuserRole == SUPERADMINROLE)
+				{?>
+					<li class="xn-icon-button pull-right configurewizard">
+					<a href="<?php echo $baseUrl; ?>/wizard" id="configurewizard"><span class="fa fa-magic"></span>Configuration Wizard</a>
+				</li>
+			<?php } ?>
+			
+			<?php if($loginuserGroup == HR_GROUP)
+				{?>
+					<li class="xn-icon-button pull-right configurewizard">
+					<a href="<?php echo $baseUrl; ?>/hrwizard" id="configurewizard"><span class="fa fa-magic"></span>Configuration Wizard</a>
+				</li>
+			<?php } ?>
+				
+				<!--END Configuration Wizard -->
             </ul>
             <!-- END X-NAVIGATION VERTICAL -->
             <!-- START BREADCRUMB -->

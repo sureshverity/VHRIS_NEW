@@ -15,43 +15,104 @@
 <div class="total-form-controller">
 <h3 class="step_main_title">Manage Modules</h3>
 <?php echo sapp_Helper::dispayAddEmployeeLink($this->wizarddata,'superadmin');?>
-<div class="manage-menu-circuit">
-
-<div class="manage-menu-level-1">
-<div class="hrms-text"><?php echo APPLICATION_NAME; ?></div>
-<div class="bc-inactive"> <h4>BACKGROUND CHECK</h4>
-<div id="menu_5" class="bc-active-menu" title=" Background Check"></div></div>
-<div class="service-request-inactive"><h4>SERVICE REQUEST</h4>
-<div id="menu_143" class="service-request-menu" title="Service Request"></div></div>
-<div class="report-inactive"><h4>ANALYTICS</h4>
-<div id="menu_8" class="reports-menu" title="Analytics"></div></div>
-<div class="times-inactive"><h4>TIME MANAGEMENT</h4>
-<div id="menu_130" class="times-active-menu" title="Time"></div></div>
-<div class="performance-inactive"><h4>PERFORMANCE MANAGEMENT</h4><div id="menu_149" class="performance-active-menu" title="Appraisals"></div></div>
-<div class="resources-inactive"><h4>TALENT AQUISITION</h4><div id="menu_19" class="resources-active-menu" title="Talent Acquisition"></div></div>
-
-</div>
-</div>
-<div class="menu-explain-data">
-	<div class="menu-text" style="display:none;">You can manage your <?php echo APPLICATION_NAME; ?> system by selecting or de-selecting the below modules. </div>
-	<div class="diagram-details">
-    	<div class="active-label"><b></b><span>Active</span></div>
-        <div class="inactive-label"><b></b><span>Inactive</span></div>
-        <div class="disable-label"><b></b><span>Not Available</span></div>
+     <div class="row">
+      <div class="block col-md-6" style="font-size:15px;">
+        <div class="col-md-6 col-sm-push-3 list-group list-group-simple">
+          <a href="#" class="col-md-4 list-group-item">
+            <span class="fa fa-circle text-success"></span> Active
+          </a>
+          <a href="#" class="col-md-4 list-group-item">
+            <span class="fa fa-circle text-danger"></span> Inactive
+          </a>
+          <a href="#" class="col-md-4 list-group-item">
+            <span class="fa fa-circle text-primary"></span> Not Available
+          </a>
+        </div>
+      </div>
     </div>
-</div>
-<div class="submit-explain-data">
+    <div class="row">
+      <div class="col-md-8 col-md-push-2">
+        <div class="col-md-6">
+          <div class="widget widget-item-icon service-request-inactive" id="menu_143" >
+            <div class="widget-item-right" >
+              <span class="modulemenu"></span>
+            </div>
+            <div class="widget-data-left">
+              <div class="widget-title">SERVICE REQUEST</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+        <div class="widget widget-item-icon report-inactive" id="menu_8" >
+          <div class="widget-item-right" >
+            <span class="modulemenu"></span>
+          </div>
+          <div class="widget-data-left">
+            <div class="widget-title">ANALYTICS</div>
+
+          </div>
+        </div>
+        </div>
+        <div class="col-md-6">
+        <div class="widget widget-item-icon times-inactive"  id="menu_130" >
+          <div class="widget-item-right" >
+            <span class="modulemenu"></span>
+          </div>
+          <div class="widget-data-left">
+            <div class="widget-int num-count"></div>
+            <div class="widget-title">TIME MANAGEMENT</div>
+            <div class="widget-subtitle"></div>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-6">
+        <div class="widget widget-item-icon performance-inactive"  id="menu_149" >
+          <div class="widget-item-right" >
+            <span class="modulemenu"></span>
+          </div>
+          <div class="widget-data-left">
+            <div class="widget-int num-count"></div>
+            <div class="widget-title">PERFORMANCE MANAGEMENT</div>
+            <div class="widget-subtitle"></div>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-6">
+        <div class="widget widget-item-icon resources-inactive"  id="menu_19" >
+          <div class="widget-item-right" >
+            <span class="modulemenu"></span>
+          </div>
+          <div class="widget-data-left">
+            <div class="widget-int num-count"></div>
+            <div class="widget-title">TALENT AQUISITION</div>
+            <div class="widget-subtitle"></div>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-6" >
+        <div class="widget widget-item-icon bc-inactive" id="menu_5" >
+          <div class="widget-item-right" >
+            <span class="modulemenu"></span>
+          </div>
+          <div class="widget-data-left">
+            <div class="widget-int num-count"></div>
+            <div class="widget-title">BACKGROUND CHECK</div>
+            <div class="widget-subtitle"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+<div class="col-md-12">
 <form id="formid" method="post" action="<?php echo BASE_URL; ?>wizard/savemenu" name="managemenu">
 <input type="hidden" name="chk_menu" value="" id="chk_menu"/>
 <div class="new-form-ui-submit" style="display: none; position: absolute; margin-left: 30px;" id="savebuttondiv" >
-<input id="submitbutton" type="submit" name="submit" value="Save">
+  <button class="btn btn-primary pull-left" id="submitbutton" type="submit" name="submit" >Save</button>
 </div>
+
 </form>
-	
+	<button class="btn btn-info pull-right" name="next" id="next" type="button" onclick="window.location='<?php echo BASE_URL?>wizard/configuresite';">Next</button>
 </div>
-<div class="nxt_pre_button nxt_pre_button2">
-		<button class="next_butt" name="next" id="next" type="button" onclick="window.location='<?php echo BASE_URL?>wizard/configuresite';">Next</button>
-	</div>
 </div>
 <script type="text/javascript">
 var checkmenu  = '';
@@ -63,199 +124,199 @@ $(document).ready(function() {
 			if($menuArr[$i]['id'] == '8')
 			{ ?>
 				checkmenu += '8,';
-                                $('#menu_8').parent().removeClass('report-inactive');
-				$('#menu_8').parent().addClass('report-active');
-				$('#menu_7').parent().addClass('compli-active');
-				$('#menu_7').parent().removeClass('compli-inactive');
+                                $('#menu_8').removeClass('report-inactive');
+				$('#menu_8').addClass('report-active');
+				$('#menu_7').addClass('compli-active');
+				$('#menu_7').removeClass('compli-inactive');
 	<?php   }
 			else if($menuArr[$i]['id'] == '7')
 			{ ?>
 				checkmenu += '7,';
-				$('#menu_7').parent().addClass('compli-active');
-				$('#menu_7').parent().removeClass('compli-inactive');
+				$('#menu_7').addClass('compli-active');
+				$('#menu_7').removeClass('compli-inactive');
 	<?php	}
 			else if($menuArr[$i]['id'] == '130')
 			{ ?>
 				checkmenu += '130,';
-				$('#menu_130').parent().removeClass('times-inactive');
-				$('#menu_130').parent().addClass('times-active');
+				$('#menu_130').removeClass('times-inactive');
+				$('#menu_130').addClass('times-active');
 	<?php	}
 			else if($menuArr[$i]['id'] == '15')
 			{ ?>	
 				checkmenu += '15,';
-				$('#menu_15').parent().removeClass('benefits-inactive');
-				$('#menu_15').parent().addClass('benefits-active');
+				$('#menu_15').removeClass('benefits-inactive');
+				$('#menu_15').addClass('benefits-active');
 	<?php	}
 			else if($menuArr[$i]['id'] == '149')
 			{ ?>
 				checkmenu += '149,';
-				$('#menu_149').parent().removeClass('performance-inactive');
-				$('#menu_149').parent().addClass('performance-active');
+				$('#menu_149').removeClass('performance-inactive');
+				$('#menu_149').addClass('performance-active');
 	<?php	}
 			else if($menuArr[$i]['id'] == '19')
 			{ ?>
 				checkmenu += '19,';
-				$('#menu_19').parent().removeClass('resources-inactive');
-				$('#menu_19').parent().addClass('resources-active');
+				$('#menu_19').removeClass('resources-inactive');
+				$('#menu_19').addClass('resources-active');
 	<?php	}
 			else if($menuArr[$i]['id'] == '5')
 			{ ?>
 				checkmenu += '5,';
-				$('#menu_5').parent().removeClass('bc-inactive');
-				$('#menu_5').parent().addClass('bc-active');
+				$('#menu_5').removeClass('bc-inactive');
+				$('#menu_5').addClass('bc-active');
 	<?php	}
 			else if($menuArr[$i]['id'] == '6')
 			{ ?>
 				checkmenu += '6,';
-				$('#menu_6').parent().removeClass('staffing-inactive');
-				$('#menu_6').parent().addClass('staffing-active');
+				$('#menu_6').removeClass('staffing-inactive');
+				$('#menu_6').addClass('staffing-active');
 	<?php	}
 			else if($menuArr[$i]['id'] == '143')
 			{?>
 			checkmenu += '143,';
-			$('#menu_143').parent().removeClass('service-request-inactive');
-			$('#menu_143').parent().addClass('service-request-active');
+			$('#menu_143').removeClass('service-request-inactive');
+			$('#menu_143').addClass('service-request-active');
 	<?php 
 			}			
 		}
  	} ?>
  	$('#chk_menu').val(checkmenu);
 	$('#menu_7').on('click',function() {
-			if($('#menu_7').parent().hasClass('compli-active')) 
+			if($('#menu_7').hasClass('compli-active')) 
 			{				
 				checkmenu = checkmenu.replace(/7,/,"");		
 				$('#chk_menu').val(checkmenu);
-				$('#menu_7').parent().removeClass('compli-active');
-				$('#menu_7').parent().addClass('compli-inactive');
-			}else if($('#menu_7').parent().hasClass('compli-inactive')) 
+				$('#menu_7').removeClass('compli-active');
+				$('#menu_7').addClass('compli-inactive');
+			}else if($('#menu_7').hasClass('compli-inactive')) 
 			{
 				checkmenu = checkmenu+'7,';				
 				$('#chk_menu').val(checkmenu);				
-				$('#menu_7').parent().removeClass('compli-inactive');
-				$('#menu_7').parent().addClass('compli-active');
+				$('#menu_7').removeClass('compli-inactive');
+				$('#menu_7').addClass('compli-active');
 			}
 	});
 	$('#menu_8').on('click',function() {
-			if($('#menu_8').parent().hasClass('report-active')) 
+			if($('#menu_8').hasClass('report-active')) 
 			{				
 				checkmenu = checkmenu.replace(/8,/,"");				
 				$('#chk_menu').val(checkmenu);
-				$('#menu_8').parent().removeClass('report-active');
-				$('#menu_8').parent().addClass('report-inactive');
-			}else if($('#menu_8').parent().hasClass('report-inactive')) 
+				$('#menu_8').removeClass('report-active');
+				$('#menu_8').addClass('report-inactive');
+			}else if($('#menu_8').hasClass('report-inactive')) 
 			{
 				checkmenu = checkmenu+'8,';				
 				$('#chk_menu').val(checkmenu);
-				$('#menu_8').parent().removeClass('report-inactive');
-				$('#menu_8').parent().addClass('report-active');
+				$('#menu_8').removeClass('report-inactive');
+				$('#menu_8').addClass('report-active');
 			}
 	});
 	$('#menu_130').on('click',function() {	
-			if($('#menu_130').parent().hasClass('times-active')) 
+			if($('#menu_130').hasClass('times-active')) 
 			{
 				checkmenu = checkmenu.replace(/130,/,"");				
 				$('#chk_menu').val(checkmenu);
-				$('#menu_130').parent().removeClass('times-active');
-				$('#menu_130').parent().addClass('times-inactive');
-			}else if($('#menu_130').parent().hasClass('times-inactive')) 
+				$('#menu_130').removeClass('times-active');
+				$('#menu_130').addClass('times-inactive');
+			}else if($('#menu_130').hasClass('times-inactive')) 
 			{
 				checkmenu = checkmenu+'130,';				
 				$('#chk_menu').val(checkmenu);
-				$('#menu_130').parent().removeClass('times-inactive');
-				$('#menu_130').parent().addClass('times-active');
+				$('#menu_130').removeClass('times-inactive');
+				$('#menu_130').addClass('times-active');
 			}
 	});
 	$('#menu_15').on('click',function() {	
-			if($('#menu_15').parent().hasClass('benefits-active')) 
+			if($('#menu_15').hasClass('benefits-active')) 
 			{
 				checkmenu = checkmenu.replace(/15,/,"");				
 				$('#chk_menu').val(checkmenu);
-				$('#menu_15').parent().removeClass('benefits-active');
-				$('#menu_15').parent().addClass('benefits-inactive');
-			}else if($('#menu_15').parent().hasClass('benefits-inactive')) 
+				$('#menu_15').removeClass('benefits-active');
+				$('#menu_15').addClass('benefits-inactive');
+			}else if($('#menu_15').hasClass('benefits-inactive')) 
 			{
 				checkmenu = checkmenu+'15,';				
 				$('#chk_menu').val(checkmenu);
-				$('#menu_15').parent().removeClass('benefits-inactive');
-				$('#menu_15').parent().addClass('benefits-active');
+				$('#menu_15').removeClass('benefits-inactive');
+				$('#menu_15').addClass('benefits-active');
 			}			
 	});
 	$('#menu_149').on('click',function() {
-			if($('#menu_149').parent().hasClass('performance-active')) 
+			if($('#menu_149').hasClass('performance-active')) 
 			{
 				checkmenu = checkmenu.replace(/149,/,"");				
 				$('#chk_menu').val(checkmenu);
-				$('#menu_149').parent().removeClass('performance-active');
-				$('#menu_149').parent().addClass('performance-inactive');
-			}else if($('#menu_149').parent().hasClass('performance-inactive')) 
+				$('#menu_149').removeClass('performance-active');
+				$('#menu_149').addClass('performance-inactive');
+			}else if($('#menu_149').hasClass('performance-inactive')) 
 			{
 				checkmenu = checkmenu+'149,';				
 				$('#chk_menu').val(checkmenu);
-				$('#menu_149').parent().removeClass('performance-inactive');
-				$('#menu_149').parent().addClass('performance-active');
+				$('#menu_149').removeClass('performance-inactive');
+				$('#menu_149').addClass('performance-active');
 			}
 	});
 	$('#menu_19').on('click',function() {
-			if($('#menu_19').parent().hasClass('resources-active')) 
+			if($('#menu_19').hasClass('resources-active')) 
 			{
 				checkmenu = checkmenu.replace(/19,/,"");				
 				$('#chk_menu').val(checkmenu);
-				$('#menu_19').parent().removeClass('resources-active');
-				$('#menu_19').parent().addClass('resources-inactive');
-			}else if($('#menu_19').parent().hasClass('resources-inactive')) 
+				$('#menu_19').removeClass('resources-active');
+				$('#menu_19').addClass('resources-inactive');
+			}else if($('#menu_19').hasClass('resources-inactive')) 
 			{
 				checkmenu = checkmenu+'19,';				
 				$('#chk_menu').val(checkmenu);
-				$('#menu_19').parent().removeClass('resources-inactive');
-				$('#menu_19').parent().addClass('resources-active');
+				$('#menu_19').removeClass('resources-inactive');
+				$('#menu_19').addClass('resources-active');
 			}
 	});
 
 	$('#menu_5').on('click',function() {
-		if($('#menu_5').parent().hasClass('bc-active')) 
+		if($('#menu_5').hasClass('bc-active')) 
 		{	
 			checkmenu = checkmenu.replace(/5,/,"");				
 			$('#chk_menu').val(checkmenu);
-			$('#menu_5').parent().removeClass('bc-active');
-			$('#menu_5').parent().addClass('bc-inactive');
-		}else if($('#menu_5').parent().hasClass('bc-inactive')) 
+			$('#menu_5').removeClass('bc-active');
+			$('#menu_5').addClass('bc-inactive');
+		}else if($('#menu_5').hasClass('bc-inactive')) 
 		{
 			checkmenu = checkmenu+'5,';				
 			$('#chk_menu').val(checkmenu);
-			$('#menu_5').parent().removeClass('bc-inactive');
-			$('#menu_5').parent().addClass('bc-active');
+			$('#menu_5').removeClass('bc-inactive');
+			$('#menu_5').addClass('bc-active');
 		}
 	});
 	$('#menu_6').on('click',function() {
-			if($('#menu_6').parent().hasClass('staffing-active')) 
+			if($('#menu_6').hasClass('staffing-active')) 
 			{
 				checkmenu = checkmenu.replace(/6,/,"");				
 				$('#chk_menu').val(checkmenu);
-				$('#menu_6').parent().removeClass('staffing-active');
-				$('#menu_6').parent().addClass('staffing-inactive');
-			}else if($('#menu_6').parent().hasClass('staffing-inactive')) 
+				$('#menu_6').removeClass('staffing-active');
+				$('#menu_6').addClass('staffing-inactive');
+			}else if($('#menu_6').hasClass('staffing-inactive')) 
 			{
 				checkmenu = checkmenu+'6,';				
 				$('#chk_menu').val(checkmenu);
-				$('#menu_6').parent().removeClass('staffing-inactive');
-				$('#menu_6').parent().addClass('staffing-active');
+				$('#menu_6').removeClass('staffing-inactive');
+				$('#menu_6').addClass('staffing-active');
 			}
 			
 		});
 
 	$('#menu_143').on('click',function() {
-		if($('#menu_143').parent().hasClass('service-request-active')) 
+		if($('#menu_143').hasClass('service-request-active')) 
 		{	
 			checkmenu = checkmenu.replace(/143,/,"");				
 			$('#chk_menu').val(checkmenu);
-			$('#menu_143').parent().removeClass('service-request-active');
-			$('#menu_143').parent().addClass('service-request-inactive');
-		}else if($('#menu_143').parent().hasClass('service-request-inactive')) 
+			$('#menu_143').removeClass('service-request-active');
+			$('#menu_143').addClass('service-request-inactive');
+		}else if($('#menu_143').hasClass('service-request-inactive')) 
 		{
 			checkmenu = checkmenu+'143,';				
 			$('#chk_menu').val(checkmenu);
-			$('#menu_143').parent().removeClass('service-request-inactive');
-			$('#menu_143').parent().addClass('service-request-active');
+			$('#menu_143').removeClass('service-request-inactive');
+			$('#menu_143').addClass('service-request-active');
 		}
 	});
 

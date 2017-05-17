@@ -1486,6 +1486,142 @@ public static function createNew($loginUserId)
 					</div>
 			
 		<?php }
+
+
+        public static function createNewItems($loginUserId)
+		{
+			$baseUrl = rtrim(BASE_URL, '/');
+			$auth = Zend_Auth::getInstance();
+			$loginuserRole = $auth->getStorage()->read()->emprole;	
+            $loginuserGroup = $auth->getStorage()->read()->group_id;
+        	$privilege_model = new Default_Model_Privileges;
+     $deptaddpermission = sapp_Global::_checkprivileges(DEPARTMENTS,$loginuserGroup,$loginuserRole,'add');
+     $bunitaddpermission = sapp_Global::_checkprivileges(BUSINESSUNITS,$loginuserGroup,$loginuserRole,'add');
+     $reqiaddpermission = sapp_Global::_checkprivileges(REQUISITION,$loginuserGroup,$loginuserRole,'add');
+     $empaddpermission = sapp_Global::_checkprivileges(EMPLOYEE,$loginuserGroup,$loginuserRole,'add');
+     $apprinitpermission = sapp_Global::_checkprivileges(INITIALIZE_APPRAISAL,$loginuserGroup,$loginuserRole,'add');
+     $announcementaddperm = sapp_Global::_checkprivileges(ANNOUNCEMENTS,$loginuserGroup,$loginuserRole,'add');
+     //$servReqAddPerm = sapp_Global::_checkprivileges(SERVICEDESKREQUEST,$loginuserGroup,$loginuserRole,'add');
+     $servReqAddPerm = $privilege_model->getObjPrivileges(SD_TRANS,$loginuserGroup,$loginuserRole);
+     $leaveAddPerm = sapp_Global::_checkprivileges(LEAVES,$loginuserGroup,$loginuserRole,'add');
+      
+     $employeeModal = new Default_Model_Employee();
+           $empData = $employeeModal->getsingleEmployeeData($loginUserId);?>
+              <li class="xn-icon-button configurewizard">
+              <a href="#"><span class="fa fa-ellipsis-v"></span>Create New</a>
+						<ul class="xn-drop-left xn-drop-white animated zoomIn">
+			<?php 
+              if($loginuserRole == SUPERADMINROLE || $empData[0]['is_orghead'] =='1')
+                {
+              ?>
+                      
+                      <?php if($empaddpermission=='Yes'){?>
+                     <li><a href="<?php echo $baseUrl; ?>/employee/add"><i class="icon-user"></i>Employee</a></li>
+                     <?php } ?>
+                     
+                     
+					  <?php if($reqiaddpermission=='Yes'){?>
+					 <li><a href="<?php echo $baseUrl; ?>/requisition/add"><i class="icon-cog"></i>Requisition</a></li>
+					  <?php }?>
+					  
+					  
+					 <?php if($apprinitpermission=='Yes'){?>
+					 <li><a href="<?php echo $baseUrl; ?>/appraisalinit/add"><i class="icon-remove"></i>Appraisal</a></li>
+					 <?php }?>
+					 
+					  
+					  <?php if($bunitaddpermission=='Yes'){?>
+					 <li><a href="<?php echo $baseUrl; ?>/businessunits/edit"><i class="icon-cog"></i>Business Unit</a></li>
+					   <?php  }?>
+                      
+					   
+					   <?php if($deptaddpermission=='Yes'){?>
+					 <li><a href="<?php echo $baseUrl; ?>/departments/edit"><i class="icon-remove"></i>Department</a></li>
+					<?php  }?>
+					 
+					  
+					<?php if($announcementaddperm=='Yes'){?>
+					 <li><a href="<?php echo $baseUrl; ?>/announcements/add"><i class="icon-remove"></i>Announcement</a></li>
+                    <?php } ?>
+                    
+                    
+             <?php 
+             }elseif($loginuserGroup == HR_GROUP||($loginuserGroup == MANAGEMENT_GROUP )){?>
+                     
+                     <?php if($empaddpermission=='Yes'){?>
+                      <li><a href="<?php echo $baseUrl; ?>/employee/add"><i class="icon-user"></i>Employee</a></li>
+                       <?php } ?>
+                       
+                      
+                       <?php if($leaveAddPerm=='Yes'){?>
+                       <li><a href="<?php echo $baseUrl; ?>/leaverequest/"><i class="icon-cog"></i>Leave Request</a></li>
+					 <?php }?>
+					 
+					  
+                       <?php if(!empty($servReqAddPerm)){?>
+					 <li><a href="<?php echo $baseUrl; ?>/servicerequests/add/t/pA=="><i class="icon-remove"></i>Service Request</a></li>
+					<?php }?>
+					
+					 
+					<?php if($reqiaddpermission=='Yes'){?>
+					 <li><a href="<?php echo $baseUrl; ?>/requisition/add"><i class="icon-cog"></i>Requisition</a></li>
+					 <?php }?>
+					
+					
+					 <?php if($apprinitpermission=='Yes'){?>
+					 <li><a href="<?php echo $baseUrl; ?>/appraisalinit/add"><i class="icon-remove"></i>Appraisal</a></li>
+					 <?php }?>
+					
+					 
+					 <?php if($bunitaddpermission=='Yes'){?>
+					 <li><a href="<?php echo $baseUrl; ?>/businessunits/edit"><i class="icon-cog"></i>Business Unit</a></li>
+					 <?php  }?>
+					
+					
+					  <?php if($deptaddpermission=='Yes'){?>
+					<li><a href="<?php echo $baseUrl; ?>/departments/edit"><i class="icon-remove"></i>Department</a></li>
+					<?php  }?>
+					
+					
+					  <?php if($announcementaddperm=='Yes'){?>
+					 <li><a href="<?php echo $baseUrl; ?>/announcements/add"><i class="icon-remove"></i>Announcement</a></li>
+                     <?php  }?>
+                     
+                     
+          <?php }elseif($loginuserGroup == EMPLOYEE_GROUP){?>
+                     
+                      <?php if($leaveAddPerm=='Yes'){?>
+                     <li><a href="<?php echo $baseUrl; ?>/leaverequest/"><i class="icon-remove"></i>Leave Request</a></li>
+					  <?php }?>
+					  
+                      
+					  <?php if(!empty($servReqAddPerm)){?>
+					 <li><a href="<?php echo $baseUrl; ?>/servicerequests/add/t/pA=="><i class="icon-remove"></i>Service Request</a></li>
+                      <?php }?>
+                     
+          <?php }elseif($loginuserGroup == MANAGER_GROUP||$loginuserGroup == SYSTEMADMIN_GROUP){?>
+                     
+                     
+                      <?php if($leaveAddPerm=='Yes'){?>
+                     <li><a href="<?php echo $baseUrl; ?>/leaverequest/"><i class="icon-remove"></i>Leave Request</a></li>
+					  <?php }?>
+					  
+                      
+                      <?php if(!empty($servReqAddPerm)){?>
+					 <li><a href="<?php echo $baseUrl; ?>/servicerequests/add/t/pA=="><i class="icon-remove"></i>Service Request</a></li>
+                        <?php }?>
+                     
+                     <?php if($reqiaddpermission=='Yes'){?>
+                      <li><a href="<?php echo $baseUrl; ?>/requisition/add"><i class="icon-cog"></i>Requisition</a></li>
+                     <?php }?>
+                     
+                     
+           <?php }?>
+						
+					</ul>
+					</li>
+			
+		<?php }
  
 	public static function viewHeader()
 		{
