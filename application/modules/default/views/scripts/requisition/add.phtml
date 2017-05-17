@@ -1,5 +1,3 @@
- 
-
 <?php 
 $form = $this->form;
 $messages = $this->messages;
@@ -12,9 +10,15 @@ $reportingManagerData = $this->reportingManagerData;
  sapp_Global::generateClientValidations($this->form);
  $requisition_view_helper = $this->Requisition();
 ?>
-<form name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
-<div class="form_cntr_block">
-<div class="total-form-controller">
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">Openings/Positions</div>
+    </div>
+<form class="form-horizontal" name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" action="<?php echo $this->form->getAction();?>" method="<?php echo $this->form->getMethod(); ?>">
+ <div class="panel-body"> 
+   <div class="row">                                       
+              
+                   
     <?php echo $form->id;
     echo $this->form->email_cnt;
          if(isset($messages['email_cnt']))
@@ -27,24 +31,29 @@ $reportingManagerData = $this->reportingManagerData;
          }
         ?>
         
-   
-    <div class="new-form-ui">
-        <label class="required">Requisition Code</label>
-        <div class="division"><span class="textarea-data-show"><?php echo $form->requisition_code;?></span></div>
+     
+     <div class="form-group">
+         <div class="col-md-6">
+         <label class="col-md-3 control-label required">Requisition Code</label>
+        <div class="col-md-9"><span class="textarea-data-show"><?php echo $form->requisition_code;?></span></div>
         <span id="errors-requisition_code" class="errors"><?php echo (isset($messages['requisition_code'])?$messages['requisition_code']:"");?></span>
     </div>
-    <div class="new-form-ui">
-        <label class="required">Due Date <img class="tooltip" title="<?php echo DATE_DESCRIPTION;?>" src="<?php echo MEDIA_PATH;?>images/help.png" /></label>
-        <div class="division"><?php echo $form->onboard_date;?>
+     <div class="col-md-6">
+         <label class="col-md-3 control-label required">Due Date <img class="tooltip" title="<?php echo DATE_DESCRIPTION;?>" src="<?php echo MEDIA_PATH;?>images/help.png" /></label>
+        <div class="col-md-9"><?php echo $form->onboard_date;?>
         <span id="errors-onboard_date" class="errors"><?php echo (isset($messages['onboard_date'])?$messages['onboard_date']:"");?></span>
         </div>
-    </div>
-    <div class="new-form-ui">
-        <label>Business Unit</label>
+    </div></div>
+       
+       
+      <div class="form-group">
+         <div class="col-md-6">
+         <label class="col-md-3 control-label required">Business Unit</label>
+       
 <?php 
         if($loginuserGroup == MANAGER_GROUP || $loginuserGroup == HR_GROUP)
         {
-?>          <div class="division">
+?>          <div class="col-md-9">
                 <input type="hidden" name="business_unit" value="<?php echo $data['bunit_data']['id'];?>" />
                 <select disabled>
                     <option><?php echo $data['bunit_data']['name'];?></option>
@@ -55,19 +64,20 @@ $reportingManagerData = $this->reportingManagerData;
         else 
         {
 ?>
-        <div class="division"><?php echo $form->business_unit;?>
+        <div class="col-md-9"><?php echo $form->business_unit;?>
         <span id="errors-business_unit" class="errors"><?php echo (isset($messages['business_unit'])?$messages['business_unit']:"");?></span>
         </div>
 <?php 
         }
 ?>
     </div>
-    <div class="new-form-ui">
-        <label class="required">Department</label>
+         <div class="col-md-6">
+   
+         <label class="col-md-3 control-label required">Department</label>
         <?php 
         if($loginuserGroup == MANAGER_GROUP)
         {
-?>          <div class="division">
+?>          <div class="col-md-9">
                 <input type="hidden" name="department" id="department" value="<?php echo $data['dept_data']['id'];?>" />
                 <select disabled>
                     <option><?php echo $data['dept_data']['name'];?></option>
@@ -78,7 +88,7 @@ $reportingManagerData = $this->reportingManagerData;
         else 
         {
         ?>
-        <div class="division"><?php echo $form->department;?>
+        <div class="col-md-9"><?php echo $form->department;?>
         <span id="errors-department" class="errors"><?php echo (isset($messages['department'])?$messages['department']:"");?></span>
         </div>
 <?php 
@@ -86,10 +96,12 @@ $reportingManagerData = $this->reportingManagerData;
 ?>
 
     </div>
-      
-    <div class="new-form-ui">
-        <label class="required">Job Title</label>
-        <div class="division"><?php echo $form->jobtitle;?>
+       </div>
+       <div class="form-group">
+     <div class="col-md-6">
+    
+         <label class="col-md-3 control-label required">Job Title</label>
+        <div class="col-md-9"><?php echo $form->jobtitle;?>
         <span id="errors-jobtitle" class="errors"><?php echo (isset($messages['jobtitle'])?$messages['jobtitle']:"");?></span>
         <?php 
 			if($this->job_title_permission == 'Yes'){
@@ -98,9 +110,9 @@ $reportingManagerData = $this->reportingManagerData;
 		?> 
         </div>
     </div>
-    <div class="new-form-ui">
-        <label class="required">Position</label>
-        <div class="division"><?php echo $form->position_id;?>
+     <div class="col-md-6">
+         <label class="col-md-3 control-label required">Position</label>
+        <div class="col-md-9"><?php echo $form->position_id;?>
         <span id="errors-position_id" class="errors"><?php echo (isset($messages['position_id'])?$messages['position_id']:"");?></span>
         <?php 
 			if($this->positions_permission == 'Yes'){
@@ -108,13 +120,15 @@ $reportingManagerData = $this->reportingManagerData;
 			} 	
 		?>  
         </div>
-    </div>  
-    <div class="new-form-ui">
-        <label class="required">Reporting Manager</label>
+    </div> </div>
+    <div class="form-group">
+    <div class="col-md-6">
+    
+        <label class="col-md-3 control-label required">Reporting Manager</label>
         <?php 
         if($loginuserGroup == MANAGER_GROUP)
         {
-?>          <div class="division">
+?>          <div class="col-md-9">
                 <input type="hidden" name="reporting_id" id="reporting_id" value="<?php echo $data['manager_data']['id'];?>" />
                 <select disabled>
                     <option><?php echo $data['manager_data']['name'];?></option>
@@ -125,8 +139,8 @@ $reportingManagerData = $this->reportingManagerData;
         else 
         {
         ?>
-        <div class="division">	
-            <select name="reporting_id" id="reporting_id">
+       <div class="col-md-9">
+           <select class="form-control select" name="reporting_id" id="reporting_id">
                 <option value="">Select Reporting Manager</option>
 <?php 
             if(count($reportingManagerData) > 0)
@@ -147,46 +161,50 @@ $reportingManagerData = $this->reportingManagerData;
         }
         ?>
     </div>
-    <div class="new-form-ui">
-        <label class="required">Required no. of Positions</label>
-        <div class="division"><?php echo $form->req_no_positions;?>
+     <div class="col-md-6">
+        <label class="col-md-3 control-label required">Required no. of Positions</label>
+        <div class="col-md-9"><?php echo $form->req_no_positions;?>
         <span id="errors-req_no_positions" class="errors"><?php echo (isset($messages['req_no_positions'])?$messages['req_no_positions']:"");?></span>
         </div>
     </div>
-    <div class="new-form-ui textareaheight">
-        <label>Job Description</label>
-        <div class="division"><?php echo $form->jobdescription;?>
+        </div>
+   <div class="form-group">
+    <div class="col-md-6">    
+        <label class="col-md-3 control-label required">Job Description</label>
+        <div class="col-md-9"><?php echo $form->jobdescription;?>
         <span id="errors-jobdescription" class="errors"><?php echo (isset($messages['jobdescription'])?$messages['jobdescription']:"");?></span>
         </div>
     </div>
-    <div class="new-form-ui textareaheight">
-        <label class="required">Required Skills</label>
-        <div class="division"><?php echo $form->req_skills;?>
+    <div class="col-md-6">   
+        <label class="col-md-3 control-label required">Required Skills</label>
+        <div class="col-md-9"><?php echo $form->req_skills;?>
 		<span id="errors-req_skills" class="errors"><?php echo (isset($messages['req_skills'])?$messages['req_skills']:"");?></span>
         </div>
-    </div>
-       <div class="new-form-ui textareaheight">
-        <label>Additional Information</label>
-        <div class="division"><?php echo $form->additional_info;?>
+    </div></div>
+       <div class="form-group">
+    <div class="col-md-6">    
+        <label class="col-md-3 control-label required">Additional Information</label>
+        <div class="col-md-9"><?php echo $form->additional_info;?>
         <span id="errors-additional_info" class="errors"><?php echo (isset($messages['additional_info'])?$messages['additional_info']:"");?></span>
         </div>
     </div>
 
-    <div class="new-form-ui">
-        <label class="required">Required Qualification</label>
-        <div class="division"><?php echo $form->req_qualification;?>
+    <div class="col-md-6">   
+        <label class="col-md-3 control-label required">Required Qualification</label>
+        <div class="col-md-9"><?php echo $form->req_qualification;?>
         <span id="errors-req_qualification" class="errors"><?php echo (isset($messages['req_qualification'])?$messages['req_qualification']:"");?></span>
         </div>
-    </div>
-    <div class="new-form-ui">
-        <label class="required">Required Experience Range <img class="tooltip" title="In years Ex: 0-3" src="<?php echo MEDIA_PATH;?>images/help.png" /></label>
-        <div class="division"><?php echo $form->req_exp_years;?>
+    </div></div>
+    <div class="form-group">
+    <div class="col-md-6">   
+         <label class="col-md-3 control-label required">Required Experience Range <img class="tooltip" title="In years Ex: 0-3" src="<?php echo MEDIA_PATH;?>images/help.png" /></label>
+        <div class="col-md-9"><?php echo $form->req_exp_years;?>
         <span id="errors-req_exp_years" class="errors"><?php echo (isset($messages['req_exp_years'])?$messages['req_exp_years']:"");?></span>
         </div>
     </div>
-    <div class="new-form-ui">
-        <label class="required">Employment Status</label>
-        <div class="division"><?php echo $form->emp_type;?>
+    <div class="col-md-6">   
+        <label class="col-md-3 control-label required">Employment Status</label>
+        <div class="col-md-9"><?php echo $form->emp_type;?>
         <span id="errors-emp_type" class="errors"><?php echo (isset($messages['emp_type'])?$messages['emp_type']:"");?></span>
         <?php 
 			if($this->emp_status_permission == 'Yes' )
@@ -195,25 +213,27 @@ $reportingManagerData = $this->reportingManagerData;
 			}	 
 		?> 
         </div>
-    </div>
-    <div class="new-form-ui">
-        <label class="required">Priority</label>
-        <div class="division"><?php echo $form->req_priority;?>
+    </div></div>
+     <div class="form-group">
+    <div class="col-md-6">   
+        <label class="col-md-3 control-label required">Priority</label>
+        <div class="col-md-9"><?php echo $form->req_priority;?>
         <span id="errors-req_priority" class="errors"><?php echo (isset($messages['req_priority'])?$messages['req_priority']:"");?></span>
         </div>
     </div>
-    <div class="new-form-ui">
-        <label class="required">Requisition Status</label>
-        <div class="division">
+    <div class="col-md-6">   
+        <label class="col-md-3 control-label required">Requisition Status</label>
+        <div class="col-md-9">
 			<?php echo $form->req_status;?>	
 			<span id="errors-additional_info" class="errors"><?php echo (isset($messages['req_status'])?$messages['req_status']:"");?></span>			
 		</div>
-    </div>
+    </div></div>
     <div class="claerall fullwidth fltleft"></div>
-    <div class="new-form-ui">
-        <label class="required">Approver -1 </label>
-        <div class="division">
-        <select name="approver1" id="approver1">
+    <div class="form-group">
+    <div class="col-md-6">   
+        <label class="col-md-3 control-label required">Approver -1 </label>
+        <div class="col-md-9">
+        <select name="approver1" class="form-control select" id="approver1">
             <option value="">Select Approver -1</option>
 <?php 
             if(count($approver1_opt) > 0)
@@ -232,10 +252,10 @@ $reportingManagerData = $this->reportingManagerData;
         </div>
     </div>
     
-    <div class="new-form-ui">
-        <label>Approver -2 </label>
-        <div class="division">        
-        <select name="approver2" id="approver2">
+   <div class="col-md-6">
+        <label class="col-md-3 control-label">Approver -2 </label>
+       <div class="col-md-9">      
+        <select name="approver2"  class="form-control select" id="approver2">
             <option value="">Select Approver -2</option>
 <?php 
             if(count($approver2_opt) > 0)
@@ -251,12 +271,13 @@ $reportingManagerData = $this->reportingManagerData;
 ?>
             </select>
         </div>
-    </div>
+    </div></div>
     
-    <div class="new-form-ui">
-        <label>Approver -3 </label>
-        <div class="division">        
-        <select name="approver3" id="approver3">
+   <div class="form-group">
+    <div class="col-md-6">   
+        <label class="col-md-3 control-label required">Approver -3 </label>
+        <div class="col-md-9">      
+        <select name="approver3" class="form-control select"  id="approver3">
             <option value="">Select Approver -3</option>
 <?php 
             if(count($approver3_opt) > 0)
@@ -273,15 +294,16 @@ $reportingManagerData = $this->reportingManagerData;
             </select>
         </div>
     </div>
+    </div></div>
     
     
-    
-    <div class="new-form-ui-submit">
+   </div>
+		<div class="panel-footer">
         <?php echo $form->submit;?>
-        <button type="button" id="Cancel" name="Cancel" onclick="window.location.href='<?php echo BASE_URL; ?>requisition';">Cancel</button>
+                    <button type="button" id="Cancel" name="Cancel" class="btn btn-danger" onclick="window.location.href='<?php echo BASE_URL; ?>requisition';">Cancel</button>
     </div>  
-</div></div>
-</form>
+
+</form></div>
 <?php 
 $requisition_view_helper->getContainer('jobtitles');
 $requisition_view_helper->getContainer('positions');
