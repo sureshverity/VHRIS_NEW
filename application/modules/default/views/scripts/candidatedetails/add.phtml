@@ -16,25 +16,30 @@ $msgarray = $candidate_details_view_helper->trimMessages($this->msgarray);
     2.Enter Candidate Details
     So the below form consists of two submit buttons for the above two options.  
 -->
-<form name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" method="POST" action='<?php echo $this->form->getAction();?>'>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">Openings/Positions</div>
+    </div>
+<form class="form-horizontal" name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" method="POST" action='<?php echo $this->form->getAction();?>'>
 
-<div class="form_cntr_block">
-<div class="total-form-controller">
-	<div class="new-form-ui inputheight-4">
-            <label class="required">Requisition ID</label>
-            <div class="division">
+<div class="panel-body"> 
+   <div class="row">
+	 <div class="form-group">
+         <div class="col-md-6">
+         <label class="col-md-3 control-label required">Requisition ID</label>
+           <div class="col-md-9">
                 <?php echo $form->requisition_id;?>
             </div>
             <?php if(isset($this->msgarray['requisition_id'])){?>
 				   <span class="errors" id="errors-requisition_id"><?php echo $this->msgarray['requisition_id'];?></span>
 		<?php }?>
     </div>
-     <div class="new-form-ui inputheight-4">
-        <label>Status</label>
-        <div class="division"><select disabled><option>Not Scheduled</option></select>
+      <div class="col-md-6">
+         <label class="col-md-3 control-label">Status</label>
+        <div class="col-md-9"><select disabled><option>Not Scheduled</option></select>
             <input type="hidden" value="Not Scheduled" name="cand_status" id="cand_status" />
         </div>
-    </div> 
+    </div> </div>
     <!--  <div class="new-form-ui inputheight-4">
         <label class="required">Candidate Name</label>
         <div class="division"><?php //echo $form->candidate_name; ?></div>
@@ -42,42 +47,45 @@ $msgarray = $candidate_details_view_helper->trimMessages($this->msgarray);
 				   <span class="errors" id="errors-candidate_name"><?php //echo $this->msgarray['candidate_name'];?></span>
 		<?php //}?>
     </div>-->
-    <div class="new-form-ui inputheight-4">
-        <label class="required">Candidate First Name</label>
-        <div class="division"><?php echo $form->candidate_firstname; ?></div>
+    <div class="form-group">
+         <div class="col-md-6">
+         <label class="col-md-3 control-label required">Candidate First Name</label>
+        <div class="col-md-9"><?php echo $form->candidate_firstname; ?></div>
         <?php if(isset($this->msgarray['candidate_firstname'])){?>
 				   <span class="errors" id="errors-candidate_firstname"><?php echo $this->msgarray['candidate_firstname'];?></span>
 		<?php }?>
     </div>
-    <div class="new-form-ui inputheight-4">
-        <label class="required">Candidate Last Name</label>
-        <div class="division"><?php echo $form->candidate_lastname; ?></div>
+    <div class="col-md-6">
+         <label class="col-md-3 control-label">Candidate Last Name</label>
+        <div class="col-md-9"><?php echo $form->candidate_lastname; ?></div>
         <?php if(isset($this->msgarray['candidate_lastname'])){?>
 				   <span class="errors" id="errors-candidate_lastname"><?php echo $this->msgarray['candidate_lastname'];?></span>
 		<?php }?>
-    </div>
-    <div class="new-form-ui inputheight-4">
-        <label class="required">Email</label>
-        <div class="division"><?php echo $form->emailid; ?></div>
+    </div></div>
+    <div class="form-group">
+         <div class="col-md-6">
+         <label class="col-md-3 control-label required">Email</label>
+        <div class="col-md-9"><?php echo $form->emailid; ?></div>
        <?php if(isset($this->msgarray['emailid'])){?>
 				   <span class="errors" id="errors-emailid"><?php echo $this->msgarray['emailid'];?></span>
 		<?php }?>
     </div>
     
-    <div class="new-form-ui">
-        <label class="required">Contact Number</label>
-        <div class="division"><?php echo $form->contact_number; ?></div>
+    <div class="col-md-6">
+         <label class="col-md-3 control-label required">Contact Number</label>
+        <div class="col-md-9"><?php echo $form->contact_number; ?></div>
 		<?php if(isset($this->msgarray['contact_number'])){?>
 				   <span class="errors" id="errors-contact_number"><?php echo $this->msgarray['contact_number'];?></span>
 		<?php }?>
-    </div>
-    <div class="new-form-ui">
-        <label class="required">Qualification</label>
-        <div class="division"><?php echo $form->qualification; ?></div>
+    </div></div>
+    <div class="form-group">
+         <div class="col-md-6">
+         <label class="col-md-3 control-label required">Qualification</label>
+        <div class="col-md-9"><?php echo $form->qualification; ?></div>
 		<?php if(isset($this->msgarray['qualification'])){?>
 				   <span class="errors" id="errors-qualification"><?php echo $this->msgarray['qualification'];?></span>
 		<?php }?>
-    </div>
+    </div></div>
     <div id="tabs" class="upload-link">
     	<a id="upload-resume" href="javascript:void(0);" <?php if($this->data['selected_option']=='upload-resume' || empty($this->data['selected_option'])){echo 'class="act"';}?>>Upload resume</a>&nbsp;&nbsp;&nbsp;(OR)&nbsp;&nbsp;&nbsp;<a id="candidate-form" href="javascript:void(0);" <?php if($this->data['selected_option']=='fill-up-form'){echo 'class="act"';}?>>Enter Candidate Details</a>
     </div>
@@ -125,38 +133,42 @@ $msgarray = $candidate_details_view_helper->trimMessages($this->msgarray);
 				   <span class="errors" id="errors-qualification"><?php //echo $this->msgarray['qualification'];?></span>
 		<?php// }?>
     </div>-->
-    <div class="new-form-ui">
-        <label class="required">Work Experience <img class="tooltip" title="In years Ex : 4.5" src="<?php echo MEDIA_PATH;?>images/help.png"></label>
-        <div class="division"><?php echo $form->experience; ?></div>
+    <div class="form-group">
+         <div class="col-md-6">
+         <label class="col-md-3 control-label required">Work Experience <img class="tooltip" title="In years Ex : 4.5" src="<?php echo MEDIA_PATH;?>images/help.png"></label>
+        <div class="col-md-9"><?php echo $form->experience; ?></div>
 		<?php if(isset($this->msgarray['experience'])){?>
 				   <span class="errors" id="errors-experience"><?php echo $this->msgarray['experience'];?></span>
 		<?php }?>
     </div>
-    <div class="new-form-ui textareaheight" >
-        <label class="required">Skill Set</label>
-        <div class="division"><?php echo $form->skillset; ?></div>
+    <div class="col-md-6">
+         <label class="col-md-3 control-label required">Skill Set</label>
+        <div class="col-md-9"><?php echo $form->skillset; ?></div>
 		<?php if(isset($this->msgarray['skillset'])){?>
 				   <span class="errors" id="errors-skillset"><?php echo $this->msgarray['skillset'];?></span>
 		<?php }?>
+    </div></div>
+    <div class="form-group">
+         <div class="col-md-6">
+         <label class="col-md-3 control-label">Education Summary</label>
+        <div class="col-md-9"><?php echo $form->education_summary; ?></div>
     </div>
-    <div class="new-form-ui textareaheight" >
-        <label>Education Summary</label>
-        <div class="division"><?php echo $form->education_summary; ?></div>
-    </div>
-    <div class="new-form-ui textareaheight" >
-        <label>Summary</label>
-        <div class="division"><?php echo $form->summary; ?></div>
-    </div>
-    <div class="new-form-ui textareaheight" >
-        <label class="required">Location</label>
-        <div class="division"><?php echo $form->cand_location; ?></div>
+    <div class="col-md-6">
+         <label class="col-md-3 control-label">Summary</label>
+        <div class="col-md-6"><?php echo $form->summary; ?></div>
+    </div></div>
+    <div class="form-group">
+         <div class="col-md-6">
+         <label class="col-md-3 control-label required">Location</label>
+        <div class="col-md-6"><?php echo $form->cand_location; ?></div>
 		<?php if(isset($this->msgarray['cand_location'])){?>
 				   <span class="errors" id="errors-cand_location"><?php echo $this->msgarray['cand_location'];?></span>
 		<?php }?>
     </div>
-    <div class="new-form-ui">
-        <label  class="required">Country</label>
-        <div class="division"><?php echo $form->country; ?>
+     
+         <div class="col-md-6">
+         <label class="col-md-3 control-label required">Country</label>
+        <div class="col-md-6"><?php echo $form->country; ?>
 		<?php if(isset($this->msgarray['country'])){?>
 				   <span class="errors" id="errors-country"><?php echo $this->msgarray['country'];?></span>
 		<?php }?>
@@ -164,10 +176,11 @@ $msgarray = $candidate_details_view_helper->trimMessages($this->msgarray);
 			<span class="add-coloum" onclick="displaydeptform('<?php echo BASE_URL.'countries/addnewcountry' ?>','Country');"> Add Country</span>			
 		<?php } ?>
         </div>
-    </div>
-    <div class="new-form-ui">
-        <label class="required">State</label>
-        <div class="division"><?php echo $form->state; ?>
+    </div></div>
+    <div class="form-group">
+         <div class="col-md-6">
+         <label class="col-md-3 control-label required">State</label>
+        <div class="col-md-6"><?php echo $form->state; ?>
 		<?php if(isset($this->msgarray['state'])){?>
 				   <span class="errors" id="errors-state"><?php echo $this->msgarray['state'];?></span>
 		<?php }?>
@@ -176,9 +189,9 @@ $msgarray = $candidate_details_view_helper->trimMessages($this->msgarray);
 		<?php } ?>
         </div>
     </div>
-    <div class="new-form-ui">
-        <label class="required">City</label>
-        <div class="division"><?php echo $form->city; ?>
+    <div class="col-md-6">
+         <label class="col-md-3 control-label required">City</label>
+        <div class="col-md-6"><?php echo $form->city; ?>
 		<?php if(isset($this->msgarray['city'])){?>
 				   <span class="errors" id="errors-city"><?php echo $this->msgarray['city'];?></span>
 		<?php }?>
@@ -186,10 +199,11 @@ $msgarray = $candidate_details_view_helper->trimMessages($this->msgarray);
 			<span class="add-coloum" onclick="displaydeptform('<?php echo BASE_URL.'cities/addnewcity' ?>','City');"> Add City</span>			
 		<?php } ?>
         </div>
-    </div>
-	 <div class="new-form-ui">
-        <label class="required">Postal Code</label>
-        <div class="division"><?php echo $form->pincode; ?></div>
+    </div></div>
+	 <div class="form-group">
+         <div class="col-md-6">
+         <label class="col-md-3 control-label required">Postal Code</label>
+        <div class="col-md-6"><?php echo $form->pincode; ?></div>
 		<?php if(isset($this->msgarray['pincode'])){?>
 				   <span class="errors" id="errors-pincode"><?php echo $this->msgarray['pincode'];?></span>
 		<?php }?>

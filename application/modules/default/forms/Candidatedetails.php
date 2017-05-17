@@ -35,7 +35,7 @@ class Default_Form_Candidatedetails extends Zend_Form
         $requisition_id = new Zend_Form_Element_Select("requisition_id");
         $requisition_id->setRegisterInArrayValidator(false);
         $requisition_id->setLabel("Requisition ID");	
-        $requisition_id->setAttrib("class", "formDataElement"); 
+        $requisition_id->setAttrib("class", "form-control");
         
 		$requisition_id->setAttrib('onchange', 'displayParticularCandidates(this,"cand")');
         $requisition_id->setAttrib('title', 'Requisition ID');
@@ -66,6 +66,7 @@ class Default_Form_Candidatedetails extends Zend_Form
 
         $candidate_firstname = new Zend_Form_Element_Text('candidate_firstname');
         $candidate_firstname->setAttrib('maxLength', 50);
+        $candidate_firstname->setAttrib("class", "form-control");
         $candidate_firstname->setAttrib('title', 'Candidate First Name');        
         $candidate_firstname->addFilter(new Zend_Filter_StringTrim());
         $candidate_firstname->setRequired(true);
@@ -79,6 +80,7 @@ class Default_Form_Candidatedetails extends Zend_Form
 
         $candidate_lastname = new Zend_Form_Element_Text('candidate_lastname');
         $candidate_lastname->setAttrib('maxLength', 50);
+        $candidate_lastname->setAttrib("class", "form-control");
         $candidate_lastname->setAttrib('title', 'Candidate Last Name');        
         $candidate_lastname->addFilter(new Zend_Filter_StringTrim());
         $candidate_lastname->setRequired(true);
@@ -92,7 +94,8 @@ class Default_Form_Candidatedetails extends Zend_Form
                 
 		$emailid = new Zend_Form_Element_Text('emailid');
                 $emailid->setAttrib('maxLength', 70);
-                $emailid->setAttrib('title', 'Email');        
+                $emailid->setAttrib('title', 'Email'); 
+                $emailid->setAttrib("class", "form-control");
                 $emailid->addFilter(new Zend_Filter_StringTrim());
                 $emailid->setRequired(true);
                 $emailid->addValidator('NotEmpty', false, array('messages' => 'Please enter email.'));  
@@ -117,7 +120,7 @@ class Default_Form_Candidatedetails extends Zend_Form
 		if($selected_option == 'fill-up-form'){
         	$contact_number->setRequired(true);
 		}
-        
+        $contact_number->setAttrib("class", "form-control");
         $contact_number->setAttrib('maxLength', 10);
         $contact_number->setAttrib('title', 'Contact Number.');        
         $contact_number->addFilter(new Zend_Filter_StringTrim());
@@ -141,6 +144,7 @@ class Default_Form_Candidatedetails extends Zend_Form
         
         $qualification = new Zend_Form_Element_Text('qualification');
         $qualification->setAttrib('maxLength', 90);
+        $qualification->setAttrib("class", "form-control");
         $qualification->setAttrib('title', 'Qualification.');        
         $qualification->addFilter(new Zend_Filter_StringTrim());
         
@@ -158,6 +162,7 @@ class Default_Form_Candidatedetails extends Zend_Form
         
         $experience = new Zend_Form_Element_Text('experience');
         $experience->setAttrib('maxLength', 5);
+        $experience->setAttrib("class", "form-control");
         $experience->setAttrib('title', 'Work Experience.');        
         $experience->addFilter(new Zend_Filter_StringTrim());
         
@@ -174,8 +179,9 @@ class Default_Form_Candidatedetails extends Zend_Form
         	));
         
         $skillset = new Zend_Form_Element_Textarea('skillset');
-        $skillset->setAttrib('rows', 10);
-        $skillset->setAttrib('cols', 50);        
+        $skillset->setAttrib('rows', 4);
+        $skillset->setAttrib('cols', 30);
+        $skillset->setAttrib("class", "form-control");
         $skillset->setAttrib('title', 'Skill Set');
         
         if($selected_option == 'fill-up-form'){
@@ -184,18 +190,21 @@ class Default_Form_Candidatedetails extends Zend_Form
         $skillset->addValidator('NotEmpty', false, array('messages' => 'Please enter skill set.')); 
         
         $education_summary = new Zend_Form_Element_Textarea('education_summary');
-        $education_summary->setAttrib('rows', 10);
-        $education_summary->setAttrib('cols', 50);        
+        $education_summary->setAttrib('rows', 4);
+        $education_summary->setAttrib('cols', 30);
+        $education_summary->setAttrib("class", "form-control");    
         $education_summary->setAttrib('title', 'Education Summary.');
         
         $summary = new Zend_Form_Element_Textarea('summary');
-        $summary->setAttrib('rows', 10);
-        $summary->setAttrib('cols', 50);        
+        $summary->setAttrib('rows', 4);
+        $summary->setAttrib('cols', 30);
+        $summary->setAttrib("class", "form-control");     
         $summary->setAttrib('title', 'Summary.');
         
         $cand_location = new Zend_Form_Element_Textarea('cand_location');
-        $cand_location->setAttrib('rows', 10);
-        $cand_location->setAttrib('cols', 50);        
+        $cand_location->setAttrib('rows', 4);
+        $cand_location->setAttrib('cols', 30);
+        $cand_location->setAttrib("class", "form-control");     
         $cand_location->setAttrib('maxlength', 150);        
         $cand_location->setAttrib('title', 'Location.');
         
@@ -208,7 +217,7 @@ class Default_Form_Candidatedetails extends Zend_Form
         $country = new Zend_Form_Element_Select("country");
         $country->setRegisterInArrayValidator(false);
         $country->setLabel("Country");		
-        $country->setAttrib("class", "formDataElement"); 
+        $country->setAttrib("class", "form-control select"); 
         $country->setAttrib('onchange', 'displayParticularState_normal(this,"","state","city")');
         $country->setAttrib('title', 'Country');
         
@@ -228,7 +237,7 @@ class Default_Form_Candidatedetails extends Zend_Form
 		$state->addValidator('NotEmpty', false, array('messages' => 'Please select state.')); 
         $state->addMultiOptions(array(''=>'Select State'));
         $state->setLabel("State");		
-        $state->setAttrib("class", "formDataElement"); 
+        $state->setAttrib("class", "form-control select"); 
         $state->setAttrib('onchange', 'displayParticularCity_normal(this,"","city","")');
         $state->setAttrib('title', 'State'); 		
         
@@ -236,7 +245,7 @@ class Default_Form_Candidatedetails extends Zend_Form
         $city->setRegisterInArrayValidator(false);
         $city->addMultiOptions(array(''=>'Select City'));
         $city->setLabel("City");		
-        $city->setAttrib("class", "formDataElement");         
+        $city->setAttrib("class", "form-control select");         
         $city->setAttrib('title', 'City');
         
         if($selected_option == 'fill-up-form'){
@@ -247,7 +256,8 @@ class Default_Form_Candidatedetails extends Zend_Form
         
         $pincode = new Zend_Form_Element_Text('pincode');
         $pincode->setAttrib('maxLength', 10);
-        $pincode->setAttrib('title', 'Postal Code.');        
+        $pincode->setAttrib('title', 'Postal Code.'); 
+        $pincode->setAttrib("class", "form-control select");  
         $pincode->addFilter(new Zend_Filter_StringTrim());
         
         if($selected_option == 'fill-up-form'){
@@ -275,12 +285,13 @@ class Default_Form_Candidatedetails extends Zend_Form
         $cand_status->setRegisterInArrayValidator(false);
         
         $cand_status->setLabel("Status");
-        $cand_status->setAttrib("class", "formDataElement");        
+        $cand_status->setAttrib("class", "form-control select");        
         $cand_status->setAttrib('title', 'Candidate status');
                         
         $submit = new Zend_Form_Element_Submit('submit');        
         $submit->setAttrib('id', 'submitbutton');
-		$submit->setAttrib('class', 'cvsbmtbtn');
+        $submit->setAttrib("class", "btn btn-primary pull-right");
+	$submit->setAttrib('class', 'cvsbmtbtn');
         $submit->setLabel('Save'); 
         
         //start of candidate work details.
