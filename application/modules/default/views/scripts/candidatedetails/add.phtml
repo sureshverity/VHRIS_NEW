@@ -22,7 +22,7 @@ $msgarray = $candidate_details_view_helper->trimMessages($this->msgarray);
     </div>
 <form class="form-horizontal" name="<?php echo $this->form->getName(); ?>" id="<?php echo $this->form->getId(); ?>" method="POST" action='<?php echo $this->form->getAction();?>'>
 
-<div class="panel-body"> 
+<div class="panel-body nav-tabs-vertical"> 
    <div class="row">
 	 <div class="form-group">
          <div class="col-md-6">
@@ -36,7 +36,7 @@ $msgarray = $candidate_details_view_helper->trimMessages($this->msgarray);
     </div>
       <div class="col-md-6">
          <label class="col-md-3 control-label">Status</label>
-        <div class="col-md-9"><select disabled><option>Not Scheduled</option></select>
+         <div class="col-md-9"><select disabled class="form-control select"><option>Not Scheduled</option></select>
             <input type="hidden" value="Not Scheduled" name="cand_status" id="cand_status" />
         </div>
     </div> </div>
@@ -155,12 +155,12 @@ $msgarray = $candidate_details_view_helper->trimMessages($this->msgarray);
     </div>
     <div class="col-md-6">
          <label class="col-md-3 control-label">Summary</label>
-        <div class="col-md-6"><?php echo $form->summary; ?></div>
+        <div class="col-md-9"><?php echo $form->summary; ?></div>
     </div></div>
     <div class="form-group">
          <div class="col-md-6">
          <label class="col-md-3 control-label required">Location</label>
-        <div class="col-md-6"><?php echo $form->cand_location; ?></div>
+        <div class="col-md-9"><?php echo $form->cand_location; ?></div>
 		<?php if(isset($this->msgarray['cand_location'])){?>
 				   <span class="errors" id="errors-cand_location"><?php echo $this->msgarray['cand_location'];?></span>
 		<?php }?>
@@ -168,7 +168,7 @@ $msgarray = $candidate_details_view_helper->trimMessages($this->msgarray);
      
          <div class="col-md-6">
          <label class="col-md-3 control-label required">Country</label>
-        <div class="col-md-6"><?php echo $form->country; ?>
+        <div class="col-md-9"><?php echo $form->country; ?>
 		<?php if(isset($this->msgarray['country'])){?>
 				   <span class="errors" id="errors-country"><?php echo $this->msgarray['country'];?></span>
 		<?php }?>
@@ -180,7 +180,7 @@ $msgarray = $candidate_details_view_helper->trimMessages($this->msgarray);
     <div class="form-group">
          <div class="col-md-6">
          <label class="col-md-3 control-label required">State</label>
-        <div class="col-md-6"><?php echo $form->state; ?>
+        <div class="col-md-9"><?php echo $form->state; ?>
 		<?php if(isset($this->msgarray['state'])){?>
 				   <span class="errors" id="errors-state"><?php echo $this->msgarray['state'];?></span>
 		<?php }?>
@@ -191,7 +191,7 @@ $msgarray = $candidate_details_view_helper->trimMessages($this->msgarray);
     </div>
     <div class="col-md-6">
          <label class="col-md-3 control-label required">City</label>
-        <div class="col-md-6"><?php echo $form->city; ?>
+        <div class="col-md-9"><?php echo $form->city; ?>
 		<?php if(isset($this->msgarray['city'])){?>
 				   <span class="errors" id="errors-city"><?php echo $this->msgarray['city'];?></span>
 		<?php }?>
@@ -203,25 +203,21 @@ $msgarray = $candidate_details_view_helper->trimMessages($this->msgarray);
 	 <div class="form-group">
          <div class="col-md-6">
          <label class="col-md-3 control-label required">Postal Code</label>
-        <div class="col-md-6"><?php echo $form->pincode; ?></div>
+        <div class="col-md-9"><?php echo $form->pincode; ?></div>
 		<?php if(isset($this->msgarray['pincode'])){?>
 				   <span class="errors" id="errors-pincode"><?php echo $this->msgarray['pincode'];?></span>
 		<?php }?>
-    </div>   
-    <div class="separetor-heading">Previous Company Details</div>        
-    <div class="poc-ui-data-control">
-
-        <div class="left-block-ui-data">
-            <div class="agency-ui">
-                <ul>
-                    <li class="active" id="poclifirst" style="cursor:pointer;" onclick="contactElements('first');">Company 1</li>
-                    <li id="poclisecond" style="cursor:pointer;" onclick="contactElements('second');">Company 2</li>
-                    <li id="poclithird" style="cursor:pointer;" onclick="contactElements('third');">Company 3</li>
+    </div>  </div> 
+    <div class="separetor-heading"><h3>Previous Company Details</h3></div>        
+    <div class="tabs">
+                <ul class="nav nav-tabs">
+                    <li class="tab-pane active" id="poclifirst" style="cursor:pointer;"><a href="#" onclick="contactElements('first');">Company 1</a></li>
+                    <li class="tab-pane" id="poclisecond" style="cursor:pointer;"><a href="#" onclick="contactElements('second');">Company 2</a></li>
+                    <li class="tab-pane" id="poclithird" style="cursor:pointer;"><a href="#" onclick="contactElements('third');">Company 3</a></li>
                 </ul>
-            </div>
-        </div>
 
-        <div class="right-block-data right-over-border">		
+
+        <div class="tab-content panel-body">		
 <?php 
 
           foreach($tab_data as $key => $value)
@@ -236,78 +232,82 @@ $msgarray = $candidate_details_view_helper->trimMessages($this->msgarray);
               $comp_address = "txt_address".$key;
 ?>              
             <div id="<?php echo $value;?>" class="clearb fltleft">
-                <div class="new-form-ui">
-                  <label class="">Company Name</label>
-                <div class="division"><?php echo $form->$company_name;?></div>
+                
+                <div class="form-group">
+         <div class="col-md-6">
+         <label class="col-md-3 control-label required">Company Name</label>
+                <div class="col-md-9"><?php echo $form->$company_name;?>
                    <?php if(isset($this->msgarray[$company_name])){?>
                            <span class="errors" id="errors-idtxt_cname<?php echo $key; ?>"><?php echo $this->msgarray[$company_name];?></span>
                   <?php }?>
-                </div>
+                </div></div>
 
-                <div class="new-form-ui">
-                  <label class="">Designation</label>
-                <div class="division"><?php echo $form->$designation;?></div>
+                <div class="col-md-6">
+         <label class="col-md-3 control-label">Designation</label>
+               <div class="col-md-9"><?php echo $form->$designation;?>
                   <?php if(isset($this->msgarray[$designation])){?>
                            <span class="errors" id="errors-idtxt_desig<?php echo $key; ?>"><?php echo $this->msgarray[$designation];?></span>
                   <?php }?>
-                </div>
+                </div> </div></div>	
 
-                <div class="new-form-ui">
-                  <label class="">From <img class="tooltip" title="<?php echo DATE_DESCRIPTION;?>" src="<?php echo MEDIA_PATH;?>images/help.png"></label>
-                <div class="division"><?php echo $form->$from_date;?></div>
+                 <div class="form-group">
+         <div class="col-md-6">
+         <label class="col-md-3 control-label">From <img class="tooltip" title="<?php echo DATE_DESCRIPTION;?>" src="<?php echo MEDIA_PATH;?>images/help.png"></label>
+                <div class="col-md-9"><?php echo $form->$from_date;?>
                  <?php if(isset($this->msgarray[$from_date])){?>
                            <span class="errors" id="errors-idtxt_from<?php echo $key;?>"><?php echo $this->msgarray[$from_date];?></span>
                   <?php }?>
-                </div>
+                </div></div>
 
-                <div class="new-form-ui">
-                  <label class="">To <img class="tooltip" title="<?php echo DATE_DESCRIPTION;?>" src="<?php echo MEDIA_PATH;?>images/help.png"></label>
-                <div class="division"><?php echo $form->$to_date;?></div>
+                <div class="col-md-6">
+         <label class="col-md-3 control-label">To <img class="tooltip" title="<?php echo DATE_DESCRIPTION;?>" src="<?php echo MEDIA_PATH;?>images/help.png"></label>
+                <div class="col-md-9"><?php echo $form->$to_date;?>
                    <?php if(isset($this->msgarray[$to_date])){?>
                            <span class="errors" id="errors-idtxt_to<?php echo $key;?>"><?php echo $this->msgarray[$to_date];?></span>
                   <?php }?>
-                </div>		
+                </div>	</div>	
+                     </div>	
 
-                <div class="new-form-ui">
-                  <label class="">Contact Number</label>
-                <div class="division"><?php echo $form->$contact_number;?></div>
+                 <div class="form-group">
+         <div class="col-md-6">
+         <label class="col-md-3 control-label">Contact Number</label>
+                <div class="col-md-9"><?php echo $form->$contact_number;?>
                    <?php if(isset($this->msgarray[$contact_number])){?>
                            <span class="errors" id="errors-idtxt_cnumber<?php echo $key;?>"><?php echo $this->msgarray[$contact_number];?></span>
                   <?php }?>
-                </div>
+                </div></div>
 
-                <div class="new-form-ui">
-                  <label class="">Web site</label>
-                <div class="division"><?php echo $form->$website;?></div>
+                <div class="col-md-6">
+         <label class="col-md-3 control-label">Web site</label>
+                <div class="col-md-9"><?php echo $form->$website;?>
                    <?php if(isset($this->msgarray[$website])){?>
                            <span class="errors" id="errors-idtxt_website<?php echo $key;?>"><?php echo $this->msgarray[$website];?></span>
                   <?php }?>
-                </div>
-
-                <div class="new-form-ui">
-                  <label class=""> Address</label>
-                <div class="division"><?php echo $form->$comp_address;?></div>
+                </div></div>
+                 </div>
+                <div class="form-group">
+         <div class="col-md-6">
+         <label class="col-md-3 control-label"> Address</label>
+                <div class="col-md-9"><?php echo $form->$comp_address;?>
                    <?php if(isset($this->msgarray[$comp_address])){?>
                            <span class="errors" id="errors-idtxt_address<?php echo $key;?>"><?php echo $this->msgarray[$comp_address];?></span>
                   <?php }?>
-                </div>
-
-                            
-                    </div>
+                </div></div></div>
+            </div>
 <?php             
           }
 ?>                    
                     </div>
-     </div>
+     </div></div>
 
-	    <div id='submit-button2' class="new-form-ui-submit mrgetop30">
+	    <div id='submit-button2' class="panel-footer">
 	        <?php echo $this->form->submit;?>
-	        <button type="button" id="Cancel" name="Cancel" onclick="window.location.href='<?php echo BASE_URL; ?>candidatedetails';">Cancel</button>
+                <button type="button" id="Cancel" class="btn btn-danger" name="Cancel" onclick="window.location.href='<?php echo BASE_URL; ?>candidatedetails';">Cancel</button>
 	    </div>
 	</div>
    	<input type="hidden" id='selected_option' name='selected_option' value="<?php $candidate_details_view_helper->checkSelectedOption($this->data);?>" />
 </div>    </div>    
-</form>
+</form></div>
 
     <div id="countriesContainer"  style="display: none; overflow: auto;">
 		<div class="heading">

@@ -291,7 +291,7 @@ class Default_Form_Candidatedetails extends Zend_Form
         $submit = new Zend_Form_Element_Submit('submit');        
         $submit->setAttrib('id', 'submitbutton');
         $submit->setAttrib("class", "btn btn-primary pull-right");
-	$submit->setAttrib('class', 'cvsbmtbtn');
+	
         $submit->setLabel('Save'); 
         
         //start of candidate work details.
@@ -300,7 +300,7 @@ class Default_Form_Candidatedetails extends Zend_Form
             $company_name[$i] = new Zend_Form_Element_Text('txt_cname['.$i.']');
             
             $company_name[$i]->setAttrib('id', 'idtxt_cname'.$i);
-            
+            $company_name[$i]->setAttrib('class', 'form-control');
             $company_name[$i]->setAttrib('maxlength', 70);
             $company_name[$i]->addValidator("regex",true,array(                           
                            'pattern'=>'/^[a-zA-Z.\-& ?]+$/',
@@ -312,7 +312,7 @@ class Default_Form_Candidatedetails extends Zend_Form
             
             $cdesignation[$i] = new Zend_Form_Element_Text('txt_desig['.$i.']');
             $cdesignation[$i]->setAttrib('id', 'idtxt_desig'.$i);
-            
+            $cdesignation[$i]->setAttrib('class', 'form-control');
             $cdesignation[$i]->setAttrib('maxlength', 40);
             $cdesignation[$i]->addValidator("regex",true,array(                           
                            'pattern'=>'/^[a-zA-Z.\-& ?]+$/',
@@ -324,19 +324,19 @@ class Default_Form_Candidatedetails extends Zend_Form
             
             $from_date[$i] = new Zend_Form_Element_Text('txt_from['.$i.']');
             $from_date[$i]->setAttrib('id', 'idtxt_from'.$i);
-            
+            $from_date[$i]->setAttrib('class', 'form-control');
             $from_date[$i]->setAttrib('readonly', 'readonly');            
             $this->addElement($from_date[$i]);
             
             $to_date[$i] = new Zend_Form_Element_Text('txt_to['.$i.']');
             $to_date[$i]->setAttrib('id', 'idtxt_to'.$i);
-            
+            $to_date[$i]->setAttrib('class', 'form-control');
             $to_date[$i]->setAttrib('readonly', 'readonly');            
             $this->addElement($to_date[$i]);
             
             $cnumber[$i] = new Zend_Form_Element_Text('txt_cnumber['.$i.']');
             $cnumber[$i]->setAttrib('id', 'idtxt_cnumber'.$i);
-           
+            $cnumber[$i]->setAttrib('class', 'form-control');
             $cnumber[$i]->setAttrib('maxlength', 10);
             $cnumber[$i]->addValidator("regex",true,array(                           
                            
@@ -350,7 +350,7 @@ class Default_Form_Candidatedetails extends Zend_Form
             
             $website[$i] = new Zend_Form_Element_Text('txt_website['.$i.']');
             $website[$i]->setAttrib('id', 'idtxt_website'.$i);
-            
+            $website[$i]->setAttrib('class', 'form-control');
             $website[$i]->setAttrib('maxlength', 70);
             
             $website[$i]->addValidator("regex",true,array(                           
@@ -363,14 +363,15 @@ class Default_Form_Candidatedetails extends Zend_Form
             
             $comp_address[$i] = new Zend_Form_Element_Textarea('txt_address['.$i.']');
             $comp_address[$i]->setAttrib('id', 'idtxt_address'.$i);
-            
-            
+            $comp_address[$i]->setAttrib('rows', 4);
+            $comp_address[$i]->setAttrib('cols', 30);
+            $comp_address[$i]->setAttrib("class", "form-control");
             $this->addElement($comp_address[$i]);
         }
         //end of candidate work details.
 		$job_title = new Zend_Form_Element_Text('job_title');        
 		$job_title->setAttrib('readonly', 'readonly');
-		
+		$job_title->setAttrib('class', 'form-control');
         $this->addElements(array($job_title,$cand_status,$id,$requisition_id,$candidate_firstname,$candidate_lastname,$emailid,$contact_number,$qualification,$experience,
                                 $skillset,$education_summary,$summary,$cand_location,$country,$state,$city,$pincode,$submit));
         $this->setElementDecorators(array('ViewHelper')); 
