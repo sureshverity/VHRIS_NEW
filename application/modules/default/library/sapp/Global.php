@@ -247,11 +247,11 @@ class sapp_Global
 		{
              /*$projectId check used in timemanagement*/
 			if($projectId != '' && $otherAction != ''){
-				$output .= "<select name='$name' tabIndex=$tabindx id='$key' style='$display' class='searchtxtbox_$name table_inputs not_appli clearall fltleft' onchange = '".$search_function.",\"select\",\"$projectId\",\"$otherAction\",\"$start_date\",\"$end_date\",\"$emp_id\")"."' >";
+				$output .= "<select name='$name' tabIndex=$tabindx id='$key' style='$display' class='form-control searchtxtbox_$name table_inputs not_appli clearall fltleft' onchange = '".$search_function.",\"select\",\"$projectId\",\"$otherAction\",\"$start_date\",\"$end_date\",\"$emp_id\")"."' >";
 			}else if($projectId != ''){
-				$output .= "<select name='$name' tabIndex=$tabindx id='$key' style='$display' class='searchtxtbox_$name table_inputs not_appli clearall fltleft' onchange = '".$search_function.",\"select\",\"$projectId\")"."' >";
+				$output .= "<select name='$name' tabIndex=$tabindx id='$key' style='$display' class='form-control searchtxtbox_$name table_inputs not_appli clearall fltleft' onchange = '".$search_function.",\"select\",\"$projectId\")"."' >";
 			}else{
-				$output .= "<select name='$name' tabIndex=$tabindx id='$key' style='$display' class='searchtxtbox_$name table_inputs not_appli clearall fltleft' onchange = '".$search_function.",\"select\")"."' >";
+				$output .= "<select name='$name' tabIndex=$tabindx id='$key' style='$display' class='form-control searchtxtbox_$name table_inputs not_appli clearall fltleft' onchange = '".$search_function.",\"select\")"."' >";
 			}
 			foreach($search_filters[$key]['filter_data'] as $skey => $svalue)
 			{
@@ -272,7 +272,7 @@ class sapp_Global
 			if(isset($search_filters[$key]['yearrange']) && $search_filters[$key]['yearrange'] == 'yearrange')
 			 $yearrange =   date("Y", strtotime("-70 years")).':'.(date('Y')+20); 
 			 
-			$output .= "<input readonly tabIndex=$tabindx  type='text' name='$name' data-focus='no' id='$key' style='$display' class='searchtxtbox_$name table_inputs grid_search_inputs ".$key_class."' value='$sText' onchange='".$search_function.",\"date\")"."' />";
+			$output .= "<input readonly tabIndex=$tabindx  type='text' name='$name' data-focus='no' id='$key' style='$display' class='form-control searchtxtbox_$name table_inputs grid_search_inputs ".$key_class."' value='$sText' onchange='".$search_function.",\"date\")"."' />";
 			$output .= "<script type='text/javascript' language='javascript'>
                     $(document).ready(function(){
                                 $( '.".$key_class."' ).datepicker({

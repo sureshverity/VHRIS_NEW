@@ -834,7 +834,7 @@ class Zend_View_Helper_Grid extends Zend_View_Helper_Abstract {
 									  alwaysVisible: false,
 									  start: 'left',
 									  position: 'bottom',
-                                                                          width:1020px
+                                      width:'1020px',
 									 
 									}).css({ background: '#fff'}); </script>";
 		$output .= "<script type='text/javascript' language='javascript'>

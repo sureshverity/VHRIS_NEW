@@ -77,7 +77,7 @@ if($actionName == 'viewsettings'){
 <!-- END META SECTION -->
 <!-- CSS INCLUDE -->
 <link rel="stylesheet" type="text/css" id="theme" href="<?php echo MEDIA_PATH_NEW;?>css/theme-default.css" />
-<link rel="stylesheet" type="text/css" id="theme" href="<?php echo MEDIA_PATH;?>/jquery/css/cupertino/jquery-ui-1.8.16.custom.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo MEDIA_PATH;?>/jquery/css/cupertino/jquery-ui-1.8.16.custom.css" />
 <!-- EOF CSS INCLUDE -->	
 <script  language="JavaScript" type="text/javascript" src="<?php echo MEDIA_PATH_NEW;?>js/plugins/jquery/jquery.min.js"></script>
     <script language="JavaScript" type="text/javascript" src="<?php echo MEDIA_PATH;?>js/jquery-ui.js"></script>
@@ -85,8 +85,9 @@ if($actionName == 'viewsettings'){
     <script language="JavaScript" type="text/javascript" src="<?php echo MEDIA_PATH_NEW;?>js/plugins/bootstrap/bootstrap.min.js"></script>
     <script language="JavaScript" type="text/javascript" src="<?php echo MEDIA_PATH; ?>jquery/js/slimScrollHorizontal.js"></script>
     <script language="JavaScript" type="text/javascript" src="<?php echo MEDIA_PATH;?>jquery/js/jquery.slimscroll.min.js"></script>
-	<script language="JavaScript" type="text/javascript" src="<?php echo MEDIA_PATH_NEW;?>js/plugins/hrms.js"></script>	
-
+	
+<script language="JavaScript" type="text/javascript" src="<?php echo MEDIA_PATH;?>jquery/js/jquery.jqpagination.js"></script>
+<link 	rel="stylesheet" type="text/css" id="theme"  href="<?php echo MEDIA_PATH;?>css/jqpagination.css" />
 </head>
 <body>
 <input type= "hidden" value= "<?php echo $baseUrl;?>" id = "baseurl" />
